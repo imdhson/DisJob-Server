@@ -17,7 +17,7 @@ import (
 type Articles struct {
 	ID         primitive.ObjectID `bson:"_id"`
 	Dj_user_id string             `bson:"dj_user_id"`
-	Title      string             `bson:"title"`
+	Title      string             `bson:"titile"`
 	Contents   string             `bson:"contents"`
 	Date       string             `bson:"date"`
 }
@@ -54,5 +54,5 @@ func main() {
 	if err != nil {
 		fmt.Println("err json MarshalIndent")
 	}
-	fmt.Println(string(output))
+	fmt.Println(output)
 }
