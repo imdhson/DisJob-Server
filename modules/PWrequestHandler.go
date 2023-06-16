@@ -13,12 +13,10 @@ func PWrequestHandler(w http.ResponseWriter, r *http.Request, urlPath *[]string)
 	Critical(err)
 	//wwwfile, err := template.ParseFiles("./www/login_pw.html")
 
-	var Vars Vars_on_html
-	Vars.Init()
-	Vars.AddVar("url_email", url_email)
-	Vars.Display()
-
-	w.Write(Vars.VarsOnHTML(wwwfile))
+	var i Vars_on_html
+	i.Init()
+	i.AddVar("url_email", url_email)
+	w.Write(i.VarsOnHTML(wwwfile))
 	//	fmt.Println(string(wwwfile))
 
 }
