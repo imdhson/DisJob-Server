@@ -1,58 +1,35 @@
 package main
 
 import (
-	"context"
-	"encoding/json"
+	our "disjob/modules"
 	"fmt"
 	"log"
-	"os"
-
-	"github.com/joho/godotenv"
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
+	"net/http"
+	"strconv"
+	"strings"
 )
 
-type Articles struct {
-	ID         primitive.ObjectID `bson:"_id"`
-	Dj_user_id string             `bson:"dj_user_id"`
-	Title      string             `bson:"title"`
-	Contents   string             `bson:"contents"`
-	Date       string             `bson:"date"`
+func urlHandler(w http.ResponseWriter, r *http.Request) {
+	url := r.URL.Path[1:] //sv_urlpath에 유저가 어떤 url을 요청했는지 저장됨
+	urlPath := strings.Split(url, "/")
+	urlPath = append(urlPath, "", "", "") //인덱싱 out of range를 막기위해 빈 슬라이스  생성
+	fmt.Println(urlPath)
+	switch urlPath[0] {
+	case "assets":
+		our.AssetsHanlder(w, r, &url)
+	default:
+		our.HtmlHanlder(w, r, &urlPath)
+	}
 }
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found")
-	}
-
-	var uri string
-	if uri = os.Getenv("MONGODB_URI"); uri == "" {
-		log.Fatal("You must set your 'MONGODB_URI' environmental variable. See\n\t https://www.mongodb.com/docs/drivers/go/current/usage-examples/#environment-variable")
-	}
-
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
-	if err != nil {
+	const PORT int = 8080
+	server := http.NewServeMux()
+	server.Handle("/", http.HandlerFunc(urlHandler))
+	fmt.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
+	err := http.ListenAndServe(":"+strconv.Itoa(PORT), server)
+	if err != nil { // http 서버 시작 중 문제 발생시
+		log.Fatal(err)
 		panic(err)
 	}
-	defer func() {
-		if err = client.Disconnect(context.TODO()); err != nil {
-			panic(err)
-		}
-	}()
-
-	collections := client.Database("dj_board").Collection("articles")
-	filter := bson.D{{"title", "윤석열 vs 이재명"}}
-
-	var result Articles
-	err = collections.FindOne(context.TODO(), filter).Decode(&result)
-	if err != nil {
-		fmt.Println("err FindOne")
-	}
-	output, err := json.MarshalIndent(result, " ", "	")
-	if err != nil {
-		fmt.Println("err json MarshalIndent")
-	}
-	fmt.Println(string(output))
 }

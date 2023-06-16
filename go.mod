@@ -1,4 +1,4 @@
-module mongo-go
+module disjob
 
 go 1.20
 
