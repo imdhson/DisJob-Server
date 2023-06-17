@@ -26,3 +26,10 @@ type Dj_users_registration struct {
 	VerifyNumber string             `bson:"verifyNumber"`
 	CreateAt     time.Time          `bson:"createAt"`
 }
+
+type Dj_user_session struct {
+	ID       primitive.ObjectID `bson:"_id,omitempty"`
+	Djuserid primitive.ObjectID `bson:"dj_user_id"`
+	Session  int                `bson:"dj_session"`
+	CreateAt time.Time          `bson:"createAt"`
+}

@@ -40,10 +40,9 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	filter_for_key_email_search := bson.D{{"verifyNumber", string(form_key)}}
 	err = coll_dj_registration.FindOne(context.TODO(), filter_for_key_email_search).Decode(&dbres)
 
-	now_time := time.Now()
 	users_struct := Dj_users_users{
 		Email: dbres.Email, Password: form_pw1,
-		LastLogin: now_time, ScrapList: []primitive.ObjectID{{}}, // primitive.NewObjectID 로 나중에 Push 가능
+		LastLogin: time.Now(), ScrapList: []primitive.ObjectID{{}}, // primitive.NewObjectID 로 나중에 Push 가능
 		Settings: Dj_users_users_settings{},
 	}
 	coll_dj_users := db.Database("dj_users").Collection("users")
