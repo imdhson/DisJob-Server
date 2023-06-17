@@ -1,7 +1,7 @@
 package main
 
 import (
-	our "disjob/modules"
+	"disjob/modules"
 	"fmt"
 	"log"
 	"net/http"
@@ -16,9 +16,11 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(urlPath)
 	switch urlPath[0] {
 	case "assets":
-		our.AssetsHanlder(w, r, &url)
+		modules.AssetsHanlder(w, r, &url)
+	case "test":
+		modules.Test(w, r)
 	default:
-		our.HtmlHanlder(w, r, &urlPath)
+		modules.HtmlHanlder(w, r, &urlPath)
 	}
 }
 

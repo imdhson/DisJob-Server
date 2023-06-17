@@ -27,6 +27,7 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		msg := "<script>alert(\"비밀번호가 불일치합니다. 다시 입력해주세요.\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"
 		w.Write([]byte(msg))
+		return
 	}
 
 	db, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(URI))
@@ -48,4 +49,7 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	coll_dj_users := db.Database("dj_users").Collection("users")
 	result, err := coll_dj_users.InsertOne(context.TODO(), users_struct)
 	fmt.Println(result)
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"
+	w.Write([]byte(msg))
 }

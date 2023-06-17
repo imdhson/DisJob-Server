@@ -41,6 +41,16 @@ func RegisterPWrequestHandler(w http.ResponseWriter, r *http.Request, urlPath *[
 		i.AddVar("url_key", url_key)
 		i.VarsOnHTML(wwwfile)
 		w.Write(i.VarsOnHTML(wwwfile))
+	} else if url_key == "" { //키가 비었으면 - 기본 빈 폼으로 반환시켜줌
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		wwwfile, err := os.ReadFile("./www/register.html")
+		Critical(err)
+		var i Vars_on_html
+		i.Init()
+		i.AddVar("url_email", url_email)
+		i.AddVar("url_key", "")
+		i.VarsOnHTML(wwwfile)
+		w.Write(i.VarsOnHTML(wwwfile))
 	} else { //키가 다르면
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		redirect_msg := "<script>alert(\"키가 다릅니다. 다시시도해주세요.\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login\">"
