@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
@@ -13,6 +14,7 @@ import (
 )
 
 func AuthIDHandler(w http.ResponseWriter, r *http.Request) {
+
 	err := godotenv.Load()
 	URI := os.Getenv("MONGODB_URI")
 	if URI == "" {
@@ -29,14 +31,47 @@ func AuthIDHandler(w http.ResponseWriter, r *http.Request) {
 	filter := bson.D{{"email", form_email}}
 	var dbres Dj_users_users
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres)
-	same_mail_not_found := func(err error) bool { //같은 email을 찾았는지 판별하는 anonymous 함수
+	same_mail_not_found_on_users := func(err error) bool { //같은 email을 찾았는지 판별하는 anonymous 함수
 		return err != nil
 	}(err)
-	if same_mail_not_found {
-		fmt.Println("pseudo: 회원가입으로 이동하기", form_email)
-		key := SmtpSender(form_email, true)
-		fmt.Print(key)
-	} else {
+	if same_mail_not_found_on_users { //같은 이메일 찾지 못하였을 때
+		//디비 registration에 항목 있는지 확인
+		coll := db.Database("dj_users").Collection("registration")
+		filter := bson.D{{"email", form_email}}
+		var dbres_regist Dj_users_registration
+		err = coll.FindOne(context.TODO(), filter).Decode(&dbres_regist)
+
+		same_mail_not_found_on_register := func(err error) bool { //같은 email을 찾았는지 판별하는 anonymous 함수
+			return err != nil
+		}(err)
+
+		if same_mail_not_found_on_register { //regist 에서 같은 이메일 못찾았을 때
+
+			key := SmtpSender(form_email, true) //메일 보내고
+			fmt.Println("pseudo: 회원가입으로 이동하기", form_email, key)
+
+			//디비 registration에 추가
+			now_time := time.Now()
+			regist_struct := Dj_users_registration{
+				Email:        form_email,
+				VerifyNumber: key,
+				CreateAt:     now_time,
+			}
+			coll_dj_regist := db.Database("dj_users").Collection("registration")
+			result, err := coll_dj_regist.InsertOne(context.TODO(), regist_struct)
+			ErrOK(err)
+
+			fmt.Println("db regist에 저장 완료", result)
+
+		} else { //regist에서 같은 이메일이 있을 때
+			filter := bson.D{{"email", form_email}}
+			coll_dj_regist := db.Database("dj_users").Collection("registration")
+			result, err := coll_dj_regist.DeleteMany(context.TODO(), filter)
+			ErrOK(err)
+			fmt.Println("regist에서 겹치는 이메일 삭제", result.DeletedCount)
+			AuthIDHandler(w, r) //삭제하고 다시 호출해서 다시수행
+		}
+	} else { //같은 이메일 user에서 찾았을 때
 		fmt.Println("pseudo:", dbres.Email, "을 E-Mail로 로그인하기")
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		redirect_msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>"

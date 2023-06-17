@@ -31,7 +31,7 @@ func RegisterPWrequestHandler(w http.ResponseWriter, r *http.Request, urlPath *[
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres)
 
 	ErrOK(err)
-	if dbres.VerifyNumber == url_key {
+	if dbres.VerifyNumber == url_key { //키가 맞으면
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		wwwfile, err := os.ReadFile("./www/register.html")
 		Critical(err)
@@ -41,9 +41,9 @@ func RegisterPWrequestHandler(w http.ResponseWriter, r *http.Request, urlPath *[
 		i.AddVar("url_key", url_key)
 		i.VarsOnHTML(wwwfile)
 		w.Write(i.VarsOnHTML(wwwfile))
-	} else {
+	} else { //키가 다르면
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		redirect_msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login\">"
+		redirect_msg := "<script>alert(\"키가 다릅니다. 다시시도해주세요.\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login\">"
 		w.Write([]byte(redirect_msg))
 	}
 

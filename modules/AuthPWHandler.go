@@ -33,11 +33,12 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println("ID, 비밀번호 매칭 실패")
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		redirect_msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>" //다시 원래 pwrequst
+
+		redirect_msg := "<script>alert(\"로그인 실패\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>" //다시 원래 pwrequst
 		w.Write([]byte(redirect_msg))
 	} else {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		tmp := fmt.Sprintln(dbres)
+		tmp := fmt.Sprintln("Login 성공 당신의 아이디는:", dbres.Email, "\n모든 내용:", dbres)
 		w.Write([]byte(tmp))
 	}
 }
