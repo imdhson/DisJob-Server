@@ -8,11 +8,11 @@ import (
 
 type Dj_users_users struct {
 	ID        primitive.ObjectID      `bson:"_id,omitempty"`
-	Email     string                  `bson:"email,omitempty"`
-	Password  string                  `bson:"password,omitempty"`
-	LastLogin time.Time               `bson:"lastLogin,omitempty"`
-	ScrapList []primitive.ObjectID    `bson:"scrapList,omitempty"`
-	Settings  Dj_users_users_settings `bson:"settings,omitempty"`
+	Email     string                  `bson:"email"`
+	Password  string                  `bson:"password"`
+	LastLogin time.Time               `bson:"lastLogin"`
+	ScrapList []primitive.ObjectID    `bson:"scrapList"`
+	Settings  Dj_users_users_settings `bson:"settings"`
 }
 
 type Dj_users_users_settings struct {
