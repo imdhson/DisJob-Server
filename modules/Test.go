@@ -13,7 +13,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func Test(w http.ResponseWriter, r *http.Request) {
+func SampleAIList(w http.ResponseWriter, r *http.Request) {
 	err := godotenv.Load()
 	Critical(err)
 	URI := os.Getenv("MONGODB_URI")
