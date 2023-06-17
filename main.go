@@ -40,6 +40,10 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 	case "sessiontest":
 		oid := modules.SessionTO_oid(w, r)
 		fmt.Println(oid)
+		a := modules.OidTOuser_struct(oid)
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		w.Write([]byte(a.Email))
+
 	default:
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		wwwfile, err := os.ReadFile("./www/error.html")

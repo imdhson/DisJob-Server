@@ -33,18 +33,19 @@ func SampleAIList(w http.ResponseWriter, r *http.Request) {
 	var dbres_1 Dj_jobs_detail
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres_1)
 	ErrOK(err)
+	dbres_1.App_List_num = 1
 	// 쿼리2
 	filter = bson.D{{"사업장명", "용인시청"}}
 	var dbres_2 Dj_jobs_detail
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres_2)
 	ErrOK(err)
-
+	dbres_2.App_List_num = 2
 	//쿼리3
 	filter = bson.D{{"사업장명", "강원랜드(주)"}}
 	var dbres_3 Dj_jobs_detail
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres_3)
 	ErrOK(err)
-
+	dbres_3.App_List_num = 3
 	//병합
 	var will_send []Dj_jobs_detail
 	will_send = append(will_send, dbres_1, dbres_2, dbres_3)

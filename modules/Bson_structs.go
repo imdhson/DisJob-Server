@@ -35,6 +35,7 @@ type Dj_user_session struct {
 }
 
 type Dj_jobs_detail struct {
+	App_List_num   int
 	ID             primitive.ObjectID `bson:"_id,omitempty"`
 	Duration       string             `bson:"구인신청일자"`
 	CompanyName    string             `bson:"사업장명"`
