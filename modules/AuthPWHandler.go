@@ -59,7 +59,8 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		coll_dj_users := db.Database("dj_users").Collection("sessions")
 		result, err := coll_dj_users.InsertOne(context.TODO(), session_struct)
-
+		ErrOK(err)
+		fmt.Println(result.InsertedID)
 		w.Write([]byte(tmp))
 	}
 }
