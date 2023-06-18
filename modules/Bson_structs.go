@@ -53,4 +53,5 @@ type Dj_jobs_detail struct {
 	ResponsiveIns  string             `bson:"담당기관"`
 	CreateAt       string             `bson:"등록일"`
 	Contact        string             `bson:"연락처"`
+	BodySpec       string             `bson:"필수부위"`
 }

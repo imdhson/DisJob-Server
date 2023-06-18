@@ -43,6 +43,8 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		a := modules.OidTOuser_struct(oid)
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		w.Write([]byte(a.Email))
+	case "sample2":
+		modules.Test2(w, r)
 
 	default:
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
