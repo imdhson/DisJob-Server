@@ -55,3 +55,18 @@ type Dj_jobs_detail struct {
 	Contact        string             `bson:"연락처"`
 	BodySpec       string             `bson:"필수부위"`
 }
+
+type Dj_board_comments struct {
+	ID       primitive.ObjectID `bson:"_id,omitempty"`
+	Djjobsid primitive.ObjectID `bson:"dj_jobs_id"`
+	Djuserid primitive.ObjectID `bson:"dj_user_id"`
+	CreateAt time.Time          `bson:"createAt"`
+	Content  string             `bson:"content"`
+}
+type Dj_board_articles struct {
+	ID       primitive.ObjectID `bson:"_id,omitempty"`
+	Djuserid primitive.ObjectID `bson:"dj_user_id"`
+	CreateAt time.Time          `bson:"createAt"`
+	Title    string             `bson:"title"`
+	Content  string             `bson:"content"`
+}

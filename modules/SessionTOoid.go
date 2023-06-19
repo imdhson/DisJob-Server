@@ -27,12 +27,18 @@ func SessionTO_oid(w http.ResponseWriter, r *http.Request) primitive.ObjectID {
 	}()
 	coll_dj_registration := db.Database("dj_users").Collection("sessions")
 	sessionkey, err := r.Cookie("dj_session") //key to value로 쿠키를 가져옴
-	ErrOK(err)
+	if err != nil {
+		ErrOK(err)
+		return primitive.NilObjectID
+	}
 	sessionkey_int, err := strconv.Atoi(sessionkey.Value)
 	ErrOK(err)
 	var dbres Dj_user_session
 	filter := bson.D{{"dj_session", sessionkey_int}}
 	err = coll_dj_registration.FindOne(context.TODO(), filter).Decode(&dbres)
-	ErrOK(err)
+	if err != nil {
+		ErrOK(err)
+		return primitive.NilObjectID
+	}
 	return dbres.Djuserid
 }

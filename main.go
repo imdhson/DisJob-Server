@@ -33,6 +33,12 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	case "r":
 		modules.RegisterPWrequestHandler(w, r, &urlPath)
+	case "comments":
+		if urlPath[1] == "insert" {
+			modules.CommentsInsert(w, r, &urlPath)
+		} else {
+			modules.CommentsView(w, r, &urlPath)
+		}
 	case "assets":
 		modules.AssetsHanlder(w, r, &url)
 	case "sample":
@@ -43,14 +49,12 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		a := modules.OidTOuser_struct(oid)
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		w.Write([]byte(a.Email))
-	case "sample2":
+	case "test2":
 		modules.Test2(w, r)
-
+	case "test3":
+		modules.Test3(w, r)
 	default:
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		wwwfile, err := os.ReadFile("./www/error.html")
-		modules.Critical(err)
-		w.Write(wwwfile)
+		modules.ErrHandler(w, r)
 	}
 }
 
