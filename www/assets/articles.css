@@ -1,0 +1,19 @@
+@import url('normalize.css');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+/* Rectangle 32 */
+li {
+position: relative;
+width: 90%;
+height: 70px;
+
+background: #FFFFFF;
+box-shadow: 3px 3px 5px 1px #E3B3FF;
+border-radius: 20px;
+list-style: none;
+margin-bottom: 30px;
+}
+ul {
+    margin-bottom: 100px;
+    background-color: #E3B3FF;
+}

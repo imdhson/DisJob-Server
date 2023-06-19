@@ -39,6 +39,15 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.CommentsView(w, r, &urlPath)
 		}
+	case "articles":
+		if urlPath[1] == "insert" && urlPath[2] == "" {
+			modules.ArticlesInsertPage(w, r)
+		} else if urlPath[1] == "insert" && urlPath[2] == "submit" {
+			modules.ArticlesInsertHandler(w, r)
+		} else {
+			modules.ArticlesView(w, r)
+		}
+
 	case "assets":
 		modules.AssetsHanlder(w, r, &url)
 	case "sample":
