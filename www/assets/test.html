@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON POST 예제</title>
+  <script>
+    function sendPostRequest() {
+      // JSON 데이터 생성
+      var data = {
+        loc: "경상북도 경산시",
+        type: "해당없음"
+      };
+
+      // POST 요청 보내기
+      fetch('http://localhost:8080/users/settings/submit/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function(response) {
+        if (response.ok) {
+          console.log('요청 성공');
+          // 여기에서 응답을 처리하거나 추가 작업 수행 가능
+        } else {
+          console.log('요청 실패');
+        }
+      })
+      .catch(function(error) {
+        console.log('요청 실패:', error);
+      });
+    }
+
+
+    function sendPostRequest_LOGOUT() {
+      // JSON 데이터 생성
+      var data = {
+       logout: "1"
+      };
+
+      // 로그아웃
+      fetch('http://localhost:8080/login/logout/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(function(response) {
+        if (response.ok) {
+          console.log('요청 성공');
+          // 여기에서 응답을 처리하거나 추가 작업 수행 가능
+        } else {
+          console.log('요청 실패');
+        }
+      })
+      .catch(function(error) {
+        console.log('요청 실패:', error);
+      });
+    }
+  </script>
+</head>
+<body>
+  <button onclick="sendPostRequest()">loc, type 수정</button>
+  <button onclick="sendPostRequest_LOGOUT()">로그아웃 json</button>
+</body>
+</html>
