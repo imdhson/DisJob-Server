@@ -3,8 +3,8 @@ package modules
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 
@@ -27,7 +27,7 @@ func SettingsChangeHandler(w http.ResponseWriter, r *http.Request) {
 		//json을 수신하여 settings_struct에 저장
 		var settings_struct Receive_settings
 		body, err := io.ReadAll(r.Body)
-		fmt.Println("json 수신 원본: ", string(body))
+		log.Println("json 수신 원본: ", string(body))
 		ErrOK(err)
 		err = json.Unmarshal(body, &settings_struct)
 		ErrOK(err)

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"os"
 
@@ -58,6 +59,6 @@ func LogoutHandler(w http.ResponseWriter, r *http.Request) {
 		filter := bson.D{{"dj_user_id", user_oid}}
 		result, err := coll_dj_session.DeleteMany(context.TODO(), filter)
 		ErrOK(err)
-		fmt.Println("로그아웃: session 삭제:", result.DeletedCount)
+		log.Println("로그아웃: session 삭제:", result.DeletedCount)
 	}
 }

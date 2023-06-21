@@ -2,7 +2,7 @@ package modules
 
 import (
 	"context"
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"time"
@@ -53,14 +53,14 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	coll_dj_users := db.Database("dj_users").Collection("users")
 	result, err := coll_dj_users.InsertOne(context.TODO(), users_struct)
-	fmt.Println(result)
+	log.Println(result)
 
 	//사용된 key 삭제
 	filter := bson.D{{"verifyNumber", form_key}}
 	coll_dj_regist := db.Database("dj_users").Collection("registration")
 	result_del, err := coll_dj_regist.DeleteMany(context.TODO(), filter)
 	ErrOK(err)
-	fmt.Println("regist 사용된 키 삭제:", result_del.DeletedCount)
+	log.Println("regist 사용된 키 삭제:", result_del.DeletedCount)
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"

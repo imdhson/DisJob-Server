@@ -2,7 +2,7 @@ package modules
 
 import (
 	"context"
-	"fmt"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
@@ -34,7 +34,7 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 	var dbres Dj_users_users
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres)
 	if err != nil { //로그인이 실패함
-		fmt.Println("ID, 비밀번호 매칭 실패")
+		log.Println("ID, 비밀번호 매칭 실패")
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
 		redirect_msg := "<script>alert(\"로그인 실패\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>" //다시 원래 pwrequst
@@ -58,7 +58,7 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 		coll_dj_session := db.Database("dj_users").Collection("sessions")
 		result, err := coll_dj_session.DeleteMany(context.TODO(), filter)
 		ErrOK(err)
-		fmt.Println("session이 겹치는 이메일 삭제", result.DeletedCount)
+		log.Println("session이 겹치는 이메일 삭제", result.DeletedCount)
 
 		//db에 세션키 저장
 		session_struct := Dj_user_session{
@@ -68,7 +68,7 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		result_1, err_1 := coll_dj_session.InsertOne(context.TODO(), session_struct)
 		ErrOK(err_1)
-		fmt.Println(result_1.InsertedID)
+		log.Println(result_1.InsertedID)
 		w.Write([]byte(tmp))
 
 		//users db에 last login 업데이트

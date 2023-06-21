@@ -2,7 +2,7 @@ package main
 
 import (
 	"disjob/modules"
-	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -10,11 +10,33 @@ import (
 	"strings"
 )
 
+func main() {
+	// 로그 기록
+	// 로그 파일 생성
+	log_f, log_err := os.OpenFile("last.log", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	modules.Critical(log_err)
+	defer log_f.Close()
+
+	// 로그 출력 설정
+	log.SetOutput(io.MultiWriter(os.Stdout, log_f))
+
+	const PORT int = 8080
+	server := http.NewServeMux()
+	server.Handle("/", http.HandlerFunc(urlHandler))
+	log.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
+	err := http.ListenAndServe(":"+strconv.Itoa(PORT), server)
+	if err != nil { // http 서버 시작 중 문제 발생시
+		log.Fatal(err)
+		panic(err)
+	}
+}
+
 func urlHandler(w http.ResponseWriter, r *http.Request) {
 	url := r.URL.Path[1:] //sv_urlpath에 유저가 어떤 url을 요청했는지 저장됨
 	urlPath := strings.Split(url, "/")
 	urlPath = append(urlPath, "", "", "") //인덱싱 out of range를 막기위해 빈 슬라이스  생성
-	fmt.Println(urlPath)
+	log.Println(url)
+	log.Default()
 	switch urlPath[0] {
 	case "login":
 		if urlPath[1] == "auth" && urlPath[2] == "id" { //login/auth/id인 경우
@@ -71,17 +93,5 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		modules.Test3(w, r)
 	default:
 		modules.ErrHandler(w, r)
-	}
-}
-
-func main() {
-	const PORT int = 8080
-	server := http.NewServeMux()
-	server.Handle("/", http.HandlerFunc(urlHandler))
-	fmt.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
-	err := http.ListenAndServe(":"+strconv.Itoa(PORT), server)
-	if err != nil { // http 서버 시작 중 문제 발생시
-		log.Fatal(err)
-		panic(err)
 	}
 }

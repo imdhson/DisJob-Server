@@ -2,7 +2,7 @@ package modules
 
 import (
 	"context"
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -59,7 +59,7 @@ func AuthIDHandler(w http.ResponseWriter, r *http.Request) {
 		if same_mail_not_found_on_register { //regist 에서 같은 이메일 못찾았을 때
 
 			key := SmtpSender(form_email, true) //메일 보내고
-			fmt.Println("pseudo: 회원가입으로 이동하기", form_email, key)
+			log.Println("pseudo: 회원가입으로 이동하기", form_email, key)
 
 			//디비 registration에 추가
 			now_time := time.Now()
@@ -75,18 +75,18 @@ func AuthIDHandler(w http.ResponseWriter, r *http.Request) {
 			redirect_msg := "<meta http-equiv=\"refresh\" content=\"0;url=/r/" + form_email + "\"></meta>"
 			w.Write([]byte(redirect_msg))
 
-			fmt.Println("db regist에 저장 완료", result)
+			log.Println("db regist에 저장 완료", result)
 
 		} else { //regist에서 같은 이메일이 있을 때 Regist DB에서 삭제
 			filter := bson.D{{"email", form_email}}
 			coll_dj_regist := db.Database("dj_users").Collection("registration")
 			result, err := coll_dj_regist.DeleteMany(context.TODO(), filter)
 			ErrOK(err)
-			fmt.Println("regist에서 겹치는 이메일 삭제", result.DeletedCount)
+			log.Println("regist에서 겹치는 이메일 삭제", result.DeletedCount)
 			AuthIDHandler(w, r) //삭제하고 다시 호출해서 다시수행
 		}
 	} else { //같은 이메일 user에서 찾았을 때 - 로그인모드
-		fmt.Println("pseudo:", dbres.Email, "을 E-Mail로 로그인하기")
+		log.Println("pseudo:", dbres.Email, "을 E-Mail로 로그인하기")
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		redirect_msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>"
 		w.Write([]byte(redirect_msg))

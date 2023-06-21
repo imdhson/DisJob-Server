@@ -6,12 +6,12 @@
     function sendPostRequest() {
       // JSON 데이터 생성
       var data = {
-        loc: "경상북도 경산시",
-        type: "해당없음"
+        loc: document.getElementById("loc").value,
+        type: document.getElementById("type").value
       };
 
       // POST 요청 보내기
-      fetch('http://localhost:8080/users/settings/submit/', {
+      fetch('http://pi.imdhson.com/users/settings/submit/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -39,7 +39,7 @@
       };
 
       // 로그아웃
-      fetch('http://localhost:8080/login/logout/', {
+      fetch('http://pi.imdhson.com/login/logout/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -61,7 +61,9 @@
   </script>
 </head>
 <body>
-  <button onclick="sendPostRequest()">loc, type 수정</button>
+  <input type="text" id="loc" name="loc" placeholder="loc">
+  <input type="text" id="type" name="type" placeholder="type">
+  <button onclick="sendPostRequest()">수정</button><br>
   <button onclick="sendPostRequest_LOGOUT()">로그아웃 json</button>
 </body>
 </html>
