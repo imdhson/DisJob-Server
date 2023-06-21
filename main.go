@@ -20,7 +20,7 @@ func main() {
 	// 로그 출력 설정
 	log.SetOutput(io.MultiWriter(os.Stdout, log_f))
 
-	const PORT int = 8080
+	const PORT int = 80
 	server := http.NewServeMux()
 	server.Handle("/", http.HandlerFunc(urlHandler))
 	log.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
@@ -35,8 +35,7 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 	url := r.URL.Path[1:] //sv_urlpath에 유저가 어떤 url을 요청했는지 저장됨
 	urlPath := strings.Split(url, "/")
 	urlPath = append(urlPath, "", "", "") //인덱싱 out of range를 막기위해 빈 슬라이스  생성
-	log.Println(url)
-	log.Default()
+	log.Printf("%v/%v", modules.GetIP(r), url)
 	switch urlPath[0] {
 	case "login":
 		if urlPath[1] == "auth" && urlPath[2] == "id" { //login/auth/id인 경우
