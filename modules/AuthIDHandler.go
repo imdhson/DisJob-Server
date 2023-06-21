@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/joho/godotenv"
@@ -20,7 +21,14 @@ func AuthIDHandler(w http.ResponseWriter, r *http.Request) {
 	if URI == "" {
 		Critical(err)
 	}
-	form_email := r.FormValue("email")
+	form_email := XSSFix(r.FormValue("email"))
+	if !strings.Contains(form_email, "@") || !strings.Contains(form_email, ".") { //ID가 @와 .을 포함해야함.
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+
+		redirect_msg := "<script>alert(\"ID 형식이 올바르지 않음.\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"
+		w.Write([]byte(redirect_msg))
+		return
+	}
 	db, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(URI))
 	Critical(err)
 	defer func() {

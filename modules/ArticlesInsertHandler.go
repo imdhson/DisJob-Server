@@ -19,8 +19,8 @@ func ArticlesInsertHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	user_oid := SessionTO_oid(w, r)
 
-	title := r.FormValue("title")
-	content := r.FormValue("content")
+	title := XSSFix(r.FormValue("title"))
+	content := XSSFix(r.FormValue("content"))
 
 	var anon bool
 	if r.FormValue("anonymous") == "on" {

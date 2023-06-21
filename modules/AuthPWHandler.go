@@ -21,8 +21,8 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 	if URI == "" {
 		Critical(err)
 	}
-	form_email := r.FormValue("email")
-	form_pw := r.FormValue("password")
+	form_email := XSSFix(r.FormValue("email"))
+	form_pw := XSSFix(r.FormValue("password"))
 	db, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(URI))
 	Critical(err)
 	defer func() {
@@ -42,7 +42,7 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 	} else {
 		//로그인이 성공함
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		tmp := fmt.Sprintln("Login 성공 당신의 아이디는:", dbres.Email, "\n모든 내용:", dbres)
+		tmp := []byte("<meta http-equiv=\"refresh\" content=\"0;url=/session/\"></meta>")
 		sessionkey := rand.Int()
 
 		//http cookie에 세션키 저장
@@ -70,5 +70,12 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 		ErrOK(err_1)
 		fmt.Println(result_1.InsertedID)
 		w.Write([]byte(tmp))
+
+		//users db에 last login 업데이트
+		coll_dj_users := db.Database("dj_users").Collection("users")
+		filter_users := bson.D{{"_id", dbres.ID}}
+		update_users := bson.D{{"$set", bson.D{{"lastLogin", time.Now()}}}}
+		_, err_users := coll_dj_users.UpdateOne(context.TODO(), filter_users, update_users)
+		ErrOK(err_users)
 	}
 }

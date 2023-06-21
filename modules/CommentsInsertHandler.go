@@ -22,7 +22,7 @@ func CommentsInsert(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 	ErrOK(err)
 	user_oid := SessionTO_oid(w, r)
 
-	content := r.FormValue("content")
+	content := XSSFix(r.FormValue("content"))
 
 	var anon bool
 	if r.FormValue("anonymous") == "on" {

@@ -25,6 +25,8 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 			modules.RegisterHandler(w, r)
 		} else if urlPath[1] == "id" { //login/id 인경우
 			modules.PWrequestHandler(w, r, &urlPath)
+		} else if urlPath[1] == "logout" { //login/logout 인경우
+			modules.LogoutHandler(w, r)
 		} else {
 			w.Header().Set("Content-Type", "text/html; charset=utf-8")
 			wwwfile, err := os.ReadFile("./www/login.html")
@@ -50,14 +52,19 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 
 	case "assets":
 		modules.AssetsHanlder(w, r, &url)
+
+	case "users":
+		if urlPath[1] == "settings" && urlPath[2] == "submit" {
+			modules.SettingsChangeHandler(w, r)
+		} else {
+			modules.ErrHandler(w, r)
+		}
 	case "sample":
 		modules.SampleAIList(w, r)
 	case "sessiontest":
-		oid := modules.SessionTO_oid(w, r)
-		fmt.Println(oid)
-		a := modules.OidTOuser_struct(oid)
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		w.Write([]byte(a.Email))
+		modules.PrintSession(w, r)
+	case "session":
+		modules.PrintSession(w, r)
 	case "test2":
 		modules.Test2(w, r)
 	case "test3":

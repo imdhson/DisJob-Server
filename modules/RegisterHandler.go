@@ -20,9 +20,9 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	if URI == "" {
 		Critical(err)
 	}
-	form_key := r.FormValue("verifyNumber")
-	form_pw1 := r.FormValue("password1")
-	form_pw2 := r.FormValue("password2")
+	form_key := XSSFix(r.FormValue("verifyNumber"))
+	form_pw1 := XSSFix(r.FormValue("password1"))
+	form_pw2 := XSSFix(r.FormValue("password2"))
 	if form_pw1 != form_pw2 {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		msg := "<script>alert(\"비밀번호가 불일치합니다. 다시 입력해주세요.\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"
