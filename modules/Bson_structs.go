@@ -16,8 +16,10 @@ type Dj_users_users struct {
 }
 
 type Dj_users_users_settings struct {
-	Loc  string `bson:"loc"`
-	Type string `bson:"type"`
+	Loc   string `bson:"loc"`
+	Type1 string `bson:"type1"`
+	Type2 string `bson:"type2"`
+	Type3 string `bson:"type3"`
 }
 
 type Dj_users_registration struct {

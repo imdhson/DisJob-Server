@@ -15,8 +15,10 @@ import (
 )
 
 type Receive_settings struct {
-	Loc  string `json:"loc"`
-	Type string `json:"type"`
+	Loc   string `json:"loc"`
+	Type1 string `json:"type1"`
+	Type2 string `json:"type2"`
+	Type3 string `json:"type3"`
 }
 
 func SettingsChangeHandler(w http.ResponseWriter, r *http.Request) {
@@ -55,7 +57,11 @@ func SettingsChangeHandler(w http.ResponseWriter, r *http.Request) {
 		filter := bson.D{{"_id", user_oid}}
 		//update := bson.D{{"$set", bson.D{{"settings", bson.D{{"loc", settings_struct.Loc}}, bson.D{{"type", settings_struct.Type}}}}}}
 		update := bson.D{
-			{"$set", bson.D{{"settings.loc", settings_struct.Loc}, {"settings.type", settings_struct.Type}}}}
+			{"$set", bson.D{{"settings.loc", settings_struct.Loc},
+				{"settings.type1", settings_struct.Type1},
+				{"settings.type2", settings_struct.Type2},
+				{"settings.type3", settings_struct.Type3}}},
+		}
 
 		_, err = coll.UpdateOne(context.TODO(), filter, update)
 		ErrOK(err)

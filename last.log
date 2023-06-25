@@ -13,3 +13,160 @@
 2023/06/21 21:24:06 ::1/
 2023/06/21 21:24:06 ::1/assets/main.css
 2023/06/21 21:24:06 ::1/assets/normalize.css
+2023/06/25 16:09:06 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:09:09 ::1/
+2023/06/25 16:09:09 ::1/assets/main.css
+2023/06/25 16:09:09 ::1/assets/normalize.css
+2023/06/25 16:09:09 ::1/apple-touch-icon-precomposed.png
+2023/06/25 16:09:09 ::1/apple-touch-icon.png
+2023/06/25 16:09:11 ::1/
+2023/06/25 16:09:11 ::1/assets/main.css
+2023/06/25 16:09:11 ::1/assets/normalize.css
+2023/06/25 16:09:13 ::1/test2
+2023/06/25 16:09:22 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:09:22 ::1/test2
+2023/06/25 16:09:30 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:09:31 ::1/test2
+2023/06/25 16:09:35 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:09:39 ::1/test2
+2023/06/25 16:11:33 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:11:34 ::1/sample
+2023/06/25 16:11:38 ::1/sample
+2023/06/25 16:11:39 ::1/
+2023/06/25 16:11:39 ::1/assets/main.css
+2023/06/25 16:11:39 ::1/assets/normalize.css
+2023/06/25 16:11:40 ::1/test2
+2023/06/25 16:11:41 ::1/test2
+2023/06/25 16:11:41 ::1/test
+2023/06/25 16:11:41 ::1/assets/main.css
+2023/06/25 16:11:41 ::1/assets/normalize.css
+2023/06/25 16:28:15 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:28:44 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:28:47 ::1/AIList
+2023/06/25 16:28:47 ErrOK:  http: named cookie not present
+2023/06/25 16:28:48 ErrOK:  mongo: no documents in result
+2023/06/25 16:28:57 ::1/
+2023/06/25 16:28:57 ::1/assets/main.css
+2023/06/25 16:28:57 ::1/assets/normalize.css
+2023/06/25 16:28:58 ::1/login
+2023/06/25 16:28:58 ::1/assets/main.css
+2023/06/25 16:28:58 ::1/assets/normalize.css
+2023/06/25 16:29:01 ::1/login/auth/id
+2023/06/25 16:29:01 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/25 16:29:01 ::1/login/id/hhammer1234@gmail.com
+2023/06/25 16:29:01 ::1/assets/main.css
+2023/06/25 16:29:01 ::1/assets/normalize.css
+2023/06/25 16:29:03 ::1/login/auth/password/
+2023/06/25 16:29:03 session이 겹치는 이메일 삭제 1
+2023/06/25 16:29:03 ObjectID("6497ecbf0ab3e9c77e4e4a0b")
+2023/06/25 16:29:04 ::1/session/
+2023/06/25 16:29:08 ::1/
+2023/06/25 16:29:08 ::1/assets/main.css
+2023/06/25 16:29:08 ::1/assets/normalize.css
+2023/06/25 16:29:11 ::1/
+2023/06/25 16:29:11 ::1/assets/main.css
+2023/06/25 16:29:11 ::1/assets/normalize.css
+2023/06/25 16:29:11 ::1/AIList
+2023/06/25 16:29:31 ::1/assets/test.html
+2023/06/25 16:29:45 ::1/AIList
+2023/06/25 16:30:09 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:30:09 ::1/AIList
+2023/06/25 16:30:20 ::1/
+2023/06/25 16:30:20 ::1/assets/main.css
+2023/06/25 16:30:20 ::1/assets/normalize.css
+2023/06/25 16:30:20 ::1/assets/test.html
+2023/06/25 16:31:58 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 16:31:59 ::1/AIList
+2023/06/25 16:31:59 ErrOK:  mongo: no documents in result
+2023/06/25 16:31:59 ErrOK:  mongo: no documents in result
+2023/06/25 16:32:14 ::1/assets/main.css
+2023/06/25 16:32:14 ::1/assets/normalize.css
+2023/06/25 16:32:15 ::1/login/auth/password/
+2023/06/25 16:32:15 ID, 비밀번호 매칭 실패
+2023/06/25 16:32:16 ::1/login/id/hhammer1234@gmail.com
+2023/06/25 16:32:16 ::1/assets/main.css
+2023/06/25 16:32:16 ::1/assets/normalize.css
+2023/06/25 16:32:19 ::1/login/auth/password/
+2023/06/25 16:32:20 session이 겹치는 이메일 삭제 1
+2023/06/25 16:32:20 ObjectID("6497ed84262764184c1a2dcc")
+2023/06/25 16:32:20 ::1/session/
+2023/06/25 16:32:25 ::1/assets/test.html
+2023/06/25 16:32:25 ::1/assets/test.html
+2023/06/25 16:32:25 ::1/
+2023/06/25 16:32:25 ::1/assets/main.css
+2023/06/25 16:32:25 ::1/assets/normalize.css
+2023/06/25 16:32:26 ::1/AIList
+2023/06/25 17:44:18 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 17:45:01 ::1/
+2023/06/25 17:45:01 ::1/assets/main.css
+2023/06/25 17:45:01 ::1/assets/normalize.css
+2023/06/25 17:45:02 ::1/session/
+2023/06/25 17:45:02 ::1/sample
+2023/06/25 17:45:02 ::1/assets/main.css
+2023/06/25 17:45:02 ::1/assets/normalize.css
+2023/06/25 17:45:20 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 17:45:20 ::1/sample
+2023/06/25 17:45:20 ::1/assets/main.css
+2023/06/25 17:45:21 ::1/assets/normalize.css
+2023/06/25 17:45:21 ::1/sample
+2023/06/25 17:45:21 ::1/assets/main.css
+2023/06/25 17:45:21 ::1/assets/normalize.css
+2023/06/25 17:45:26 ::1/test2
+2023/06/25 17:45:28 ::1/test
+2023/06/25 17:45:28 ErrOK:  mongo: no documents in result
+2023/06/25 17:51:08 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 17:51:11 ::1/test
+2023/06/25 17:51:19 ::1/test
+2023/06/25 17:51:21 ErrOK:  mongo: no documents in result
+2023/06/25 17:51:29 ErrOK:  mongo: no documents in result
+2023/06/25 17:53:11 ::1/test
+2023/06/25 17:53:11 ErrOK:  mongo: no documents in result
+2023/06/25 17:54:34 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 17:54:36 ::1/test
+2023/06/25 17:54:46 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 17:54:47 ::1/test
+2023/06/25 17:54:47 ErrOK:  mongo: no documents in result
+2023/06/25 18:15:54 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 18:15:55 ::1/test
+2023/06/25 18:15:56 ErrOK:  (BadValue) unknown top level operator: $in. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+2023/06/25 18:20:00 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 18:20:02 ::1/test
+2023/06/25 18:20:02 ErrOK:  (BadValue) unknown top level operator: $in. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+2023/06/25 20:21:48 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 20:28:02 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 20:28:12 ::1/
+2023/06/25 20:28:12 ::1/assets/main.css
+2023/06/25 20:28:12 ::1/assets/normalize.css
+2023/06/25 20:28:13 ::1/login
+2023/06/25 20:28:13 ::1/assets/main.css
+2023/06/25 20:28:13 ::1/assets/normalize.css
+2023/06/25 20:28:15 ::1/login/auth/id
+2023/06/25 20:28:15 ErrOK:  mongo: no documents in result
+2023/06/25 20:28:16 pseudo: 회원가입으로 이동하기 hhammer1234@gmail.com 62683
+2023/06/25 20:28:16 db regist에 저장 완료 &{ObjectID("649824d0a043094e54d87543")}
+2023/06/25 20:28:16 ::1/r/hhammer1234@gmail.com
+2023/06/25 20:28:16 ::1/assets/main.css
+2023/06/25 20:28:16 ::1/assets/normalize.css
+2023/06/25 20:28:28 ::1/login/auth/register/
+2023/06/25 20:28:29 &{ObjectID("649824dda043094e54d87546")}
+2023/06/25 20:28:29 regist 사용된 키 삭제: 1
+2023/06/25 20:28:29 ::1/login/
+2023/06/25 20:28:29 ::1/assets/main.css
+2023/06/25 20:28:29 ::1/assets/normalize.css
+2023/06/25 20:28:52 ::1/login/auth/id
+2023/06/25 20:28:52 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/25 20:28:52 ::1/login/id/hhammer1234@gmail.com
+2023/06/25 20:28:52 ::1/assets/main.css
+2023/06/25 20:28:52 ::1/assets/normalize.css
+2023/06/25 20:28:53 ::1/login/auth/password/
+2023/06/25 20:28:54 session이 겹치는 이메일 삭제 0
+2023/06/25 20:28:54 ObjectID("649824f6a043094e54d87549")
+2023/06/25 20:28:54 ::1/session/
+2023/06/25 20:29:04 ::1/test
+2023/06/25 20:29:04 ErrOK:  (BadValue) unknown top level operator: $in. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+2023/06/25 20:29:25 ::1/
+2023/06/25 20:29:25 ::1/assets/main.css
+2023/06/25 20:29:25 ::1/assets/normalize.css
+2023/06/25 20:29:25 ::1/assets/test.html
+2023/06/25 20:29:30 ::1/session/
+2023/06/25 20:29:34 ::1/session/

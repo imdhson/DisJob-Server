@@ -29,7 +29,14 @@ func SampleAIList(w http.ResponseWriter, r *http.Request) {
 	coll := db.Database("dj_jobs").Collection("job_list")
 
 	//쿼리1
-	filter := bson.D{{"사업장명", "서울아산병원"}}
+	filter := bson.D{
+		{"$in", bson.A{
+			bson.D{{"사업장명", "대한적십자사"}},
+			bson.D{{"사업장명", "코오롱글로벌"}},
+		},
+		},
+	}
+	//filter := bson.D{{"사업장명", bson.D{{"$regex", "서울아산병원"}}}}
 	var dbres_1 Dj_jobs_detail
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres_1)
 	ErrOK(err)
@@ -49,7 +56,7 @@ func SampleAIList(w http.ResponseWriter, r *http.Request) {
 	//병합
 	var will_send []Dj_jobs_detail
 	will_send = append(will_send, dbres_1, dbres_2, dbres_3)
-	will_send_json, _ := json.Marshal(will_send)
+	will_send_json, _ := json.MarshalIndent(will_send, " ", "	")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write(will_send_json)
@@ -73,9 +80,9 @@ func Test2(w http.ResponseWriter, r *http.Request) { //applist를 보낼 때 모
 	//쿼리1
 	filter := bson.D{
 		{"$and", bson.A{
-			bson.D{{"사업장 주소", bson.D{{"$regex", "대구"}}}},
-			bson.D{{"사업장 주소", bson.D{{"$regex", "북구"}}}},
-			bson.D{{"필수부위", bson.D{{"$regex", "팔"}}}},
+			bson.D{{"사업장 주소", bson.D{{"$regex", "서울특별시"}}}},
+			bson.D{{"사업장 주소", bson.D{{"$regex", "중구"}}}},
+			bson.D{{"필수부위", bson.D{{"$regex", ""}}}},
 		},
 		},
 	}

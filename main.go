@@ -80,12 +80,14 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.ErrHandler(w, r)
 		}
-	case "sample":
-		modules.SampleAIList(w, r)
+	case "AIList":
+		modules.AIListSender(w, r)
 	case "sessiontest":
 		modules.PrintSession(w, r)
 	case "session":
 		modules.PrintSession(w, r)
+	case "test":
+		modules.SampleAIList(w, r)
 	case "test2":
 		modules.Test2(w, r)
 	case "test3":

@@ -7,7 +7,9 @@
       // JSON 데이터 생성
       var data = {
         loc: document.getElementById("loc").value,
-        type: document.getElementById("type").value
+        type1: document.getElementById("type1").value,
+        type2: document.getElementById("type2").value,
+        type3: document.getElementById("type3").value,
       };
 
       // POST 요청 보내기
@@ -62,7 +64,9 @@
 </head>
 <body>
   <input type="text" id="loc" name="loc" placeholder="loc">
-  <input type="text" id="type" name="type" placeholder="type">
+  <input type="text" id="type1" name="type1" placeholder="type1">
+  <input type="text" id="type2" name="type2" placeholder="type2">
+  <input type="text" id="type3" name="type3" placeholder="type3">
   <button onclick="sendPostRequest()">수정</button><br>
   <button onclick="sendPostRequest_LOGOUT()">로그아웃 json</button>
 </body>
