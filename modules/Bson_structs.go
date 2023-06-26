@@ -72,3 +72,8 @@ type Dj_board_articles struct {
 	Title    string             `bson:"title"`
 	Content  string             `bson:"content"`
 }
+type Dj_jobs_typeavt struct {
+	ID           primitive.ObjectID `bson:"_id,omitempty"`
+	Type         string             `bson:"종류"`
+	Availability string             `bson:"가능 부위"`
+}

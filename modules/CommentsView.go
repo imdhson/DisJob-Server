@@ -55,14 +55,23 @@ func CommentsView(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 		useremail := OidTOuser_struct(v.Djuserid).Email
 		if v.Djuserid == primitive.NilObjectID {
 			useremail = "익명의 유저"
+		} else {
+			useremail, _, _ = strings.Cut(useremail, "@")
 		}
 		compare_time := time.Since(v.CreateAt).String()
-		compare_time_splited := strings.Split(compare_time, ".") //이후로 무시하기 위함
+		compare_time, _, _ = strings.Cut(compare_time, "m") // m 이후로 무시하기 위함
+		if strings.Contains(compare_time, ".") {            //1분 미만이면 방금이라고 표기
+			compare_time = "방금 "
+		} else {
+			compare_time += "분 " //1분 이상이면 숫자+분
+		}
+		compare_time = strings.ReplaceAll(compare_time, "h", "시간")
+		compare_time = strings.ReplaceAll(compare_time, "d", "일")
 		comments_msg +=
 			"<li><span class=\"comment-content\">" +
 				v.Content +
 				"</span><span class=\"comment-writer\">" +
-				useremail + "(이)가 " + compare_time_splited[0] + "초 전 작성</span></li>"
+				useremail + "(이)가 " + compare_time + "전 작성</span></li>"
 	}
 	htmlmodify.AddVar("comments_msg", comments_msg)
 	html_modified := htmlmodify.VarsOnHTML(wwwfile)

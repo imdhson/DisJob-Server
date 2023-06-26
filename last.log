@@ -170,3 +170,222 @@
 2023/06/25 20:29:25 ::1/assets/test.html
 2023/06/25 20:29:30 ::1/session/
 2023/06/25 20:29:34 ::1/session/
+2023/06/25 21:22:14 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:22:19 ::1/comments/
+2023/06/25 21:22:19 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:20 ::1/assets/comments.css
+2023/06/25 21:22:20 ::1/assets/normalize.css
+2023/06/25 21:22:41 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:22:41 ::1/comments/
+2023/06/25 21:22:41 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:42 ::1/assets/comments.css
+2023/06/25 21:22:42 ::1/assets/normalize.css
+2023/06/25 21:22:43 ::1/comments/
+2023/06/25 21:22:43 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:44 ::1/assets/comments.css
+2023/06/25 21:22:44 ::1/assets/normalize.css
+2023/06/25 21:22:45 ::1/comments/
+2023/06/25 21:22:45 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:45 ::1/assets/comments.css
+2023/06/25 21:22:45 ::1/assets/normalize.css
+2023/06/25 21:22:46 ::1/comments/
+2023/06/25 21:22:46 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:47 ::1/assets/comments.css
+2023/06/25 21:22:47 ::1/assets/normalize.css
+2023/06/25 21:22:48 ::1/comments/
+2023/06/25 21:22:48 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:22:49 ::1/assets/comments.css
+2023/06/25 21:22:49 ::1/assets/normalize.css
+2023/06/25 21:23:23 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:23:24 ::1/comments/
+2023/06/25 21:23:24 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:25 ::1/assets/comments.css
+2023/06/25 21:23:25 ::1/assets/normalize.css
+2023/06/25 21:23:27 ::1/comments/insert/
+2023/06/25 21:23:27 ErrOK:  http: named cookie not present
+2023/06/25 21:23:27 ::1/assets/main.css
+2023/06/25 21:23:27 ::1/assets/normalize.css
+2023/06/25 21:23:31 ::1/comments/
+2023/06/25 21:23:31 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:32 ::1/assets/comments.css
+2023/06/25 21:23:32 ::1/assets/normalize.css
+2023/06/25 21:23:34 ::1/comments/insert/
+2023/06/25 21:23:34 ErrOK:  http: named cookie not present
+2023/06/25 21:23:34 ::1/assets/main.css
+2023/06/25 21:23:34 ::1/assets/normalize.css
+2023/06/25 21:23:35 ::1/login
+2023/06/25 21:23:35 ::1/assets/main.css
+2023/06/25 21:23:35 ::1/assets/normalize.css
+2023/06/25 21:23:40 ::1/login/auth/id
+2023/06/25 21:23:40 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/25 21:23:40 ::1/login/id/hhammer1234@gmail.com
+2023/06/25 21:23:40 ::1/assets/main.css
+2023/06/25 21:23:40 ::1/assets/normalize.css
+2023/06/25 21:23:41 ::1/login/auth/password/
+2023/06/25 21:23:42 session이 겹치는 이메일 삭제 1
+2023/06/25 21:23:42 ObjectID("649831ce1984c1ede7116c9c")
+2023/06/25 21:23:42 ::1/session/
+2023/06/25 21:23:46 ::1/
+2023/06/25 21:23:46 ::1/assets/main.css
+2023/06/25 21:23:46 ::1/assets/normalize.css
+2023/06/25 21:23:46 ::1/comments/
+2023/06/25 21:23:46 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:47 ::1/assets/comments.css
+2023/06/25 21:23:47 ::1/assets/normalize.css
+2023/06/25 21:23:50 ::1/comments/insert/
+2023/06/25 21:23:50 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:51 ::1/comments/
+2023/06/25 21:23:51 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:52 ErrOK:  mongo: no documents in result
+2023/06/25 21:23:52 ::1/assets/normalize.css
+2023/06/25 21:23:52 ::1/assets/comments.css
+2023/06/25 21:23:54 ::1/comments/
+2023/06/25 21:23:54 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:55 ErrOK:  mongo: no documents in result
+2023/06/25 21:23:55 ::1/assets/normalize.css
+2023/06/25 21:23:55 ::1/assets/comments.css
+2023/06/25 21:23:56 ::1/comments/insert/
+2023/06/25 21:23:56 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:57 ::1/comments/
+2023/06/25 21:23:57 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:23:58 ErrOK:  mongo: no documents in result
+2023/06/25 21:23:58 ::1/assets/normalize.css
+2023/06/25 21:23:58 ::1/assets/comments.css
+2023/06/25 21:24:01 ::1/comments/insert/
+2023/06/25 21:24:01 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:02 ::1/comments/
+2023/06/25 21:24:02 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:03 ErrOK:  mongo: no documents in result
+2023/06/25 21:24:03 ::1/assets/normalize.css
+2023/06/25 21:24:03 ::1/assets/comments.css
+2023/06/25 21:24:06 ::1/comments/
+2023/06/25 21:24:06 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:06 ErrOK:  mongo: no documents in result
+2023/06/25 21:24:07 ::1/assets/comments.css
+2023/06/25 21:24:07 ::1/assets/normalize.css
+2023/06/25 21:24:08 ::1/comments/
+2023/06/25 21:24:08 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:09 ErrOK:  mongo: no documents in result
+2023/06/25 21:24:10 ::1/assets/comments.css
+2023/06/25 21:24:10 ::1/assets/normalize.css
+2023/06/25 21:24:10 ::1/assets/comments.css
+2023/06/25 21:24:10 ::1/assets/normalize.css
+2023/06/25 21:24:16 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:24:17 ::1/comments/
+2023/06/25 21:24:17 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:18 ErrOK:  mongo: no documents in result
+2023/06/25 21:24:19 ::1/assets/comments.css
+2023/06/25 21:24:19 ::1/assets/normalize.css
+2023/06/25 21:24:21 ::1/comments/
+2023/06/25 21:24:21 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:24:22 ErrOK:  mongo: no documents in result
+2023/06/25 21:24:22 ::1/assets/comments.css
+2023/06/25 21:24:22 ::1/assets/normalize.css
+2023/06/25 21:25:16 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:25:16 ::1/comments/
+2023/06/25 21:25:16 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:25:17 ErrOK:  mongo: no documents in result
+2023/06/25 21:25:18 ::1/assets/comments.css
+2023/06/25 21:25:18 ::1/assets/normalize.css
+2023/06/25 21:25:21 ::1/comments/insert/
+2023/06/25 21:25:21 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:25:22 ::1/comments/
+2023/06/25 21:25:22 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:25:22 ErrOK:  mongo: no documents in result
+2023/06/25 21:25:23 ::1/assets/comments.css
+2023/06/25 21:25:23 ::1/assets/normalize.css
+2023/06/25 21:25:24 ::1/comments/
+2023/06/25 21:25:24 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:25:25 ErrOK:  mongo: no documents in result
+2023/06/25 21:25:26 ::1/assets/comments.css
+2023/06/25 21:25:26 ::1/assets/normalize.css
+2023/06/25 21:25:33 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:26:09 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:26:10 ::1/comments/
+2023/06/25 21:26:10 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:26:16 ::1/comments/
+2023/06/25 21:26:16 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:26:21 ErrOK:  mongo: no documents in result
+2023/06/25 21:26:30 ::1/comments/
+2023/06/25 21:26:30 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:26:47 ErrOK:  mongo: no documents in result
+2023/06/25 21:26:56 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:26:57 ::1/comments/
+2023/06/25 21:26:57 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:27:28 ErrOK:  mongo: no documents in result
+2023/06/25 21:27:39 ::1/assets/comments.css
+2023/06/25 21:27:39 ::1/assets/normalize.css
+2023/06/25 21:28:03 ::1/comments/insert/
+2023/06/25 21:28:03 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:28:04 ::1/comments/
+2023/06/25 21:28:04 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:28:05 ErrOK:  mongo: no documents in result
+2023/06/25 21:28:06 ::1/assets/comments.css
+2023/06/25 21:28:06 ::1/assets/normalize.css
+2023/06/25 21:28:14 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:28:15 ::1/comments/
+2023/06/25 21:28:15 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:28:16 ErrOK:  mongo: no documents in result
+2023/06/25 21:28:17 ::1/assets/comments.css
+2023/06/25 21:28:17 ::1/assets/normalize.css
+2023/06/25 21:28:20 ::1/comments/
+2023/06/25 21:28:20 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:28:21 ErrOK:  mongo: no documents in result
+2023/06/25 21:28:22 ::1/assets/comments.css
+2023/06/25 21:28:22 ::1/assets/normalize.css
+2023/06/25 21:28:49 ::1/comments/
+2023/06/25 21:28:49 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:28:50 ErrOK:  mongo: no documents in result
+2023/06/25 21:28:51 ::1/assets/comments.css
+2023/06/25 21:28:51 ::1/assets/normalize.css
+2023/06/25 21:30:00 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:30:01 ::1/comments/
+2023/06/25 21:30:01 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:30:02 ErrOK:  mongo: no documents in result
+2023/06/25 21:30:04 ::1/assets/comments.css
+2023/06/25 21:30:04 ::1/assets/normalize.css
+2023/06/25 21:30:09 ::1/comments/
+2023/06/25 21:30:09 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:30:20 ErrOK:  mongo: no documents in result
+2023/06/25 21:30:30 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:30:31 ::1/comments/
+2023/06/25 21:30:31 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:30:52 ErrOK:  mongo: no documents in result
+2023/06/25 21:30:53 ::1/assets/comments.css
+2023/06/25 21:30:53 ::1/assets/normalize.css
+2023/06/25 21:31:20 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:31:21 ::1/comments/
+2023/06/25 21:31:21 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:31:22 ErrOK:  mongo: no documents in result
+2023/06/25 21:31:23 ::1/assets/comments.css
+2023/06/25 21:31:23 ::1/assets/normalize.css
+2023/06/25 21:32:27 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:32:27 ::1/comments/
+2023/06/25 21:32:27 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:32:28 ErrOK:  mongo: no documents in result
+2023/06/25 21:32:30 ::1/assets/comments.css
+2023/06/25 21:32:30 ::1/assets/normalize.css
+2023/06/25 21:32:31 ::1/comments/
+2023/06/25 21:32:31 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:32:32 ErrOK:  mongo: no documents in result
+2023/06/25 21:32:33 ::1/assets/comments.css
+2023/06/25 21:32:33 ::1/assets/normalize.css
+2023/06/25 21:32:34 ::1/comments/insert/
+2023/06/25 21:32:35 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:32:35 ::1/comments/
+2023/06/25 21:32:35 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:32:36 ErrOK:  mongo: no documents in result
+2023/06/25 21:32:38 ::1/assets/comments.css
+2023/06/25 21:32:38 ::1/assets/normalize.css
+2023/06/25 21:33:49 ::1/comments/
+2023/06/25 21:33:49 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:33:50 ErrOK:  mongo: no documents in result
+2023/06/25 21:33:51 ::1/assets/comments.css
+2023/06/25 21:33:51 ::1/assets/normalize.css
+2023/06/25 21:35:05 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/25 21:35:05 ::1/comments/
+2023/06/25 21:35:05 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/25 21:35:06 ErrOK:  mongo: no documents in result
+2023/06/25 21:35:08 ::1/assets/comments.css
+2023/06/25 21:35:08 ::1/assets/normalize.css
+2023/06/26 10:45:46 http://localhost:80 에서 요청을 기다리는 중:

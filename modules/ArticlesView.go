@@ -53,7 +53,7 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 
 	for _, v := range will_send {
 		compare_time := time.Since(v.CreateAt).String()
-		compare_time_splited := strings.Split(compare_time, ".") //이후로 무시하기 위함
+		compare_time_splited := strings.Split(compare_time, "m") //이후로 무시하기 위함
 		useremail := OidTOuser_struct(v.Djuserid).Email
 		article_url := "/articles/" + v.ID.Hex()
 		title_msg +=
@@ -61,7 +61,7 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 				"<li><span class=\"comment-content\">" +
 				v.Title +
 				"</span></a><span class=\"comment-writer\">" +
-				useremail + "(이)가 " + compare_time_splited[0] + "초 전 작성</span></li>"
+				useremail + "(이)가 " + compare_time_splited[0] + "분 전 작성</span></li>"
 	}
 	htmlmodify.AddVar("title_msg", title_msg)
 	html_modified := htmlmodify.VarsOnHTML(wwwfile)
