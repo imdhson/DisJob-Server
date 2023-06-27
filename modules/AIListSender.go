@@ -26,7 +26,7 @@ func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int)
 		//log.Println(v.ID, dbres.ID, v.ID == dbres.ID)
 		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
 			tmp = true
-			log.Println("!!!!!!이미 포함됨", v.ID, dbres.ID)
+			//log.Println("!!!!!!이미 포함됨", v.ID, dbres.ID)
 			//log.Println(v.AI_List_score, dbres.AI_List_score)
 			//v.AI_List_score += score //포인터 변수가 잘 수정되는지 확인 필요
 			(*input)[i].AI_List_score += score //포인터 타고가서 실제값 수정 성공
@@ -36,7 +36,7 @@ func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int)
 		}
 	}
 	if !tmp { //포함되지 않았을 때 dbres를 append함
-		log.Println("어펜드 시도", dbres.ID)
+		//log.Println("어펜드 시도", dbres.ID)
 		(*dbres).AI_List_score += score
 		*input = append(*input, *dbres)
 	}
@@ -186,6 +186,19 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 			will_send_append(&dbres_type, &will_send, 110)
 			cnt++
 		}
+	}
+
+	//will_send를 순회하여 급여에 대한 가산점 처리
+	for iw := range will_send {
+		switch will_send[iw].WageType {
+		case "시급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / 100
+		case "일급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / 100
+		case "월급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / 100
+		}
+
 	}
 
 	//
