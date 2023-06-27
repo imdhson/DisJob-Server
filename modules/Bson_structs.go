@@ -37,7 +37,8 @@ type Dj_user_session struct {
 }
 
 type Dj_jobs_detail struct {
-	App_List_num   int
+	AI_List_num    int
+	AI_List_score  int
 	ID             primitive.ObjectID `bson:"_id,omitempty"`
 	Duration       string             `bson:"구인신청일자"`
 	CompanyName    string             `bson:"사업장명"`
@@ -56,6 +57,18 @@ type Dj_jobs_detail struct {
 	CreateAt       string             `bson:"등록일"`
 	Contact        string             `bson:"연락처"`
 	BodySpec       string             `bson:"필수부위"`
+}
+type Dj_jobs_detail_s []Dj_jobs_detail
+
+func (a Dj_jobs_detail_s) Len() int {
+	return len(a)
+}
+
+func (a Dj_jobs_detail_s) Swap(i int, j int) {
+	a[i], a[j] = a[j], a[i]
+}
+func (a Dj_jobs_detail_s) Less(i int, j int) bool {
+	return a[i].AI_List_score < a[j].AI_List_score
 }
 
 type Dj_board_comments struct {

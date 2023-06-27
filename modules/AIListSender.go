@@ -6,22 +6,40 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
 	"strings"
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func will_send_contains(input []Dj_jobs_detail, oid primitive.ObjectID) bool {
-	for _, v := range input {
-		if v.ID == oid {
-			return true
+const (
+	BATCHSIZE = 100
+)
+
+func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
+	var tmp bool = false
+	for i, v := range *input {
+		//log.Println(v.ID, dbres.ID, v.ID == dbres.ID)
+		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
+			tmp = true
+			log.Println("!!!!!!이미 포함됨", v.ID, dbres.ID)
+			log.Println(v.AI_List_score, dbres.AI_List_score)
+			//v.AI_List_score += score //포인터 변수가 잘 수정되는지 확인 필요
+			(*input)[i].AI_List_score += score //포인터 타고가서 실제값 수정 성공
+			return
+		} else { //포함되지 않았을 때 dbres를 append함
+			log.Println(v.AI_List_score, dbres.AI_List_score)
+			tmp = false
 		}
 	}
-	return false
+	if !tmp { //포함되지 않았을 때 dbres를 append함
+		log.Println("어펜드 시도", dbres.ID)
+		(*dbres).AI_List_score += score
+		*input = append(*input, *dbres)
+	}
 }
 
 func contains(input []string, v string) bool {
@@ -35,7 +53,7 @@ func contains(input []string, v string) bool {
 	}
 	return false
 }
-func type_union(t1 string, t2 string, t3 string) []string { //장애유형을 받아서 교집합만 배열로 반환해줌
+func type_inters(t1 string, t2 string, t3 string) []string { //장애유형을 받아서 교집합만 배열로 반환해줌
 	var rst []string
 	t1 = strings.ReplaceAll(t1, " ", "") // space가 있으면 소거
 	t2 = strings.ReplaceAll(t2, " ", "")
@@ -89,37 +107,93 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type3}}).Decode(&typeavt[2])
 	ErrOK(err)
 
-	avt_unioned := type_union(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability) //교집합 구하기
-	//fmt.Printf("avt0: %v\navt1: %v\navt2: %v\n", typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability)
-	log.Println("avt unioned", avt_unioned)
+	avt_inters := type_inters(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability) //교집합 구하기
+	log.Println("avt inters:", avt_inters)
 	// avt 관련 쿼리 종료
 
 	//직장 쿼리 시작
+	//
+	//
 	coll := db.Database("dj_jobs").Collection("job_list")
-
-	filter_loc := ""
-	filter_avt := ""
+	// **도 쿼리 시작
+	var will_send Dj_jobs_detail_s
+	var filter_loc_0 string
+	var filter_loc_1 string
+	if len(splited_loc) <= 1 { //빈칸일경우 모든 지역 포함간주
+		filter_loc_0 = ""
+		filter_loc_1 = ""
+	} else {
+		filter_loc_0 = splited_loc[0]
+		filter_loc_1 = splited_loc[1]
+	}
 	filter := bson.D{
 		{"$and", bson.A{
-			bson.D{{"사업장 주소", bson.D{{"$regex", filter_loc}}}},
-			bson.D{{"필수부위", bson.D{{"$regex", filter_avt}}}},
+			bson.D{{"사업장 주소", bson.D{{"$regex", filter_loc_0}}}},
 		}}}
-
 	cursor, err := coll.Find(context.TODO(), filter)
+	ErrOK(err)
 	defer cursor.Close(context.TODO())
-	var will_send []Dj_jobs_detail
-	App_List_num := 0
+	cnt := 0
 	for cursor.Next(context.TODO()) {
-		var dbres Dj_jobs_detail
-		cursor.Decode(&dbres)
-		if !will_send_contains(will_send, dbres.ID) { //will_send에 이미 포함되지 않은 경우만 append
-			dbres.App_List_num = App_List_num
-			will_send = append(will_send, dbres)
-			App_List_num++
+		if cnt > BATCHSIZE {
+			break
+		}
+		var dbres_loc1 Dj_jobs_detail = Dj_jobs_detail{}
+		cursor.Decode(&dbres_loc1)
+		will_send_append(&dbres_loc1, &will_send, 200)
+		cnt++
+	}
+
+	// **시 쿼리 시작
+	filter = bson.D{
+		{"$and", bson.A{
+			bson.D{{"사업장 주소", bson.D{{"$regex", filter_loc_0}}}},
+			bson.D{{"사업장 주소", bson.D{{"$regex", filter_loc_1}}}},
+		}}}
+	cursor, err = coll.Find(context.TODO(), filter)
+	ErrOK(err)
+	defer cursor.Close(context.TODO())
+	cnt = 0
+	for cursor.Next(context.TODO()) {
+		if cnt > BATCHSIZE {
+			break
+		}
+		var dbres_loc2 Dj_jobs_detail = Dj_jobs_detail{}
+		cursor.Decode(&dbres_loc2)
+		will_send_append(&dbres_loc2, &will_send, 100)
+		cnt++
+	}
+	// type_inters 순회하여 쿼리 시작
+	for _, v := range avt_inters { //avt 순회
+		if cnt > BATCHSIZE {
+			break
+		}
+		filter_avt := v
+		filter := bson.D{
+			{"$and", bson.A{
+				bson.D{{"필수부위", bson.D{{"$regex", filter_avt}}}},
+			}}}
+		cursor, err := coll.Find(context.TODO(), filter)
+		ErrOK(err)
+		defer cursor.Close(context.TODO())
+		cnt = 0
+		for cursor.Next(context.TODO()) {
+			if cnt > BATCHSIZE {
+				break
+			}
+			var dbres_type Dj_jobs_detail
+			cursor.Decode(&dbres_type)
+			will_send_append(&dbres_type, &will_send, 110)
+			cnt++
 		}
 	}
-	ErrOK(err)
 
+	//
+	//
+	//
+
+	//score을 기반으로 sort 시작
+	sort.Sort(Dj_jobs_detail_s(will_send))
 	will_send_json, _ := json.MarshalIndent(will_send, " ", "	")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
