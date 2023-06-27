@@ -3,6 +3,9 @@
 * {
   font-family: 'Jua', sans-serif;
 }
+a:not(.button) {
+  color: black;
+}
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */

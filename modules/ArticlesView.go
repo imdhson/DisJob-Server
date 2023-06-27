@@ -9,6 +9,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -52,16 +53,26 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 	var title_msg string
 
 	for _, v := range will_send {
-		compare_time := time.Since(v.CreateAt).String()
-		compare_time_splited := strings.Split(compare_time, "m") //이후로 무시하기 위함
 		useremail := OidTOuser_struct(v.Djuserid).Email
+		if v.Djuserid == primitive.NilObjectID {
+			useremail = "익명의 유저"
+		} else {
+			useremail, _, _ = strings.Cut(useremail, "@")
+		}
+		compare_time := time.Since(v.CreateAt).String()
+		compare_time, _, _ = strings.Cut(compare_time, "m") // m 이후로 무시하기 위함
+		if strings.Contains(compare_time, ".") {            //1분 미만이면 방금이라고 표기
+			compare_time = "방금 "
+		} else {
+			compare_time += "분 " //1분 이상이면 숫자+분
+		}
+		compare_time = strings.ReplaceAll(compare_time, "h", "시간")
+		compare_time = strings.ReplaceAll(compare_time, "d", "일")
 		article_url := "/articles/" + v.ID.Hex()
-		title_msg +=
-			"<a href=\"" + article_url + "\"" + // /articles/oid 형식으로 전달되게됨
-				"<li><span class=\"comment-content\">" +
-				v.Title +
-				"</span></a><span class=\"comment-writer\">" +
-				useremail + "(이)가 " + compare_time_splited[0] + "분 전 작성</span></li>"
+		title_msg += "<a href="
+		title_msg += article_url
+		title_msg += "\"><li><span class=\"comment-content\">" + v.Title + "</span>" + "</span><span class=\"comment-writer\">" +
+			useremail + "(이)가 " + compare_time + "전 작성</span></li></a>"
 	}
 	htmlmodify.AddVar("title_msg", title_msg)
 	html_modified := htmlmodify.VarsOnHTML(wwwfile)

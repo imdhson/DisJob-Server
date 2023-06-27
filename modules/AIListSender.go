@@ -89,10 +89,10 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	//filter에 적용할 user의 데이터를 가져옴
 	user_struct := OidTOuser_struct(SessionTO_oid(w, r))
 	splited_loc := strings.Split(user_struct.Settings.Loc, " ")
-	if len(splited_loc) <= 1 { //인덱스 런타임 에러 방지
+	if len(splited_loc) <= 1 || IsHeLogin(w, r) { //인덱스 런타임 에러 방지
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
-		err_msg := map[string]string{"error": "users 관련 처리 중 오류 발생"}
+		err_msg := map[string]string{"error": "로그인이 되지 않음"}
 		err_msg_json, _ := json.MarshalIndent(err_msg, " ", "	")
 		w.Write(err_msg_json)
 		return
@@ -207,10 +207,10 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 
 	//score을 기반으로 sort 시작
 	sort.Sort(sort.Reverse(Dj_jobs_detail_s(will_send)))
-	sort_cnt := 0
-	for sorti, _ := range will_send {
-		will_send[sorti].AI_List_num = sort_cnt
-		sort_cnt++
+	ai_list_num := 0
+	for numi, _ := range will_send {
+		will_send[numi].AI_List_num = ai_list_num
+		ai_list_num++
 	}
 
 	var Outputsize_var int           //결과 슬라이싱시 인덱스 바깥으로 튀는것 방지하기 위함
@@ -219,7 +219,26 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	} else {
 		Outputsize_var = OUTPUTSIZE
 	}
-	will_send_json, _ := json.MarshalIndent(will_send[:Outputsize_var], " ", "	")
+
+	//필요한 만큼 outputsize로 자르고 메인에서 필요한 데이터만 남김
+	var will_send_refined []Dj_jobs_refined
+	for ir, vr := range will_send {
+		if ir > Outputsize_var {
+			break
+		}
+		tmp := Dj_jobs_refined{
+			AI_List_num:   vr.AI_List_num,
+			AI_List_score: vr.AI_List_score,
+			ID:            vr.ID,
+			CompanyName:   vr.CompanyName,
+			WageType:      vr.WageType,
+			Wage:          vr.Wage,
+			Address:       vr.Address,
+		}
+		will_send_refined = append(will_send_refined, tmp)
+	}
+
+	will_send_json, _ := json.MarshalIndent(will_send_refined, " ", "	")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write(will_send_json)
