@@ -3,7 +3,7 @@ package modules
 import (
 	"context"
 	"encoding/json"
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -41,7 +41,7 @@ func type_union(t1 string, t2 string, t3 string) []string { //장애유형을 �
 	t2 = strings.ReplaceAll(t2, " ", "")
 	t3 = strings.ReplaceAll(t3, " ", "")
 	t1_splited := strings.Split(t1, ",") //,를 기준으로 split
-	if len(t1_splited) <= 1 {            //1번 마저도 빈칸이면 모든 부위 사용 가능
+	if len(t1_splited) <= 1 {            //1번 마저도 빈칸이면 모든 부위 사용 가능으로 간주함
 		t1_splited = []string{"팔", "다리", "시각", "음성", "귀"}
 	}
 	t2_splited := strings.Split(t2, ",")
@@ -90,16 +90,19 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	ErrOK(err)
 
 	avt_unioned := type_union(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability) //교집합 구하기
-	fmt.Printf("avt0: %v\navt1: %v\navt2: %v\n", typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability)
-	//현재 개발중
-	fmt.Println("avt unioned", avt_unioned)
+	//fmt.Printf("avt0: %v\navt1: %v\navt2: %v\n", typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability)
+	log.Println("avt unioned", avt_unioned)
+	// avt 관련 쿼리 종료
 
+	//직장 쿼리 시작
 	coll := db.Database("dj_jobs").Collection("job_list")
-	//쿼리
+
+	filter_loc := ""
+	filter_avt := ""
 	filter := bson.D{
 		{"$and", bson.A{
-			bson.D{{"사업장 주소", bson.D{{"$regex", splited_loc[0]}}}},
-			bson.D{{"필수부위", bson.D{{"$regex", ""}}}},
+			bson.D{{"사업장 주소", bson.D{{"$regex", filter_loc}}}},
+			bson.D{{"필수부위", bson.D{{"$regex", filter_avt}}}},
 		}}}
 
 	cursor, err := coll.Find(context.TODO(), filter)
