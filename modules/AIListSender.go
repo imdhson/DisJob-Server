@@ -16,7 +16,8 @@ import (
 )
 
 const (
-	BATCHSIZE = 100
+	BATCHSIZE  = 2000
+	OUTPUTSIZE = 100
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
@@ -26,12 +27,11 @@ func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int)
 		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
 			tmp = true
 			log.Println("!!!!!!이미 포함됨", v.ID, dbres.ID)
-			log.Println(v.AI_List_score, dbres.AI_List_score)
+			//log.Println(v.AI_List_score, dbres.AI_List_score)
 			//v.AI_List_score += score //포인터 변수가 잘 수정되는지 확인 필요
 			(*input)[i].AI_List_score += score //포인터 타고가서 실제값 수정 성공
 			return
 		} else { //포함되지 않았을 때 dbres를 append함
-			log.Println(v.AI_List_score, dbres.AI_List_score)
 			tmp = false
 		}
 	}
@@ -193,8 +193,20 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	//
 
 	//score을 기반으로 sort 시작
-	sort.Sort(Dj_jobs_detail_s(will_send))
-	will_send_json, _ := json.MarshalIndent(will_send, " ", "	")
+	sort.Sort(sort.Reverse(Dj_jobs_detail_s(will_send)))
+	sort_cnt := 0
+	for sorti, _ := range will_send {
+		will_send[sorti].AI_List_num = sort_cnt
+		sort_cnt++
+	}
+
+	var Outputsize_var int           //결과 슬라이싱시 인덱스 바깥으로 튀는것 방지하기 위함
+	if len(will_send) < OUTPUTSIZE { //결과 슬라이싱시 인덱스 바깥으로 튀는것 방지하기 위함
+		Outputsize_var = len(will_send)
+	} else {
+		Outputsize_var = OUTPUTSIZE
+	}
+	will_send_json, _ := json.MarshalIndent(will_send[:Outputsize_var], " ", "	")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write(will_send_json)
