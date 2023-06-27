@@ -37,7 +37,7 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 		Critical(err)
 	}()
 	coll := db.Database("dj_board").Collection("articles")
-	opts := options.Find().SetSort(bson.D{{"createAt", 1}})
+	opts := options.Find().SetSort(bson.D{{"createAt", -1}})
 	cursor, err := coll.Find(context.TODO(), bson.D{}, opts)
 	ErrOK(err)
 
@@ -71,7 +71,7 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 		article_url := "/articles/" + v.ID.Hex()
 		title_msg += "<a href="
 		title_msg += article_url
-		title_msg += "\"><li><span class=\"comment-content\">" + v.Title + "</span>" + "</span><span class=\"comment-writer\">" +
+		title_msg += "><li><span class=\"comment-content\">" + v.Title + "</span><span class=\"comment-writer\">" +
 			useremail + "(이)가 " + compare_time + "전 작성</span></li></a>"
 	}
 	htmlmodify.AddVar("title_msg", title_msg)

@@ -47,7 +47,6 @@ func CommentsView(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 		cursor.Decode(&dbres)
 		will_send = append(will_send, dbres)
 	}
-	ErrOK(err)
 
 	htmlmodify.AddVar("form_action_url", "/comments/insert/"+ARJB_oid_str)
 	var comments_msg string

@@ -54,7 +54,7 @@ func CommentsInsert(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 		ErrOK(err)
 	} else {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		redirect_url := "/comments/" + ARJB_oid_str
+		redirect_url := "/articles/" + ARJB_oid_str
 		msg := "<meta http-equiv=\"refresh\" content=\"0;url=" + redirect_url + "\"></meta>"
 		w.Write([]byte(msg))
 	}

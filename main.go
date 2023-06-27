@@ -63,12 +63,14 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 			modules.CommentsView(w, r, &urlPath)
 		}
 	case "articles":
-		if urlPath[1] == "insert" && urlPath[2] == "" {
+		if urlPath[1] == "insert" && urlPath[2] == "" { //삽입 모드
 			modules.ArticlesInsertPage(w, r)
-		} else if urlPath[1] == "insert" && urlPath[2] == "submit" {
+		} else if urlPath[1] == "insert" && urlPath[2] == "submit" { //삽입 제출 모드
 			modules.ArticlesInsertHandler(w, r)
-		} else {
+		} else if urlPath[1] == "" { //게시글 제목 뷰 모드
 			modules.ArticlesView(w, r)
+		} else {
+			modules.ArticlesDetailHandler(w, r, &urlPath)
 		}
 
 	case "assets":

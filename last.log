@@ -3424,3 +3424,800 @@
 2023/06/27 21:33:10 ErrOK:  mongo: no documents in result
 2023/06/27 21:33:11 ::1/assets/articles.css
 2023/06/27 21:33:11 ::1/assets/normalize.css
+2023/06/27 21:39:05 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 21:39:10 ::1/articles
+2023/06/27 21:39:12 ErrOK:  mongo: no documents in result
+2023/06/27 21:39:13 ErrOK:  mongo: no documents in result
+2023/06/27 21:39:13 ::1/assets/articles.css
+2023/06/27 21:39:13 ::1/assets/normalize.css
+2023/06/27 21:39:34 ::1/articles
+2023/06/27 21:39:36 ErrOK:  mongo: no documents in result
+2023/06/27 21:39:37 ErrOK:  mongo: no documents in result
+2023/06/27 21:39:37 ::1/assets/articles.css
+2023/06/27 21:39:37 ::1/assets/normalize.css
+2023/06/27 21:41:08 ::1/articles
+2023/06/27 21:41:10 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:11 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:11 ::1/assets/articles.css
+2023/06/27 21:41:11 ::1/assets/normalize.css
+2023/06/27 21:41:23 ::1/articles
+2023/06/27 21:41:25 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:26 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:26 ::1/assets/articles.css
+2023/06/27 21:41:26 ::1/assets/normalize.css
+2023/06/27 21:41:36 ::1/articles
+2023/06/27 21:41:38 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:39 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:39 ::1/assets/articles.css
+2023/06/27 21:41:39 ::1/assets/normalize.css
+2023/06/27 21:41:41 ::1/articles
+2023/06/27 21:41:43 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:44 ErrOK:  mongo: no documents in result
+2023/06/27 21:41:44 ::1/assets/articles.css
+2023/06/27 21:41:44 ::1/assets/normalize.css
+2023/06/27 21:41:47 ::1/assets/normalize.css
+2023/06/27 21:42:28 ::1/articles
+2023/06/27 21:42:31 ErrOK:  mongo: no documents in result
+2023/06/27 21:42:31 ErrOK:  mongo: no documents in result
+2023/06/27 21:42:31 ::1/assets/articles.css
+2023/06/27 21:42:31 ::1/assets/normalize.css
+2023/06/27 21:42:51 ::1/assets/normalize.css
+2023/06/27 21:42:52 ::1/assets/normalize.css
+2023/06/27 21:42:54 ::1/assets/normalize.css
+2023/06/27 21:42:55 ::1/assets/normalize.css
+2023/06/27 21:42:56 ::1/assets/normalize.css
+2023/06/27 21:42:56 ::1/assets/normalize.css
+2023/06/27 21:42:57 ::1/assets/normalize.css
+2023/06/27 21:42:59 ::1/assets/normalize.css
+2023/06/27 21:43:04 ::1/articles
+2023/06/27 21:43:16 ErrOK:  mongo: no documents in result
+2023/06/27 21:43:16 ErrOK:  mongo: no documents in result
+2023/06/27 21:43:17 ::1/assets/articles.css
+2023/06/27 21:43:17 ::1/assets/normalize.css
+2023/06/27 21:43:25 ::1/assets/normalize.css
+2023/06/27 21:43:42 ::1/assets/normalize.css
+2023/06/27 21:43:45 ::1/assets/normalize.css
+2023/06/27 21:43:46 ::1/assets/normalize.css
+2023/06/27 21:43:48 ::1/assets/normalize.css
+2023/06/27 21:43:52 ::1/assets/normalize.css
+2023/06/27 21:43:57 ::1/assets/normalize.css
+2023/06/27 21:43:57 ::1/assets/normalize.css
+2023/06/27 21:44:05 ::1/articles
+2023/06/27 21:44:09 ErrOK:  mongo: no documents in result
+2023/06/27 21:44:09 ErrOK:  mongo: no documents in result
+2023/06/27 21:44:10 ::1/assets/articles.css
+2023/06/27 21:44:10 ::1/assets/normalize.css
+2023/06/27 21:44:15 ::1/assets/normalize.css
+2023/06/27 21:44:16 ::1/assets/normalize.css
+2023/06/27 21:44:32 ::1/assets/normalize.css
+2023/06/27 21:44:33 ::1/assets/normalize.css
+2023/06/27 21:44:34 ::1/assets/normalize.css
+2023/06/27 21:44:35 ::1/assets/normalize.css
+2023/06/27 21:44:36 ::1/assets/normalize.css
+2023/06/27 21:44:38 ::1/assets/normalize.css
+2023/06/27 21:44:40 ::1/assets/normalize.css
+2023/06/27 21:44:41 ::1/assets/normalize.css
+2023/06/27 21:44:42 ::1/assets/normalize.css
+2023/06/27 21:44:42 ::1/assets/normalize.css
+2023/06/27 21:44:44 ::1/assets/normalize.css
+2023/06/27 21:44:45 ::1/assets/normalize.css
+2023/06/27 21:44:47 ::1/assets/normalize.css
+2023/06/27 21:44:48 ::1/assets/normalize.css
+2023/06/27 21:45:06 ::1/assets/normalize.css
+2023/06/27 21:45:14 ::1/assets/normalize.css
+2023/06/27 21:45:15 ::1/assets/normalize.css
+2023/06/27 21:45:16 ::1/assets/normalize.css
+2023/06/27 21:45:20 ::1/assets/normalize.css
+2023/06/27 21:45:21 ::1/assets/normalize.css
+2023/06/27 21:45:23 ::1/assets/normalize.css
+2023/06/27 21:45:25 ::1/assets/normalize.css
+2023/06/27 21:45:27 ::1/assets/normalize.css
+2023/06/27 21:45:28 ::1/assets/normalize.css
+2023/06/27 21:45:29 ::1/assets/normalize.css
+2023/06/27 21:45:30 ::1/assets/normalize.css
+2023/06/27 21:45:35 ::1/assets/normalize.css
+2023/06/27 21:45:36 ::1/assets/normalize.css
+2023/06/27 21:46:33 ::1/articles
+2023/06/27 21:46:36 ErrOK:  mongo: no documents in result
+2023/06/27 21:46:36 ErrOK:  mongo: no documents in result
+2023/06/27 21:46:36 ::1/assets/articles.css
+2023/06/27 21:46:36 ::1/assets/normalize.css
+2023/06/27 21:46:49 ::1/articles
+2023/06/27 21:46:52 ErrOK:  mongo: no documents in result
+2023/06/27 21:46:53 ErrOK:  mongo: no documents in result
+2023/06/27 21:46:53 ::1/assets/articles.css
+2023/06/27 21:46:53 ::1/assets/normalize.css
+2023/06/27 21:47:25 ::1/articles
+2023/06/27 21:47:27 ErrOK:  mongo: no documents in result
+2023/06/27 21:47:28 ErrOK:  mongo: no documents in result
+2023/06/27 21:47:28 ::1/assets/articles.css
+2023/06/27 21:47:28 ::1/assets/normalize.css
+2023/06/27 21:59:54 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 21:59:56 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 21:59:58 ErrOK:  mongo: no documents in result
+2023/06/27 21:59:58 ErrOK:  mongo: no documents in result
+2023/06/27 21:59:59 ::1/assets/articles.css
+2023/06/27 21:59:59 ::1/assets/normalize.css
+2023/06/27 22:00:09 ::1/articles/6492ef1f9ae1e17f5897d834"
+2023/06/27 22:00:10 ErrOK:  mongo: no documents in result
+2023/06/27 22:00:11 ErrOK:  mongo: no documents in result
+2023/06/27 22:00:11 ::1/assets/articles.css
+2023/06/27 22:00:11 ::1/assets/normalize.css
+2023/06/27 22:01:28 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:01:29 ::1/articles/6492ef1f9ae1e17f5897d834"
+2023/06/27 22:01:30 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:01:30 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:31 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:31 ::1/assets/articles.css
+2023/06/27 22:01:31 ::1/assets/normalize.css
+2023/06/27 22:01:52 ::1/articles/6492ef1f9ae1e17f5897d834"
+2023/06/27 22:01:53 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:01:53 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:54 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:54 ::1/assets/articles.css
+2023/06/27 22:01:54 ::1/assets/normalize.css
+2023/06/27 22:01:55 ::1/articles/
+2023/06/27 22:01:57 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:57 ErrOK:  mongo: no documents in result
+2023/06/27 22:01:58 ::1/assets/articles.css
+2023/06/27 22:01:58 ::1/assets/normalize.css
+2023/06/27 22:02:22 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:02:23 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:02:24 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:24 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:24 ::1/assets/articles.css
+2023/06/27 22:02:24 ::1/assets/normalize.css
+2023/06/27 22:02:28 ::1/articles/6492ef109ae1e17f5897d82d22
+2023/06/27 22:02:29 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:02:30 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:31 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:31 ::1/assets/articles.css
+2023/06/27 22:02:31 ::1/assets/normalize.css
+2023/06/27 22:02:42 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:02:43 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:02:43 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:02:44 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:45 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:45 ErrOK:  mongo: no documents in result
+2023/06/27 22:02:45 ::1/assets/articles.css
+2023/06/27 22:02:45 ::1/assets/normalize.css
+2023/06/27 22:02:58 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:03:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:03:00 ::1/assets/articles.css
+2023/06/27 22:03:00 ::1/assets/normalize.css
+2023/06/27 22:03:25 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:03:26 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:03:27 ErrOK:  mongo: no documents in result
+2023/06/27 22:03:28 ErrOK:  mongo: no documents in result
+2023/06/27 22:03:28 ::1/assets/articles.css
+2023/06/27 22:03:28 ::1/assets/normalize.css
+2023/06/27 22:04:16 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:04:16 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:04:17 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:04:18 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:18 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:19 ::1/assets/articles.css
+2023/06/27 22:04:19 ::1/assets/normalize.css
+2023/06/27 22:04:23 ::1/articles/
+2023/06/27 22:04:24 ::1/articles
+2023/06/27 22:04:26 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:26 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:27 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:27 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:27 ::1/assets/articles.css
+2023/06/27 22:04:27 ::1/assets/normalize.css
+2023/06/27 22:04:30 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:04:31 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:04:32 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:33 ErrOK:  mongo: no documents in result
+2023/06/27 22:04:33 ::1/assets/articles.css
+2023/06/27 22:04:33 ::1/assets/normalize.css
+2023/06/27 22:05:22 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:05:24 ::1/articles
+2023/06/27 22:05:27 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:28 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:28 ::1/assets/articles.css
+2023/06/27 22:05:28 ::1/assets/normalize.css
+2023/06/27 22:05:30 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:05:32 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:33 ::1/assets/articles.css
+2023/06/27 22:05:33 ::1/assets/normalize.css
+2023/06/27 22:05:35 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:05:36 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:05:37 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:38 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:38 ::1/assets/articles.css
+2023/06/27 22:05:38 ::1/assets/normalize.css
+2023/06/27 22:05:53 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:05:54 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:05:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:56 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:05:57 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:05:57 ErrOK:  mongo: no documents in result
+2023/06/27 22:05:58 ::1/articles
+2023/06/27 22:05:58 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:01 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:01 ::1/assets/articles.css
+2023/06/27 22:06:01 ::1/assets/normalize.css
+2023/06/27 22:06:02 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:06:04 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:04 ::1/assets/articles.css
+2023/06/27 22:06:04 ::1/assets/normalize.css
+2023/06/27 22:06:08 ::1/articles/6492ef109ae1e17f5897d82d"
+2023/06/27 22:06:09 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:06:09 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:10 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:10 ::1/assets/articles.css
+2023/06/27 22:06:10 ::1/assets/normalize.css
+2023/06/27 22:06:23 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:06:26 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:26 ::1/assets/articles.css
+2023/06/27 22:06:26 ::1/assets/normalize.css
+2023/06/27 22:06:43 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:06:44 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:06:46 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:47 ::1/assets/articles.css
+2023/06/27 22:06:47 ::1/assets/normalize.css
+2023/06/27 22:06:49 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:06:51 ErrOK:  mongo: no documents in result
+2023/06/27 22:06:52 ::1/assets/articles.css
+2023/06/27 22:06:52 ::1/assets/normalize.css
+2023/06/27 22:08:39 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:08:39 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:08:42 ErrOK:  mongo: no documents in result
+2023/06/27 22:08:42 ::1/assets/articles.css
+2023/06/27 22:08:42 ::1/assets/normalize.css
+2023/06/27 22:08:48 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:08:50 ErrOK:  mongo: no documents in result
+2023/06/27 22:08:51 ::1/assets/articles.css
+2023/06/27 22:08:51 ::1/assets/normalize.css
+2023/06/27 22:08:53 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:08:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:08:55 ::1/assets/articles.css
+2023/06/27 22:08:55 ::1/assets/normalize.css
+2023/06/27 22:09:13 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:09:16 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:09:17 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:09:19 ErrOK:  mongo: no documents in result
+2023/06/27 22:09:19 ::1/assets/articles.css
+2023/06/27 22:09:19 ::1/assets/normalize.css
+2023/06/27 22:11:52 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:11:52 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:11:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:11:55 ::1/assets/articles.css
+2023/06/27 22:11:55 ::1/assets/normalize.css
+2023/06/27 22:12:09 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:12:11 ErrOK:  mongo: no documents in result
+2023/06/27 22:12:11 ::1/assets/articles.css
+2023/06/27 22:12:11 ::1/assets/normalize.css
+2023/06/27 22:12:32 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:12:34 ErrOK:  mongo: no documents in result
+2023/06/27 22:12:34 ::1/assets/articles.css
+2023/06/27 22:12:34 ::1/assets/normalize.css
+2023/06/27 22:12:56 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:12:58 ErrOK:  mongo: no documents in result
+2023/06/27 22:12:59 ::1/assets/articles.css
+2023/06/27 22:12:59 ::1/assets/normalize.css
+2023/06/27 22:13:03 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:13:06 ErrOK:  mongo: no documents in result
+2023/06/27 22:13:06 ::1/assets/articles.css
+2023/06/27 22:13:06 ::1/assets/normalize.css
+2023/06/27 22:14:11 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:14:12 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:14:15 ErrOK:  mongo: no documents in result
+2023/06/27 22:14:15 ::1/assets/articles.css
+2023/06/27 22:14:15 ::1/assets/normalize.css
+2023/06/27 22:14:25 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:14:27 ErrOK:  mongo: no documents in result
+2023/06/27 22:14:27 ::1/assets/articles.css
+2023/06/27 22:14:27 ::1/assets/normalize.css
+2023/06/27 22:14:46 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:14:48 ErrOK:  mongo: no documents in result
+2023/06/27 22:14:49 ::1/assets/articles.css
+2023/06/27 22:14:49 ::1/assets/normalize.css
+2023/06/27 22:15:11 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:15:14 ErrOK:  mongo: no documents in result
+2023/06/27 22:15:14 ::1/assets/articles.css
+2023/06/27 22:15:14 ::1/assets/normalize.css
+2023/06/27 22:16:45 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:16:48 ErrOK:  mongo: no documents in result
+2023/06/27 22:16:48 ::1/assets/articles.css
+2023/06/27 22:16:48 ::1/assets/normalize.css
+2023/06/27 22:17:28 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:17:29 ::1/articles/6492ef1f9ae1e17f5897d834
+2023/06/27 22:17:31 ErrOK:  mongo: no documents in result
+2023/06/27 22:17:31 ::1/assets/articles.css
+2023/06/27 22:17:31 ::1/assets/normalize.css
+2023/06/27 22:17:35 ::1/articles
+2023/06/27 22:17:37 ErrOK:  mongo: no documents in result
+2023/06/27 22:17:38 ErrOK:  mongo: no documents in result
+2023/06/27 22:17:38 ::1/assets/articles.css
+2023/06/27 22:17:38 ::1/assets/normalize.css
+2023/06/27 22:17:39 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:17:41 ErrOK:  mongo: no documents in result
+2023/06/27 22:17:42 ::1/assets/articles.css
+2023/06/27 22:17:42 ::1/assets/normalize.css
+2023/06/27 22:17:52 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:17:54 ErrOK:  mongo: no documents in result
+2023/06/27 22:17:54 ::1/assets/articles.css
+2023/06/27 22:17:54 ::1/assets/normalize.css
+2023/06/27 22:18:13 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:18:15 ErrOK:  mongo: no documents in result
+2023/06/27 22:18:15 ::1/assets/articles.css
+2023/06/27 22:18:15 ::1/assets/normalize.css
+2023/06/27 22:18:21 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:18:23 ErrOK:  mongo: no documents in result
+2023/06/27 22:18:23 ::1/assets/articles.css
+2023/06/27 22:18:23 ::1/assets/normalize.css
+2023/06/27 22:18:57 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:18:59 ErrOK:  mongo: no documents in result
+2023/06/27 22:18:59 ::1/assets/articles.css
+2023/06/27 22:18:59 ::1/assets/normalize.css
+2023/06/27 22:19:06 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:19:08 ErrOK:  mongo: no documents in result
+2023/06/27 22:19:08 ::1/assets/articles.css
+2023/06/27 22:19:08 ::1/assets/normalize.css
+2023/06/27 22:19:11 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:19:14 ErrOK:  mongo: no documents in result
+2023/06/27 22:19:14 ::1/assets/articles.css
+2023/06/27 22:19:14 ::1/assets/normalize.css
+2023/06/27 22:19:35 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:19:38 ErrOK:  mongo: no documents in result
+2023/06/27 22:19:38 ::1/assets/articles.css
+2023/06/27 22:19:38 ::1/assets/normalize.css
+2023/06/27 22:19:50 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:19:52 ErrOK:  mongo: no documents in result
+2023/06/27 22:19:52 ::1/assets/articles.css
+2023/06/27 22:19:52 ::1/assets/normalize.css
+2023/06/27 22:19:55 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:19:57 ErrOK:  mongo: no documents in result
+2023/06/27 22:19:58 ::1/assets/articles.css
+2023/06/27 22:19:58 ::1/assets/normalize.css
+2023/06/27 22:20:02 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:20:03 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:20:04 ErrOK:  mongo: no documents in result
+2023/06/27 22:20:06 ErrOK:  mongo: no documents in result
+2023/06/27 22:20:06 ::1/assets/articles.css
+2023/06/27 22:20:06 ::1/assets/normalize.css
+2023/06/27 22:20:09 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:20:12 ErrOK:  mongo: no documents in result
+2023/06/27 22:20:12 ::1/assets/articles.css
+2023/06/27 22:20:12 ::1/assets/normalize.css
+2023/06/27 22:20:18 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:20:21 ErrOK:  mongo: no documents in result
+2023/06/27 22:20:21 ::1/assets/articles.css
+2023/06/27 22:20:21 ::1/assets/normalize.css
+2023/06/27 22:20:43 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:20:46 ErrOK:  mongo: no documents in result
+2023/06/27 22:20:46 ::1/assets/articles.css
+2023/06/27 22:20:46 ::1/assets/normalize.css
+2023/06/27 22:20:57 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:00 ::1/assets/articles.css
+2023/06/27 22:21:00 ::1/assets/normalize.css
+2023/06/27 22:21:06 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:09 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:09 ::1/assets/articles.css
+2023/06/27 22:21:09 ::1/assets/normalize.css
+2023/06/27 22:21:15 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:18 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:18 ::1/assets/articles.css
+2023/06/27 22:21:18 ::1/assets/normalize.css
+2023/06/27 22:21:26 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:28 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:28 ::1/assets/articles.css
+2023/06/27 22:21:28 ::1/assets/normalize.css
+2023/06/27 22:21:36 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:39 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:39 ::1/assets/articles.css
+2023/06/27 22:21:39 ::1/assets/normalize.css
+2023/06/27 22:21:44 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:21:46 ErrOK:  mongo: no documents in result
+2023/06/27 22:21:46 ::1/assets/articles.css
+2023/06/27 22:21:46 ::1/assets/normalize.css
+2023/06/27 22:22:01 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:03 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:03 ::1/assets/articles.css
+2023/06/27 22:22:03 ::1/assets/normalize.css
+2023/06/27 22:22:19 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:21 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:21 ::1/assets/articles.css
+2023/06/27 22:22:21 ::1/assets/normalize.css
+2023/06/27 22:22:28 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:30 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:30 ::1/assets/articles.css
+2023/06/27 22:22:30 ::1/assets/normalize.css
+2023/06/27 22:22:33 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:35 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:35 ::1/assets/articles.css
+2023/06/27 22:22:35 ::1/assets/normalize.css
+2023/06/27 22:22:39 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:41 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:41 ::1/assets/articles.css
+2023/06/27 22:22:41 ::1/assets/normalize.css
+2023/06/27 22:22:53 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:55 ::1/assets/articles.css
+2023/06/27 22:22:55 ::1/assets/normalize.css
+2023/06/27 22:22:56 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:22:59 ErrOK:  mongo: no documents in result
+2023/06/27 22:22:59 ::1/assets/articles.css
+2023/06/27 22:22:59 ::1/assets/normalize.css
+2023/06/27 22:23:26 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:23:29 ErrOK:  mongo: no documents in result
+2023/06/27 22:23:29 ::1/assets/articles.css
+2023/06/27 22:23:29 ::1/assets/normalize.css
+2023/06/27 22:23:36 ::1/articles
+2023/06/27 22:23:39 ErrOK:  mongo: no documents in result
+2023/06/27 22:23:40 ErrOK:  mongo: no documents in result
+2023/06/27 22:23:40 ::1/assets/articles.css
+2023/06/27 22:23:40 ::1/assets/normalize.css
+2023/06/27 22:23:40 ::1/articles/insert
+2023/06/27 22:23:40 ::1/assets/articles_insert.css
+2023/06/27 22:23:40 ::1/assets/normalize.css
+2023/06/27 22:27:06 ::1/articles
+2023/06/27 22:27:09 ErrOK:  mongo: no documents in result
+2023/06/27 22:27:10 ErrOK:  mongo: no documents in result
+2023/06/27 22:27:10 ::1/assets/articles.css
+2023/06/27 22:27:10 ::1/assets/normalize.css
+2023/06/27 22:27:57 ::1/articles
+2023/06/27 22:28:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:01 ::1/assets/articles.css
+2023/06/27 22:28:01 ::1/assets/normalize.css
+2023/06/27 22:28:03 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:28:05 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:05 ::1/assets/articles.css
+2023/06/27 22:28:05 ::1/assets/normalize.css
+2023/06/27 22:28:32 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:28:35 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:35 ::1/assets/articles.css
+2023/06/27 22:28:35 ::1/assets/normalize.css
+2023/06/27 22:28:39 ::1/articles
+2023/06/27 22:28:41 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:42 ErrOK:  mongo: no documents in result
+2023/06/27 22:28:42 ::1/assets/articles.css
+2023/06/27 22:28:42 ::1/assets/normalize.css
+2023/06/27 22:28:57 ::1/articles
+2023/06/27 22:28:59 ErrOK:  mongo: no documents in result
+2023/06/27 22:29:00 ErrOK:  mongo: no documents in result
+2023/06/27 22:29:00 ::1/assets/articles.css
+2023/06/27 22:29:00 ::1/assets/normalize.css
+2023/06/27 22:29:01 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:29:03 ErrOK:  mongo: no documents in result
+2023/06/27 22:29:03 ::1/assets/articles.css
+2023/06/27 22:29:03 ::1/assets/normalize.css
+2023/06/27 22:30:02 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:30:03 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:30:05 ErrOK:  mongo: no documents in result
+2023/06/27 22:30:05 ::1/assets/articles.css
+2023/06/27 22:30:05 ::1/assets/normalize.css
+2023/06/27 22:30:07 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:30:09 ErrOK:  mongo: no documents in result
+2023/06/27 22:30:09 ::1/assets/articles.css
+2023/06/27 22:30:09 ::1/assets/normalize.css
+2023/06/27 22:30:24 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:30:26 ErrOK:  mongo: no documents in result
+2023/06/27 22:30:26 ::1/assets/articles.css
+2023/06/27 22:30:26 ::1/assets/normalize.css
+2023/06/27 22:30:32 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:30:32 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:30:35 ErrOK:  mongo: no documents in result
+2023/06/27 22:30:35 ::1/assets/articles.css
+2023/06/27 22:30:35 ::1/assets/normalize.css
+2023/06/27 22:30:59 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:30:59 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:31:02 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:02 ::1/assets/articles.css
+2023/06/27 22:31:02 ::1/assets/normalize.css
+2023/06/27 22:31:06 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:31:09 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:09 ::1/assets/articles.css
+2023/06/27 22:31:09 ::1/assets/normalize.css
+2023/06/27 22:31:11 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:31:13 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:13 ::1/assets/articles.css
+2023/06/27 22:31:13 ::1/assets/normalize.css
+2023/06/27 22:31:17 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:31:20 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:20 ::1/assets/articles.css
+2023/06/27 22:31:20 ::1/assets/normalize.css
+2023/06/27 22:31:27 ::1/articles/insert
+2023/06/27 22:31:27 ::1/assets/articles_insert.css
+2023/06/27 22:31:27 ::1/assets/normalize.css
+2023/06/27 22:31:36 ::1/articles/insert/submit
+2023/06/27 22:31:39 ::1/articles/
+2023/06/27 22:31:41 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:41 ErrOK:  mongo: no documents in result
+2023/06/27 22:31:42 ::1/assets/articles.css
+2023/06/27 22:31:42 ::1/assets/normalize.css
+2023/06/27 22:31:44 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:31:47 ::1/assets/articles.css
+2023/06/27 22:31:47 ::1/assets/normalize.css
+2023/06/27 22:32:05 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:32:07 ::1/assets/articles.css
+2023/06/27 22:32:07 ::1/assets/normalize.css
+2023/06/27 22:32:11 ::1/articles
+2023/06/27 22:32:13 ErrOK:  mongo: no documents in result
+2023/06/27 22:32:14 ErrOK:  mongo: no documents in result
+2023/06/27 22:32:15 ::1/assets/articles.css
+2023/06/27 22:32:15 ::1/assets/normalize.css
+2023/06/27 22:32:18 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:32:20 ::1/assets/articles.css
+2023/06/27 22:32:20 ::1/assets/normalize.css
+2023/06/27 22:32:27 ::1/articles
+2023/06/27 22:32:29 ErrOK:  mongo: no documents in result
+2023/06/27 22:32:30 ErrOK:  mongo: no documents in result
+2023/06/27 22:32:31 ::1/assets/articles.css
+2023/06/27 22:32:31 ::1/assets/normalize.css
+2023/06/27 22:32:38 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:32:40 ::1/assets/articles.css
+2023/06/27 22:32:40 ::1/assets/normalize.css
+2023/06/27 22:39:21 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:39:25 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:39:25 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:39:28 ::1/assets/articles.css
+2023/06/27 22:39:28 ::1/assets/normalize.css
+2023/06/27 22:39:51 ::1/
+2023/06/27 22:39:51 ::1/assets/main.css
+2023/06/27 22:39:51 ::1/assets/normalize.css
+2023/06/27 22:39:52 ::1/comments/
+2023/06/27 22:39:52 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:39:54 ::1/assets/comments.css
+2023/06/27 22:39:54 ::1/assets/normalize.css
+2023/06/27 22:40:43 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:40:46 ::1/assets/articles.css
+2023/06/27 22:40:46 ::1/assets/normalize.css
+2023/06/27 22:41:13 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:41:15 ::1/assets/articles.css
+2023/06/27 22:41:15 ::1/assets/normalize.css
+2023/06/27 22:41:23 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:41:26 ::1/assets/articles.css
+2023/06/27 22:41:26 ::1/assets/normalize.css
+2023/06/27 22:41:52 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:41:55 ::1/assets/articles.css
+2023/06/27 22:41:55 ::1/assets/normalize.css
+2023/06/27 22:42:33 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:42:36 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:42:37 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:42:40 ::1/assets/articles.css
+2023/06/27 22:42:40 ::1/assets/normalize.css
+2023/06/27 22:43:00 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:43:03 ::1/assets/articles.css
+2023/06/27 22:43:03 ::1/assets/normalize.css
+2023/06/27 22:43:10 ::1/
+2023/06/27 22:43:10 ::1/assets/main.css
+2023/06/27 22:43:10 ::1/assets/normalize.css
+2023/06/27 22:43:11 ::1/comments/
+2023/06/27 22:43:11 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:43:13 ::1/assets/comments.css
+2023/06/27 22:43:13 ::1/assets/normalize.css
+2023/06/27 22:44:10 ::1/comments/
+2023/06/27 22:44:10 ErrOK:  the provided hex string is not a valid ObjectID
+2023/06/27 22:44:11 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:44:13 ::1/assets/articles.css
+2023/06/27 22:44:13 ::1/assets/normalize.css
+2023/06/27 22:44:37 ::1/comments/insert/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:44:40 ::1/comments/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:44:42 ::1/assets/comments.css
+2023/06/27 22:44:42 ::1/assets/normalize.css
+2023/06/27 22:44:49 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:44:52 ::1/assets/articles.css
+2023/06/27 22:44:52 ::1/assets/normalize.css
+2023/06/27 22:44:56 ::1/comments/insert/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:44:59 ::1/comments/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:45:01 ::1/assets/comments.css
+2023/06/27 22:45:01 ::1/assets/normalize.css
+2023/06/27 22:48:05 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:48:06 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:48:10 ::1/assets/articles.css
+2023/06/27 22:48:10 ::1/assets/normalize.css
+2023/06/27 22:48:18 ::1/comments/insert/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:48:20 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:48:25 ErrOK:  mongo: no documents in result
+2023/06/27 22:48:25 ::1/assets/articles.css
+2023/06/27 22:48:25 ::1/assets/normalize.css
+2023/06/27 22:51:28 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:51:28 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:51:33 ErrOK:  mongo: no documents in result
+2023/06/27 22:51:33 ::1/assets/articles.css
+2023/06/27 22:51:33 ::1/assets/normalize.css
+2023/06/27 22:51:51 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:51:56 ErrOK:  mongo: no documents in result
+2023/06/27 22:51:56 ::1/assets/articles.css
+2023/06/27 22:51:56 ::1/assets/normalize.css
+2023/06/27 22:52:45 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:52:50 ErrOK:  mongo: no documents in result
+2023/06/27 22:52:50 ::1/assets/articles.css
+2023/06/27 22:52:50 ::1/assets/normalize.css
+2023/06/27 22:53:23 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 22:53:29 ErrOK:  mongo: no documents in result
+2023/06/27 22:53:29 ::1/assets/articles.css
+2023/06/27 22:53:29 ::1/assets/normalize.css
+2023/06/27 22:53:39 ::1/
+2023/06/27 22:53:39 ::1/assets/main.css
+2023/06/27 22:53:39 ::1/assets/normalize.css
+2023/06/27 22:53:41 ::1/
+2023/06/27 22:53:41 ::1/assets/main.css
+2023/06/27 22:53:41 ::1/assets/normalize.css
+2023/06/27 22:53:43 ::1/
+2023/06/27 22:53:43 ::1/assets/main.css
+2023/06/27 22:53:43 ::1/assets/normalize.css
+2023/06/27 22:53:43 ::1/
+2023/06/27 22:53:43 ::1/assets/main.css
+2023/06/27 22:53:43 ::1/assets/normalize.css
+2023/06/27 22:53:44 ::1/ailist
+2023/06/27 22:53:44 ::1/articles
+2023/06/27 22:53:47 ErrOK:  mongo: no documents in result
+2023/06/27 22:53:48 ErrOK:  mongo: no documents in result
+2023/06/27 22:53:48 ::1/assets/articles.css
+2023/06/27 22:53:48 ::1/assets/normalize.css
+2023/06/27 22:53:53 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:53:55 ErrOK:  mongo: no documents in result
+2023/06/27 22:53:55 ::1/assets/articles.css
+2023/06/27 22:53:55 ::1/assets/normalize.css
+2023/06/27 22:54:00 ::1/comments/insert/6492ef109ae1e17f5897d82d
+2023/06/27 22:54:03 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 22:54:05 ErrOK:  mongo: no documents in result
+2023/06/27 22:54:06 ::1/assets/articles.css
+2023/06/27 22:54:06 ::1/assets/normalize.css
+2023/06/27 22:54:16 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:54:18 ErrOK:  mongo: no documents in result
+2023/06/27 22:54:19 http: panic serving [::1]:57980: interface conversion: interface {} is nil, not string
+goroutine 2727 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x103155e60, 0x1400018c420})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.(*Vars_on_html).VarsOnHTML(0x140004754e0, {0x140000d0e00?, 0x102f94c03?, 0xc?})
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/VarOnHTML.go:23 +0x1ac
+disjob/modules.ArticlesDetailHandler({0x1031d1740, 0x14000222000}, 0x14000475a08?, 0x140004759f0)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/ArticlesDetailHandler.go:112 +0xee4
+main.urlHandler({0x1031d1740, 0x14000222000}, 0x14000354100)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:73 +0x7d0
+net/http.HandlerFunc.ServeHTTP(0x14000475ad8?, {0x1031d1740?, 0x14000222000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1031d1740, 0x14000222000}, 0x14000354100)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400022af00?}, {0x1031d1740, 0x14000222000}, 0x14000354100)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140003c46c0, {0x1031d1cf8, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/27 22:54:19 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:54:21 ErrOK:  mongo: no documents in result
+2023/06/27 22:54:21 http: panic serving [::1]:57981: interface conversion: interface {} is nil, not string
+goroutine 2728 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x103155e60, 0x140000f3470})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.(*Vars_on_html).VarsOnHTML(0x1400014d4e0, {0x140000d0000?, 0x102f94c03?, 0xc?})
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/VarOnHTML.go:23 +0x1ac
+disjob/modules.ArticlesDetailHandler({0x1031d1740, 0x14000222460}, 0x1400044da08?, 0x1400014d9f0)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/ArticlesDetailHandler.go:112 +0xee4
+main.urlHandler({0x1031d1740, 0x14000222460}, 0x14000490700)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:73 +0x7d0
+net/http.HandlerFunc.ServeHTTP(0x1400044dad8?, {0x1031d1740?, 0x14000222460?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1031d1740, 0x14000222460}, 0x14000490700)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400022afc0?}, {0x1031d1740, 0x14000222460}, 0x14000490700)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140003c4750, {0x1031d1cf8, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/27 22:54:21 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:54:23 ErrOK:  mongo: no documents in result
+2023/06/27 22:54:24 http: panic serving [::1]:58628: interface conversion: interface {} is nil, not string
+goroutine 5460 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x103155e60, 0x14000530ab0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.(*Vars_on_html).VarsOnHTML(0x1400014d4e0, {0x140002da700?, 0x102f94c03?, 0xc?})
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/VarOnHTML.go:23 +0x1ac
+disjob/modules.ArticlesDetailHandler({0x1031d1740, 0x140002fe000}, 0x1400011da08?, 0x1400014d9f0)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/ArticlesDetailHandler.go:112 +0xee4
+main.urlHandler({0x1031d1740, 0x140002fe000}, 0x140000f8400)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:73 +0x7d0
+net/http.HandlerFunc.ServeHTTP(0x1400011dad8?, {0x1031d1740?, 0x140002fe000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1031d1740, 0x140002fe000}, 0x140000f8400)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140000fcf00?}, {0x1031d1740, 0x140002fe000}, 0x140000f8400)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x14000142900, {0x1031d1cf8, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/27 22:55:14 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:55:15 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:55:18 ErrOK:  mongo: no documents in result
+2023/06/27 22:55:18 ::1/assets/articles.css
+2023/06/27 22:55:18 ::1/assets/normalize.css
+2023/06/27 22:56:27 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:56:27 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:56:30 ErrOK:  mongo: no documents in result
+2023/06/27 22:56:30 ::1/assets/articles.css
+2023/06/27 22:56:30 ::1/assets/normalize.css
+2023/06/27 22:56:32 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:56:34 ErrOK:  mongo: no documents in result
+2023/06/27 22:56:34 ::1/assets/articles.css
+2023/06/27 22:56:34 ::1/assets/normalize.css
+2023/06/27 22:57:10 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:57:10 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:57:13 ErrOK:  mongo: no documents in result
+2023/06/27 22:57:13 ::1/assets/articles.css
+2023/06/27 22:57:13 ::1/assets/normalize.css
+2023/06/27 22:57:29 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:57:30 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:57:32 ErrOK:  mongo: no documents in result
+2023/06/27 22:57:32 ::1/assets/articles.css
+2023/06/27 22:57:32 ::1/assets/normalize.css
+2023/06/27 22:58:01 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:58:01 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:58:04 ErrOK:  mongo: no documents in result
+2023/06/27 22:58:04 ::1/assets/articles.css
+2023/06/27 22:58:04 ::1/assets/normalize.css
+2023/06/27 22:58:07 ::1/comments/insert/648e92b1f2d0f84208c426ed
+2023/06/27 22:58:10 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:58:12 ErrOK:  mongo: no documents in result
+2023/06/27 22:58:13 ::1/assets/articles.css
+2023/06/27 22:58:13 ::1/assets/normalize.css
+2023/06/27 22:59:12 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:59:12 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:59:15 ErrOK:  mongo: no documents in result
+2023/06/27 22:59:15 ::1/assets/articles.css
+2023/06/27 22:59:15 ::1/assets/normalize.css
+2023/06/27 22:59:20 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 22:59:20 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 22:59:23 ErrOK:  mongo: no documents in result
+2023/06/27 22:59:24 ::1/assets/articles.css
+2023/06/27 22:59:24 ::1/assets/normalize.css
+2023/06/27 23:07:53 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 23:08:24 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 23:08:26 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 23:08:28 ErrOK:  mongo: no documents in result
+2023/06/27 23:08:29 ::1/assets/articles.css
+2023/06/27 23:08:29 ::1/assets/normalize.css
+2023/06/27 23:08:34 ::1/articles
+2023/06/27 23:08:37 ErrOK:  mongo: no documents in result
+2023/06/27 23:08:38 ErrOK:  mongo: no documents in result
+2023/06/27 23:08:38 ::1/assets/articles.css
+2023/06/27 23:08:38 ::1/assets/normalize.css
+2023/06/27 23:09:26 ::1/articles/insert
+2023/06/27 23:09:26 ::1/assets/articles_insert.css
+2023/06/27 23:09:26 ::1/assets/normalize.css
+2023/06/27 23:09:30 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 23:09:35 ErrOK:  mongo: no documents in result
+2023/06/27 23:09:35 ::1/assets/articles.css
+2023/06/27 23:09:35 ::1/assets/normalize.css
+2023/06/27 23:09:58 ::1/articles/648e92b1f2d0f84208c426ed
+2023/06/27 23:10:00 ErrOK:  mongo: no documents in result
+2023/06/27 23:10:01 ::1/assets/articles.css
+2023/06/27 23:10:01 ::1/assets/normalize.css
+2023/06/27 23:11:00 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 23:11:05 ErrOK:  mongo: no documents in result
+2023/06/27 23:11:05 ::1/assets/articles.css
+2023/06/27 23:11:05 ::1/assets/normalize.css
+2023/06/27 23:11:14 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/27 23:11:19 ErrOK:  mongo: no documents in result
+2023/06/27 23:11:19 ::1/assets/articles.css
+2023/06/27 23:11:19 ::1/assets/normalize.css
+2023/06/27 23:11:23 ::1/articles
+2023/06/27 23:11:26 ErrOK:  mongo: no documents in result
+2023/06/27 23:11:27 ErrOK:  mongo: no documents in result
+2023/06/27 23:11:27 ::1/assets/articles.css
+2023/06/27 23:11:27 ::1/assets/normalize.css
+2023/06/27 23:11:29 ::1/articles/insert
+2023/06/27 23:11:29 ::1/assets/articles_insert.css
+2023/06/27 23:11:29 ::1/assets/normalize.css
+2023/06/27 23:11:34 ::1/articles/6492ef109ae1e17f5897d82d
+2023/06/27 23:11:36 ErrOK:  mongo: no documents in result
+2023/06/27 23:11:37 ::1/assets/articles.css
+2023/06/27 23:11:37 ::1/assets/normalize.css
