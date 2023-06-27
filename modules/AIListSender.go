@@ -3,6 +3,7 @@ package modules
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 	"strings"
@@ -24,7 +25,7 @@ func will_send_contains(input []Dj_jobs_detail, oid primitive.ObjectID) bool {
 }
 
 func contains(input []string, v string) bool {
-	if len(input) < 1 { //빈칸일경우 무조건 true 반환
+	if len(input) <= 1 { //빈칸일경우 무조건 true 반환
 		return true
 	}
 	for _, v2 := range input {
@@ -34,14 +35,14 @@ func contains(input []string, v string) bool {
 	}
 	return false
 }
-func type_union(t1 string, t2 string, t3 string) []string { //장애유형을 받아서 합집합만 배열로 반환해줌
+func type_union(t1 string, t2 string, t3 string) []string { //장애유형을 받아서 교집합만 배열로 반환해줌
 	var rst []string
 	t1 = strings.ReplaceAll(t1, " ", "") // space가 있으면 소거
 	t2 = strings.ReplaceAll(t2, " ", "")
 	t3 = strings.ReplaceAll(t3, " ", "")
 	t1_splited := strings.Split(t1, ",") //,를 기준으로 split
-	if len(t1_splited) < 1 {             //1번 마저도 빈칸이면 모든 부위 사용 가능
-		return []string{"팔", "다리", "시각", "음성", "귀"}
+	if len(t1_splited) <= 1 {            //1번 마저도 빈칸이면 모든 부위 사용 가능
+		t1_splited = []string{"팔", "다리", "시각", "음성", "귀"}
 	}
 	t2_splited := strings.Split(t2, ",")
 	t3_splited := strings.Split(t3, ",")
@@ -80,12 +81,18 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	}
 
 	coll_avty := db.Database("dj_jobs").Collection("type_availability")
-	var typeavt []Dj_jobs_typeavt
-	coll_avty.FindOne(context.TODO(), bson.D{{"가능 부위", user_struct.Settings.Type1}}).Decode(typeavt[0])
-	coll_avty.FindOne(context.TODO(), bson.D{{"가능 부위", user_struct.Settings.Type2}}).Decode(typeavt[1])
-	coll_avty.FindOne(context.TODO(), bson.D{{"가능 부위", user_struct.Settings.Type3}}).Decode(typeavt[2])
+	var typeavt [3]Dj_jobs_typeavt
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type1}}).Decode(&typeavt[0])
+	ErrOK(err)
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type2}}).Decode(&typeavt[1])
+	ErrOK(err)
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type3}}).Decode(&typeavt[2])
+	ErrOK(err)
 
-	type_union(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability)
+	avt_unioned := type_union(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability) //교집합 구하기
+	fmt.Printf("avt0: %v\navt1: %v\navt2: %v\n", typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability)
+	//현재 개발중
+	fmt.Println("avt unioned", avt_unioned)
 
 	coll := db.Database("dj_jobs").Collection("job_list")
 	//쿼리

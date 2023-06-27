@@ -389,3 +389,715 @@
 2023/06/25 21:35:08 ::1/assets/comments.css
 2023/06/25 21:35:08 ::1/assets/normalize.css
 2023/06/26 10:45:46 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:35:48 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:36:02 ::1/
+2023/06/26 12:36:02 ::1/assets/main.css
+2023/06/26 12:36:02 ::1/assets/normalize.css
+2023/06/26 12:36:02 ::1/assets/test.html
+2023/06/26 12:36:03 ::1/ailist
+2023/06/26 12:36:03 ::1/assets/main.css
+2023/06/26 12:36:03 ::1/assets/normalize.css
+2023/06/26 12:36:32 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:36:32 ::1/ailist
+2023/06/26 12:36:33 ErrOK:  mongo: no documents in result
+2023/06/26 12:36:33 ErrOK:  mongo: no documents in result
+2023/06/26 12:36:40 ::1/
+2023/06/26 12:36:40 ::1/assets/main.css
+2023/06/26 12:36:40 ::1/assets/normalize.css
+2023/06/26 12:36:40 ::1/
+2023/06/26 12:36:40 ::1/assets/main.css
+2023/06/26 12:36:40 ::1/assets/normalize.css
+2023/06/26 12:36:41 ::1/login
+2023/06/26 12:36:41 ::1/assets/main.css
+2023/06/26 12:36:41 ::1/assets/normalize.css
+2023/06/26 12:36:42 ::1/login/auth/id
+2023/06/26 12:36:42 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/26 12:36:43 ::1/login/id/hhammer1234@gmail.com
+2023/06/26 12:36:43 ::1/assets/main.css
+2023/06/26 12:36:43 ::1/assets/normalize.css
+2023/06/26 12:36:44 ::1/login/auth/password/
+2023/06/26 12:36:44 session이 겹치는 이메일 삭제 1
+2023/06/26 12:36:44 ObjectID("649907cc07c2a49d6222e0a9")
+2023/06/26 12:36:44 ::1/session/
+2023/06/26 12:36:47 ::1/
+2023/06/26 12:36:47 ::1/assets/main.css
+2023/06/26 12:36:47 ::1/assets/normalize.css
+2023/06/26 12:36:47 ::1/assets/test.html
+2023/06/26 12:36:47 ::1/ailist
+2023/06/26 12:36:48 http: panic serving [::1]:55318: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1033a36a0, 0x14000528558})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1033d8e20, 0x140006821c0}, 0x14000177a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1033d8e20, 0x140006821c0}, 0x1400013c300)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000177ad8?, {0x1033d8e20?, 0x140006821c0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1033d8e20, 0x140006821c0}, 0x1400013c300)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400009bfb0?}, {0x1033d8e20, 0x140006821c0}, 0x1400013c300)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140000f21b0, {0x1033d9378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:36:48 ::1/ailist
+2023/06/26 12:36:49 http: panic serving [::1]:55342: runtime error: index out of range [0] with length 0
+goroutine 242 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1033a36a0, 0x140000a09d8})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1033d8e20, 0x140001300e0}, 0x14000315a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1033d8e20, 0x140001300e0}, 0x1400034e000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000315ad8?, {0x1033d8e20?, 0x140001300e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1033d8e20, 0x140001300e0}, 0x1400034e000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400038b290?}, {0x1033d8e20, 0x140001300e0}, 0x1400034e000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400038c1b0, {0x1033d9378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:36:49 ::1/ailist
+2023/06/26 12:36:50 http: panic serving [::1]:55484: runtime error: index out of range [0] with length 0
+goroutine 1475 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1033a36a0, 0x140000a09f0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1033d8e20, 0x140006b8540}, 0x14000392a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1033d8e20, 0x140006b8540}, 0x140001b4700)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000392ad8?, {0x1033d8e20?, 0x140006b8540?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1033d8e20, 0x140006b8540}, 0x140001b4700)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400059eae0?}, {0x1033d8e20, 0x140006b8540}, 0x140001b4700)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400033e630, {0x1033d9378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:15 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:39:17 ::1/ailist
+2023/06/26 12:39:18 http: panic serving [::1]:55540: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104c476a0, 0x14000171038})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104c7ce20, 0x140002280e0}, 0x140001b5a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104c7ce20, 0x140002280e0}, 0x1400023a000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140001b5ad8?, {0x104c7ce20?, 0x140002280e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104c7ce20, 0x140002280e0}, 0x1400023a000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x14000191fb0?}, {0x104c7ce20, 0x140002280e0}, 0x1400023a000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140001ea1b0, {0x104c7d378, 0x14000191ec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:18 ::1/ailist
+2023/06/26 12:39:27 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:39:28 ::1/ailist
+2023/06/26 12:39:29 http: panic serving [::1]:55620: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1036076a0, 0x140000fe930})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x10363ce20, 0x140001a80e0}, 0x14000133a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x10363ce20, 0x140001a80e0}, 0x140001ba000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000133ad8?, {0x10363ce20?, 0x140001a80e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10363ce20, 0x140001a80e0}, 0x140001ba000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400010ffb0?}, {0x10363ce20, 0x140001a80e0}, 0x140001ba000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400016a1b0, {0x10363d378, 0x1400010fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:29 ::1/ailist
+2023/06/26 12:39:30 http: panic serving [::1]:55680: runtime error: index out of range [0] with length 0
+goroutine 397 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1036076a0, 0x140000fe780})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x10363ce20, 0x14000480700}, 0x14000759a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x10363ce20, 0x14000480700}, 0x14000320900)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000759ad8?, {0x10363ce20?, 0x14000480700?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10363ce20, 0x14000480700}, 0x14000320900)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140000bde60?}, {0x10363ce20, 0x14000480700}, 0x14000320900)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400016b200, {0x10363d378, 0x1400010fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:30 ::1/ailist
+2023/06/26 12:39:31 http: panic serving [::1]:55714: runtime error: index out of range [0] with length 0
+goroutine 695 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1036076a0, 0x140002f65b8})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x10363ce20, 0x140001a8540}, 0x140004fca08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x10363ce20, 0x140001a8540}, 0x140000dc200)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140004fcad8?, {0x10363ce20?, 0x140001a8540?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x10363ce20, 0x140001a8540}, 0x140000dc200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x14000560150?}, {0x10363ce20, 0x140001a8540}, 0x140000dc200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x14000434510, {0x10363d378, 0x1400010fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:48 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:39:49 ::1/ailist
+2023/06/26 12:39:50 http: panic serving [::1]:55755: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x102bb76a0, 0x1400036e510})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x102bece20, 0x1400012e0e0}, 0x140000bda08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x102bece20, 0x1400012e0e0}, 0x1400013c000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140000bdad8?, {0x102bece20?, 0x1400012e0e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x102bece20, 0x1400012e0e0}, 0x1400013c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400009bfb0?}, {0x102bece20, 0x1400012e0e0}, 0x1400013c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140000f21b0, {0x102bed378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:50 ::1/ailist
+2023/06/26 12:39:51 http: panic serving [::1]:55795: runtime error: index out of range [0] with length 0
+goroutine 377 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x102bb76a0, 0x1400036ec90})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x102bece20, 0x14000370000}, 0x1400015ea08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x102bece20, 0x14000370000}, 0x140003ec000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400015ead8?, {0x102bece20?, 0x14000370000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x102bece20, 0x14000370000}, 0x140003ec000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400029e9c0?}, {0x102bece20, 0x14000370000}, 0x140003ec000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140003c4360, {0x102bed378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:39:51 ::1/ailist
+2023/06/26 12:39:52 http: panic serving [::1]:55829: runtime error: index out of range [0] with length 0
+goroutine 667 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x102bb76a0, 0x140000a0b28})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x102bece20, 0x140003707e0}, 0x14000713a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x102bece20, 0x140003707e0}, 0x1400013c500)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000713ad8?, {0x102bece20?, 0x140003707e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x102bece20, 0x140003707e0}, 0x1400013c500)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400013b350?}, {0x102bece20, 0x140003707e0}, 0x1400013c500)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140006d0ab0, {0x102bed378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:40:41 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:40:41 ::1/ailist
+2023/06/26 12:40:42 http: panic serving [::1]:55878: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1015bf6a0, 0x140004e83f0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1015f4e20, 0x140001840e0}, 0x1400011ba08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1015f4e20, 0x140001840e0}, 0x14000190000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400011bad8?, {0x1015f4e20?, 0x140001840e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1015f4e20, 0x140001840e0}, 0x14000190000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400007ffb0?}, {0x1015f4e20, 0x140001840e0}, 0x14000190000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140001421b0, {0x1015f5378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:40:42 ::1/ailist
+2023/06/26 12:40:43 http: panic serving [::1]:55917: runtime error: index out of range [0] with length 0
+goroutine 344 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1015bf6a0, 0x140002eeb40})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1015f4e20, 0x1400049e1c0}, 0x140004dba08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1015f4e20, 0x1400049e1c0}, 0x14000190200)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140004dbad8?, {0x1015f4e20?, 0x1400049e1c0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1015f4e20, 0x1400049e1c0}, 0x14000190200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140000aa6c0?}, {0x1015f4e20, 0x1400049e1c0}, 0x14000190200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400032c480, {0x1015f5378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:40:43 ::1/ailist
+2023/06/26 12:40:44 http: panic serving [::1]:55955: runtime error: index out of range [0] with length 0
+goroutine 707 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1015bf6a0, 0x140002ee780})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1015f4e20, 0x140001848c0}, 0x1400042fa08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1015f4e20, 0x140001848c0}, 0x14000190f00)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400042fad8?, {0x1015f4e20?, 0x140001848c0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1015f4e20, 0x140001848c0}, 0x14000190f00)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400018f8c0?}, {0x1015f4e20, 0x140001848c0}, 0x14000190f00)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x14000142cf0, {0x1015f5378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:43:21 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:43:22 ::1/ailist
+2023/06/26 12:43:23 http: panic serving [::1]:56008: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1007a36a0, 0x140003f8018})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1007d8e20, 0x140001a80e0}, 0x1400012fa08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:86 +0x454
+main.urlHandler({0x1007d8e20, 0x140001a80e0}, 0x140001b0000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400012fad8?, {0x1007d8e20?, 0x140001a80e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1007d8e20, 0x140001a80e0}, 0x140001b0000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400010bf80?}, {0x1007d8e20, 0x140001a80e0}, 0x140001b0000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400016a1b0, {0x1007d9378, 0x1400010be90})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:43:23 ::1/ailist
+2023/06/26 12:43:24 http: panic serving [::1]:56044: runtime error: index out of range [0] with length 0
+goroutine 327 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1007a36a0, 0x140005d0228})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1007d8e20, 0x14000340000}, 0x14000696a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:86 +0x454
+main.urlHandler({0x1007d8e20, 0x14000340000}, 0x1400032c000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000696ad8?, {0x1007d8e20?, 0x14000340000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1007d8e20, 0x14000340000}, 0x1400032c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140003c2300?}, {0x1007d8e20, 0x14000340000}, 0x1400032c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x14000244090, {0x1007d9378, 0x1400010be90})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:43:24 ::1/ailist
+2023/06/26 12:43:25 http: panic serving [::1]:56083: runtime error: index out of range [0] with length 0
+goroutine 127 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1007a36a0, 0x14000024978})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1007d8e20, 0x140003f0000}, 0x14000625a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:86 +0x454
+main.urlHandler({0x1007d8e20, 0x140003f0000}, 0x140003e6000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000625ad8?, {0x1007d8e20?, 0x140003f0000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1007d8e20, 0x140003f0000}, 0x140003e6000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140006d8750?}, {0x1007d8e20, 0x140003f0000}, 0x140003e6000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140005041b0, {0x1007d9378, 0x1400010be90})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:44:13 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:44:14 ::1/ailist
+2023/06/26 12:44:15 http: panic serving [::1]:56138: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x10333b840, 0x14000258660})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x103370fe0, 0x140001840e0}, 0x1400011ba08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:86 +0x470
+main.urlHandler({0x103370fe0, 0x140001840e0}, 0x1400018e000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400011bad8?, {0x103370fe0?, 0x140001840e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x103370fe0, 0x140001840e0}, 0x1400018e000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400007ffb0?}, {0x103370fe0, 0x140001840e0}, 0x1400018e000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140001421b0, {0x103371538, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:44:15 ::1/ailist
+2023/06/26 12:44:26 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:44:26 ::1/ailist
+2023/06/26 12:44:27 http: panic serving [::1]:56212: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104c2b6a0, 0x14000024e10})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104c60e20, 0x140001b00e0}, 0x1400013fa08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104c60e20, 0x140001b00e0}, 0x140001bc000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400013fad8?, {0x104c60e20?, 0x140001b00e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104c60e20, 0x140001b00e0}, 0x140001bc000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400011dfb0?}, {0x104c60e20, 0x140001b00e0}, 0x140001bc000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140001721b0, {0x104c61378, 0x1400011dec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:44:27 ::1/ailist
+2023/06/26 12:44:28 http: panic serving [::1]:56249: runtime error: index out of range [0] with length 0
+goroutine 329 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104c2b6a0, 0x140002004b0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104c60e20, 0x14000440000}, 0x1400044ca08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104c60e20, 0x14000440000}, 0x1400043a000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400044cad8?, {0x104c60e20?, 0x14000440000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104c60e20, 0x14000440000}, 0x1400043a000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400031e9c0?}, {0x104c60e20, 0x14000440000}, 0x1400043a000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140003283f0, {0x104c61378, 0x1400011dec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:44:28 ::1/ailist
+2023/06/26 12:44:29 http: panic serving [::1]:56285: runtime error: index out of range [0] with length 0
+goroutine 705 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104c2b6a0, 0x140002eae40})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104c60e20, 0x14000638380}, 0x14000673a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104c60e20, 0x14000638380}, 0x140002c6200)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000673ad8?, {0x104c60e20?, 0x14000638380?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104c60e20, 0x14000638380}, 0x140002c6200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400063af30?}, {0x104c60e20, 0x14000638380}, 0x140002c6200)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140000b4120, {0x104c61378, 0x1400011dec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:45:17 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:45:18 ::1/ailist
+2023/06/26 12:45:19 http: panic serving [::1]:56332: runtime error: index out of range [0] with length 0
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104b576a0, 0x140001c2828})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104b8ce20, 0x140001300e0}, 0x140000bda08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104b8ce20, 0x140001300e0}, 0x1400013c000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140000bdad8?, {0x104b8ce20?, 0x140001300e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104b8ce20, 0x140001300e0}, 0x1400013c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400009bfb0?}, {0x104b8ce20, 0x140001300e0}, 0x1400013c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140000ce240, {0x104b8d378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:45:19 ::1/ailist
+2023/06/26 12:45:20 http: panic serving [::1]:56372: runtime error: index out of range [0] with length 0
+goroutine 366 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104b576a0, 0x140002decd8})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104b8ce20, 0x140002e28c0}, 0x140003f8a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104b8ce20, 0x140002e28c0}, 0x1400013ca00)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140003f8ad8?, {0x104b8ce20?, 0x140002e28c0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104b8ce20, 0x140002e28c0}, 0x1400013ca00)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140004af770?}, {0x104b8ce20, 0x140002e28c0}, 0x1400013ca00)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400038c900, {0x104b8d378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:45:20 ::1/ailist
+2023/06/26 12:45:21 http: panic serving [::1]:56408: runtime error: index out of range [0] with length 0
+goroutine 648 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x104b576a0, 0x140001c2060})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x104b8ce20, 0x1400057eb60}, 0x14000313a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x104b8ce20, 0x1400057eb60}, 0x14000620600)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x14000313ad8?, {0x104b8ce20?, 0x1400057eb60?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104b8ce20, 0x1400057eb60}, 0x14000620600)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140001d9830?}, {0x104b8ce20, 0x1400057eb60}, 0x14000620600)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x14000244870, {0x104b8d378, 0x1400009bec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:46:11 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:46:12 ::1/ailist
+2023/06/26 12:46:12 http: panic serving [::1]:56452: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1011b76a0, 0x140000f2b88})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1011ece20, 0x140001820e0}, 0x1400011ba08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1011ece20, 0x140001820e0}, 0x1400018c000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400011bad8?, {0x1011ece20?, 0x140001820e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1011ece20, 0x140001820e0}, 0x1400018c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400007ffb0?}, {0x1011ece20, 0x140001820e0}, 0x1400018c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140001421b0, {0x1011ed378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:46:13 ::1/ailist
+2023/06/26 12:46:13 http: panic serving [::1]:56490: runtime error: index out of range [0] with length 0
+goroutine 344 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1011b76a0, 0x14000690000})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1011ece20, 0x140001827e0}, 0x1400008da08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1011ece20, 0x140001827e0}, 0x1400018c800)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x1400008dad8?, {0x1011ece20?, 0x140001827e0?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1011ece20, 0x140001827e0}, 0x1400018c800)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x1400022a0c0?}, {0x1011ece20, 0x140001827e0}, 0x1400018c800)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x1400022c7e0, {0x1011ed378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:46:13 ::1/ailist
+2023/06/26 12:46:14 http: panic serving [::1]:56520: runtime error: index out of range [0] with length 0
+goroutine 508 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1854 +0xb0
+panic({0x1011b76a0, 0x140000f2918})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/runtime/panic.go:890 +0x258
+disjob/modules.AIListSender({0x1011ece20, 0x140002ec000}, 0x140001b4a08?)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/modules/AIListSender.go:85 +0x40c
+main.urlHandler({0x1011ece20, 0x140002ec000}, 0x1400018c000)
+	/Users/sondonghwi/Documents/git/mongodb-go/mongo-go/main.go:84 +0x624
+net/http.HandlerFunc.ServeHTTP(0x140001b4ad8?, {0x1011ece20?, 0x140002ec000?}, 0x10?)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2122 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x1011ece20, 0x140002ec000}, 0x1400018c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2500 +0x140
+net/http.serverHandler.ServeHTTP({0x140005960c0?}, {0x1011ece20, 0x140002ec000}, 0x1400018c000)
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:2936 +0x2d8
+net/http.(*conn).serve(0x140000b4000, {0x1011ed378, 0x1400007fec0})
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:1995 +0x560
+created by net/http.(*Server).Serve
+	/opt/homebrew/Cellar/go/1.20.4/libexec/src/net/http/server.go:3089 +0x520
+2023/06/26 12:46:27 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:46:29 ::1/ailist
+2023/06/26 12:46:30 치명적인 오류 발생:  mongo: no documents in result
+2023/06/26 12:46:30 mongo: no documents in result
+2023/06/26 12:48:42 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:48:42 ::1/ailist
+2023/06/26 12:48:43 ErrOK:  mongo: no documents in result
+2023/06/26 12:48:43 ErrOK:  mongo: no documents in result
+2023/06/26 12:48:43 ErrOK:  mongo: no documents in result
+2023/06/26 12:49:13 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:49:13 ::1/ailist
+2023/06/26 12:49:14 ErrOK:  mongo: no documents in result
+2023/06/26 12:49:14 ErrOK:  mongo: no documents in result
+2023/06/26 12:49:14 ErrOK:  mongo: no documents in result
+2023/06/26 12:49:55 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:49:55 ::1/ailist
+2023/06/26 12:49:56 ErrOK:  mongo: no documents in result
+2023/06/26 12:50:13 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:50:14 ::1/ailist
+2023/06/26 12:50:15 ErrOK:  mongo: no documents in result
+2023/06/26 12:50:52 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:50:52 ::1/ailist
+2023/06/26 12:50:53 ErrOK:  mongo: no documents in result
+2023/06/26 12:51:07 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:51:08 ::1/ailist
+2023/06/26 12:51:09 ErrOK:  mongo: no documents in result
+2023/06/26 12:51:21 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:51:23 ::1/ailist
+2023/06/26 12:51:24 ErrOK:  mongo: no documents in result
+2023/06/26 12:51:39 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:51:39 ::1/ailist
+2023/06/26 12:51:40 ErrOK:  mongo: no documents in result
+2023/06/26 12:52:09 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:52:11 ::1/ailist
+2023/06/26 12:52:11 ErrOK:  mongo: no documents in result
+2023/06/26 12:52:37 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:52:39 ::1/ailist
+2023/06/26 12:52:40 ErrOK:  mongo: no documents in result
+2023/06/26 12:53:02 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/26 12:53:02 ::1/ailist
+2023/06/26 12:53:03 ErrOK:  mongo: no documents in result
+2023/06/27 11:03:07 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 11:03:13 ::1/
+2023/06/27 11:03:13 ::1/assets/main.css
+2023/06/27 11:03:13 ::1/assets/normalize.css
+2023/06/27 11:03:15 ::1/ailist
+2023/06/27 11:03:16 ErrOK:  mongo: no documents in result
+2023/06/27 11:03:16 ErrOK:  mongo: no documents in result
+2023/06/27 11:03:19 ::1/session/
+2023/06/27 11:03:20 ErrOK:  mongo: no documents in result
+2023/06/27 11:03:20 ::1/
+2023/06/27 11:03:20 ::1/assets/main.css
+2023/06/27 11:03:20 ::1/assets/normalize.css
+2023/06/27 11:03:20 ::1/login
+2023/06/27 11:03:20 ::1/assets/main.css
+2023/06/27 11:03:20 ::1/assets/normalize.css
+2023/06/27 11:03:24 ::1/login/auth/id
+2023/06/27 11:03:25 ::1/login/
+2023/06/27 11:03:25 ::1/assets/main.css
+2023/06/27 11:03:25 ::1/assets/normalize.css
+2023/06/27 11:03:29 ::1/login/auth/id
+2023/06/27 11:03:29 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/27 11:03:29 ::1/login/id/hhammer1234@gmail.com
+2023/06/27 11:03:29 ::1/assets/main.css
+2023/06/27 11:03:29 ::1/assets/normalize.css
+2023/06/27 11:03:31 ::1/login/auth/password/
+2023/06/27 11:03:32 session이 겹치는 이메일 삭제 1
+2023/06/27 11:03:32 ObjectID("649a437417ef61555ac4545d")
+2023/06/27 11:03:32 ::1/session/
+2023/06/27 11:03:41 ::1/session/
+2023/06/27 11:03:41 ::1/
+2023/06/27 11:03:41 ::1/assets/main.css
+2023/06/27 11:03:41 ::1/assets/normalize.css
+2023/06/27 11:03:41 ::1/ailist
+2023/06/27 11:03:57 ::1/
+2023/06/27 11:03:57 ::1/assets/main.css
+2023/06/27 11:03:57 ::1/assets/normalize.css
+2023/06/27 13:00:20 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 13:00:25 ::1/
+2023/06/27 13:00:25 ::1/assets/main.css
+2023/06/27 13:00:25 ::1/assets/normalize.css
+2023/06/27 13:00:25 ::1/ailist
+2023/06/27 13:00:26 ErrOK:  mongo: no documents in result
+2023/06/27 13:00:26 ErrOK:  mongo: no documents in result
+2023/06/27 13:00:39 ::1/
+2023/06/27 13:00:39 ::1/assets/main.css
+2023/06/27 13:00:39 ::1/assets/normalize.css
+2023/06/27 13:00:40 ::1/login
+2023/06/27 13:00:40 ::1/assets/main.css
+2023/06/27 13:00:40 ::1/assets/normalize.css
+2023/06/27 13:00:43 ::1/login/auth/id
+2023/06/27 13:00:44 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/27 13:00:44 ::1/login/id/hhammer1234@gmail.com
+2023/06/27 13:00:44 ::1/assets/main.css
+2023/06/27 13:00:44 ::1/assets/normalize.css
+2023/06/27 13:00:45 ::1/login/auth/password/
+2023/06/27 13:00:45 session이 겹치는 이메일 삭제 1
+2023/06/27 13:00:45 ObjectID("649a5eedf280c304422b016c")
+2023/06/27 13:00:45 ::1/session/
+2023/06/27 13:00:54 ::1/
+2023/06/27 13:00:54 ::1/assets/main.css
+2023/06/27 13:00:54 ::1/assets/normalize.css
+2023/06/27 13:00:54 ::1/ailist
+2023/06/27 13:00:54 ::1/assets/test.html
+2023/06/27 13:00:55 ::1/ailist
+2023/06/27 13:00:55 ErrOK:  mongo: no documents in result
+2023/06/27 13:00:55 ::1/ais
+2023/06/27 13:00:55 ::1/assets/main.css
+2023/06/27 13:00:55 ::1/assets/normalize.css
+2023/06/27 13:00:56 ErrOK:  mongo: no documents in result
+2023/06/27 13:00:57 ::1/ailist
+2023/06/27 13:00:58 ErrOK:  mongo: no documents in result
+2023/06/27 13:02:06 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 13:02:07 ::1/ailist
+2023/06/27 13:02:08 ErrOK:  mongo: no documents in result
+2023/06/27 13:02:30 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 13:02:30 ::1/ailist
+2023/06/27 13:02:31 ErrOK:  mongo: no documents in result
+2023/06/27 13:04:19 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/27 13:04:21 ::1/ailist
+2023/06/27 13:04:22 ErrOK:  mongo: no documents in result

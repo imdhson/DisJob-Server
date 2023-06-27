@@ -80,7 +80,7 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.ErrHandler(w, r)
 		}
-	case "AIList":
+	case "ailist":
 		modules.AIListSender(w, r)
 	case "sessiontest":
 		modules.PrintSession(w, r)
