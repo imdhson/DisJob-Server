@@ -60,14 +60,13 @@ type Dj_jobs_detail struct {
 }
 type Dj_jobs_detail_s []Dj_jobs_detail
 type Dj_jobs_refined struct {
-	AI_List_num   int
-	AI_List_score int
-	ID            primitive.ObjectID `bson:"_id,omitempty" json:"_id"`
-	CompanyName   string             `bson:"사업장명" json:"사업장명"`
-	WageType      string             `bson:"임금형태" json:"임금형태"`
-	Wage          int                `bson:"임금" json:"임금"`
-	Address       string             `bson:"사업장 주소" json:"사업장 주소"`
-	RecuritShape  string             `bson:"고용형태" json:"고용형태"`
+	AI_List_num  int
+	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id"`
+	CompanyName  string             `bson:"사업장명" json:"사업장명"`
+	WageType     string             `bson:"임금형태" json:"임금형태"`
+	Wage         int                `bson:"임금" json:"임금"`
+	Address      string             `bson:"사업장 주소" json:"사업장 주소"`
+	RecuritShape string             `bson:"고용형태" json:"고용형태"`
 }
 
 func (a Dj_jobs_detail_s) Len() int {
