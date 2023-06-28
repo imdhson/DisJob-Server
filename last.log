@@ -5051,3 +5051,34 @@ created by net/http.(*Server).Serve
 2023/06/28 17:59:04 http://localhost:443 에서 요청을 기다리는 중:
 2023/06/28 18:01:58 :443 에서 요청을 기다리는 중:
 2023/06/28 18:02:41 :443 에서 요청을 기다리는 중:
+2023/06/28 18:35:01 :443 에서 요청을 기다리는 중:
+2023/06/28 18:35:09 http: TLS handshake error from [::1]:49912: EOF
+2023/06/28 18:35:09 http: TLS handshake error from [::1]:49913: EOF
+2023/06/28 18:35:46 http: TLS handshake error from [::1]:49933: EOF
+2023/06/28 18:35:46 http: TLS handshake error from [::1]:49934: EOF
+2023/06/28 18:35:46 http: TLS handshake error from [::1]:49935: EOF
+2023/06/28 18:35:46 http: TLS handshake error from [::1]:49936: EOF
+2023/06/28 18:35:50 ::1/r/hhammer00@naver.com
+2023/06/28 18:35:50 치명적인 오류 발생:  error parsing uri: lookup disjob-db.wztgdur.mongodb.net on [fe80::9850:2eff:fe48:8464%en0]:53: cannot unmarshal DNS message
+2023/06/28 18:35:50 error parsing uri: lookup disjob-db.wztgdur.mongodb.net on [fe80::9850:2eff:fe48:8464%en0]:53: cannot unmarshal DNS message
+2023/06/28 18:36:24 :443 에서 요청을 기다리는 중:
+2023/06/28 18:36:24 ::1/r/hhammer00@naver.com
+2023/06/28 18:38:59 ::1/r/hhammer00@naver.com
+2023/06/28 18:41:28 ::1/r/hhammer00@naver.com
+2023/06/28 18:43:14 ::1/r/hhammer00@naver.com
+2023/06/28 18:43:58 ::1/r/hhammer00@naver.com
+2023/06/28 19:05:24 ::1/r/hhammer00@naver.com
+2023/06/28 19:17:26 ::1/r/hhammer00@naver.com
+2023/06/28 19:17:53 ::1/r/hhammer00@naver.com
+2023/06/28 22:55:13 ::1/r/hhammer00@naver.com
+2023/06/28 22:58:15 ::1/r/hhammer00@naver.com
+2023/06/28 22:59:09 ::1/r/hhammer00@naver.com
+2023/06/28 22:59:21 ::1/r/hhammer00@naver.com
+2023/06/28 22:59:32 ::1/r/hhammer00@naver.com
+2023/06/28 22:59:47 ::1/r/hhammer00@naver.com
+2023/06/28 22:59:59 ::1/r/hhammer00@naver.com
+2023/06/28 23:00:10 ::1/r/hhammer00@naver.com
+2023/06/28 23:00:22 ::1/r/hhammer00@naver.com
+2023/06/28 23:13:14 ::1/r/hhammer00@naver.com
+2023/06/28 23:29:46 ::1/r/hhammer00@naver.com
+2023/06/28 23:35:11 ::1/r/hhammer00@naver.com
