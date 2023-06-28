@@ -47,12 +47,13 @@ func ArticlesInsertHandler(w http.ResponseWriter, r *http.Request) {
 	if anon {
 		articles_struct.Djuserid = primitive.NilObjectID
 	}
-	_, err = coll.InsertOne(context.TODO(), articles_struct)
+	result, err := coll.InsertOne(context.TODO(), articles_struct)
 	if err != nil {
 		ErrOK(err)
 	} else {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		redirect_url := "/articles/"
+		inserted_id := result.InsertedID.(primitive.ObjectID).Hex() //result.id를 hex로 변환
+		redirect_url := "/articles/" + inserted_id
 		msg := "<meta http-equiv=\"refresh\" content=\"0;url=" + redirect_url + "\"></meta>"
 		w.Write([]byte(msg))
 	}

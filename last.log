@@ -4221,3 +4221,351 @@ created by net/http.(*Server).Serve
 2023/06/27 23:11:36 ErrOK:  mongo: no documents in result
 2023/06/27 23:11:37 ::1/assets/articles.css
 2023/06/27 23:11:37 ::1/assets/normalize.css
+2023/06/28 12:43:35 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 12:43:51 ::1/
+2023/06/28 12:43:51 ::1/assets/main.css
+2023/06/28 12:43:51 ::1/assets/normalize.css
+2023/06/28 12:43:51 ::1/ailist
+2023/06/28 12:43:51 ErrOK:  http: named cookie not present
+2023/06/28 12:43:53 ErrOK:  mongo: no documents in result
+2023/06/28 12:43:57 ::1/ailist
+2023/06/28 12:43:57 ErrOK:  http: named cookie not present
+2023/06/28 12:43:57 ErrOK:  mongo: no documents in result
+2023/06/28 12:45:14 ::1/session/
+2023/06/28 12:45:14 ErrOK:  http: named cookie not present
+2023/06/28 12:45:15 ::1/
+2023/06/28 12:45:15 ::1/assets/main.css
+2023/06/28 12:45:15 ::1/assets/normalize.css
+2023/06/28 12:45:16 ::1/
+2023/06/28 12:45:16 ::1/assets/main.css
+2023/06/28 12:45:16 ::1/assets/normalize.css
+2023/06/28 12:45:17 ::1/session/
+2023/06/28 12:45:17 ErrOK:  http: named cookie not present
+2023/06/28 12:45:19 ::1/assets/main.css
+2023/06/28 12:45:19 ::1/assets/normalize.css
+2023/06/28 12:45:21 ::1/login
+2023/06/28 12:45:21 ::1/assets/main.css
+2023/06/28 12:45:21 ::1/assets/normalize.css
+2023/06/28 12:45:23 ::1/login/auth/id
+2023/06/28 12:45:23 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 12:45:23 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 12:45:23 ::1/assets/main.css
+2023/06/28 12:45:23 ::1/assets/normalize.css
+2023/06/28 12:45:26 ::1/login/auth/password/
+2023/06/28 12:45:26 session이 겹치는 이메일 삭제 1
+2023/06/28 12:45:26 ObjectID("649bacd6c4f4a50757088114")
+2023/06/28 12:45:26 ::1/session/
+2023/06/28 12:45:30 ::1/
+2023/06/28 12:45:30 ::1/assets/main.css
+2023/06/28 12:45:30 ::1/assets/normalize.css
+2023/06/28 12:45:30 ::1/ailist
+2023/06/28 12:45:49 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 12:45:52 ::1/ailist
+2023/06/28 12:45:53 ErrOK:  mongo: no documents in result
+2023/06/28 12:45:53 ErrOK:  mongo: no documents in result
+2023/06/28 12:45:53 ErrOK:  mongo: no documents in result
+2023/06/28 12:45:53 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 13:01:44 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:01:48 ::1/
+2023/06/28 13:01:48 ::1/assets/main.css
+2023/06/28 13:01:48 ::1/assets/normalize.css
+2023/06/28 13:01:50 ::1/
+2023/06/28 13:01:50 ::1/assets/main.css
+2023/06/28 13:01:50 ::1/assets/normalize.css
+2023/06/28 13:01:50 ::1/ailist
+2023/06/28 13:01:50 ::1/articles
+2023/06/28 13:01:51 ErrOK:  mongo: no documents in result
+2023/06/28 13:01:51 ErrOK:  mongo: no documents in result
+2023/06/28 13:01:51 ::1/assets/main.css
+2023/06/28 13:01:51 ::1/assets/normalize.css
+2023/06/28 13:01:51 ErrOK:  mongo: no documents in result
+2023/06/28 13:01:53 ::1/login
+2023/06/28 13:01:53 ::1/assets/main.css
+2023/06/28 13:01:53 ::1/assets/normalize.css
+2023/06/28 13:01:55 ::1/login/auth/id
+2023/06/28 13:01:55 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 13:01:55 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 13:01:55 ::1/assets/main.css
+2023/06/28 13:01:55 ::1/assets/normalize.css
+2023/06/28 13:01:57 ::1/login/auth/password/
+2023/06/28 13:01:57 session이 겹치는 이메일 삭제 1
+2023/06/28 13:01:57 ObjectID("649bb0b5e90d16702009a8bd")
+2023/06/28 13:01:57 ::1/session/
+2023/06/28 13:06:47 ::1/
+2023/06/28 13:06:47 ::1/assets/main.css
+2023/06/28 13:06:47 ::1/assets/normalize.css
+2023/06/28 13:06:47 ::1/ailist
+2023/06/28 13:06:47 ::1/articles
+2023/06/28 13:06:48 ::1/articles
+2023/06/28 13:06:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:50 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 13:06:51 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:51 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:51 ::1/assets/normalize.css
+2023/06/28 13:06:51 ::1/assets/articles.css
+2023/06/28 13:06:53 ::1/articles/649ae4baa1b37b281ea3a8ff
+2023/06/28 13:06:55 ErrOK:  mongo: no documents in result
+2023/06/28 13:06:55 ::1/assets/articles.css
+2023/06/28 13:06:55 ::1/assets/normalize.css
+2023/06/28 13:07:08 ::1/articles/insert
+2023/06/28 13:07:08 ::1/assets/articles_insert.css
+2023/06/28 13:07:08 ::1/assets/normalize.css
+2023/06/28 13:07:15 ::1/articles/insert/submit
+2023/06/28 13:07:17 ::1/articles/
+2023/06/28 13:07:19 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:19 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:19 ::1/assets/articles.css
+2023/06/28 13:07:19 ::1/assets/normalize.css
+2023/06/28 13:07:30 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:07:31 ::1/assets/articles.css
+2023/06/28 13:07:31 ::1/assets/normalize.css
+2023/06/28 13:07:33 ::1/articles
+2023/06/28 13:07:35 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:35 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:35 ::1/assets/normalize.css
+2023/06/28 13:07:36 ::1/assets/articles.css
+2023/06/28 13:07:37 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:07:38 ::1/assets/articles.css
+2023/06/28 13:07:38 ::1/assets/normalize.css
+2023/06/28 13:07:45 ::1/articles
+2023/06/28 13:07:46 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:47 ErrOK:  mongo: no documents in result
+2023/06/28 13:07:47 ::1/assets/articles.css
+2023/06/28 13:07:47 ::1/assets/normalize.css
+2023/06/28 13:07:59 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:08:00 ::1/assets/articles.css
+2023/06/28 13:08:00 ::1/assets/normalize.css
+2023/06/28 13:09:49 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:09:53 ::1/articles/insert
+2023/06/28 13:09:53 ::1/assets/articles_insert.css
+2023/06/28 13:09:53 ::1/assets/normalize.css
+2023/06/28 13:09:56 ::1/articles/insert/submit
+2023/06/28 13:09:57 ::1/articles/
+2023/06/28 13:09:59 ErrOK:  mongo: no documents in result
+2023/06/28 13:09:59 ErrOK:  mongo: no documents in result
+2023/06/28 13:09:59 ::1/assets/articles.css
+2023/06/28 13:09:59 ::1/assets/normalize.css
+2023/06/28 13:10:01 ::1/articles/649bb295beb7837cd4bcba87
+2023/06/28 13:10:02 ::1/assets/articles.css
+2023/06/28 13:10:02 ::1/assets/normalize.css
+2023/06/28 13:13:56 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:13:56 ::1/articles/insert
+2023/06/28 13:13:56 ::1/assets/articles_insert.css
+2023/06/28 13:13:56 ::1/assets/normalize.css
+2023/06/28 13:14:40 ::1/articles/insert
+2023/06/28 13:15:25 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:15:26 ::1/articles/insert
+2023/06/28 13:15:26 ::1/assets/articles_insert.css
+2023/06/28 13:15:26 ::1/assets/normalize.css
+2023/06/28 13:15:37 ::1/articles/insert
+2023/06/28 13:15:37 ::1/assets/normalize.css
+2023/06/28 13:15:38 ::1/articles/insert
+2023/06/28 13:15:38 ::1/assets/normalize.css
+2023/06/28 13:15:56 ::1/articles/insert
+2023/06/28 13:15:56 ::1/assets/normalize.css
+2023/06/28 13:20:02 ::1/articles/insert
+2023/06/28 13:20:02 ::1/assets/normalize.css
+2023/06/28 13:20:57 ::1/articles/insert
+2023/06/28 13:20:57 ::1/assets/normalize.css
+2023/06/28 13:21:05 ::1/articles/insert
+2023/06/28 13:21:05 ::1/assets/normalize.css
+2023/06/28 13:21:16 ::1/assets/articles.css
+2023/06/28 13:21:17 ::1/articles
+2023/06/28 13:21:20 ErrOK:  mongo: no documents in result
+2023/06/28 13:21:20 ErrOK:  mongo: no documents in result
+2023/06/28 13:21:20 ::1/assets/normalize.css
+2023/06/28 13:21:20 ::1/assets/articles.css
+2023/06/28 13:21:22 ::1/articles/insert
+2023/06/28 13:21:22 ::1/assets/normalize.css
+2023/06/28 13:21:26 ::1/articles/insert
+2023/06/28 13:21:26 ::1/assets/normalize.css
+2023/06/28 13:22:46 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:23:36 ::1/articles/insert
+2023/06/28 13:23:36 ::1/assets/normalize.css
+2023/06/28 13:23:37 ::1/articles/insert
+2023/06/28 13:23:37 ::1/assets/normalize.css
+2023/06/28 13:23:43 ::1/articles/insert/submit
+2023/06/28 13:23:44 ::1/articles/
+2023/06/28 13:23:47 ErrOK:  mongo: no documents in result
+2023/06/28 13:23:47 ErrOK:  mongo: no documents in result
+2023/06/28 13:23:47 ::1/assets/articles.css
+2023/06/28 13:23:47 ::1/assets/normalize.css
+2023/06/28 13:23:49 ::1/articles/649bb5d0eb1d1a7928d0848d
+2023/06/28 13:23:50 ::1/assets/articles.css
+2023/06/28 13:23:50 ::1/assets/normalize.css
+2023/06/28 13:28:14 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:28:16 ::1/articles/insert
+2023/06/28 13:28:16 ::1/assets/normalize.css
+2023/06/28 13:28:22 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:28:23 ::1/articles/insert/submit
+2023/06/28 13:28:24 ::1/articles/649bb6e8ec2235cc9312b126
+2023/06/28 13:28:25 ::1/assets/articles.css
+2023/06/28 13:28:25 ::1/assets/normalize.css
+2023/06/28 13:28:29 ::1/articles
+2023/06/28 13:28:32 ErrOK:  mongo: no documents in result
+2023/06/28 13:28:32 ErrOK:  mongo: no documents in result
+2023/06/28 13:28:32 ::1/assets/articles.css
+2023/06/28 13:28:32 ::1/assets/normalize.css
+2023/06/28 13:28:34 ::1/articles/insert
+2023/06/28 13:28:34 ::1/assets/normalize.css
+2023/06/28 13:28:36 ::1/articles/insert
+2023/06/28 13:28:36 ::1/assets/normalize.css
+2023/06/28 13:28:48 ::1/articles/insert
+2023/06/28 13:28:48 ::1/assets/normalize.css
+2023/06/28 13:28:51 ::1/articles
+2023/06/28 13:28:54 ErrOK:  mongo: no documents in result
+2023/06/28 13:28:54 ErrOK:  mongo: no documents in result
+2023/06/28 13:28:54 ::1/assets/articles.css
+2023/06/28 13:28:54 ::1/assets/normalize.css
+2023/06/28 13:28:57 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:28:58 ::1/assets/articles.css
+2023/06/28 13:28:58 ::1/assets/normalize.css
+2023/06/28 13:29:33 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:29:34 ::1/assets/articles.css
+2023/06/28 13:29:34 ::1/assets/normalize.css
+2023/06/28 13:29:38 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:29:39 ::1/assets/articles.css
+2023/06/28 13:29:39 ::1/assets/normalize.css
+2023/06/28 13:30:34 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:30:35 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:30:36 ::1/assets/articles.css
+2023/06/28 13:30:36 ::1/assets/normalize.css
+2023/06/28 13:30:37 ::1/articles/649bb1f5e90d16702009a8d8
+2023/06/28 13:30:38 ::1/assets/articles.css
+2023/06/28 13:30:38 ::1/assets/normalize.css
+2023/06/28 13:30:39 ::1/articles
+2023/06/28 13:30:42 ErrOK:  mongo: no documents in result
+2023/06/28 13:30:42 ErrOK:  mongo: no documents in result
+2023/06/28 13:30:42 ::1/assets/articles.css
+2023/06/28 13:30:42 ::1/assets/normalize.css
+2023/06/28 13:30:43 ::1/articles/649bb6e8ec2235cc9312b126
+2023/06/28 13:30:44 ::1/assets/articles.css
+2023/06/28 13:30:44 ::1/assets/normalize.css
+2023/06/28 13:30:45 ::1/articles/insert
+2023/06/28 13:30:45 ::1/assets/normalize.css
+2023/06/28 13:30:47 ::1/articles
+2023/06/28 13:30:49 ErrOK:  mongo: no documents in result
+2023/06/28 13:30:50 ErrOK:  mongo: no documents in result
+2023/06/28 13:30:50 ::1/assets/articles.css
+2023/06/28 13:30:50 ::1/assets/normalize.css
+2023/06/28 13:30:55 ::1/articles/insert
+2023/06/28 13:30:55 ::1/assets/normalize.css
+2023/06/28 13:31:15 ::1/articles/insert
+2023/06/28 13:31:15 ::1/assets/normalize.css
+2023/06/28 13:31:17 ::1/articles
+2023/06/28 13:31:19 ErrOK:  mongo: no documents in result
+2023/06/28 13:31:20 ErrOK:  mongo: no documents in result
+2023/06/28 13:31:20 ::1/assets/articles.css
+2023/06/28 13:31:20 ::1/assets/normalize.css
+2023/06/28 13:31:20 ::1/articles/649bb6e8ec2235cc9312b126
+2023/06/28 13:31:21 ::1/assets/articles.css
+2023/06/28 13:31:21 ::1/assets/normalize.css
+2023/06/28 13:31:24 ::1/articles
+2023/06/28 13:31:27 ErrOK:  mongo: no documents in result
+2023/06/28 13:31:27 ErrOK:  mongo: no documents in result
+2023/06/28 13:31:27 ::1/assets/normalize.css
+2023/06/28 13:31:27 ::1/assets/articles.css
+2023/06/28 13:33:08 ::1/articles/insert
+2023/06/28 13:33:08 ::1/assets/normalize.css
+2023/06/28 13:33:09 ::1/articles/insert
+2023/06/28 13:33:09 ::1/assets/normalize.css
+2023/06/28 13:33:59 ::1/articles/insert
+2023/06/28 13:33:59 ::1/assets/normalize.css
+2023/06/28 13:34:09 ::1/articles/insert
+2023/06/28 13:34:09 ::1/assets/normalize.css
+2023/06/28 13:34:19 ::1/articles/insert
+2023/06/28 13:34:19 ::1/assets/normalize.css
+2023/06/28 13:34:31 ::1/articles/insert
+2023/06/28 13:34:31 ::1/assets/normalize.css
+2023/06/28 13:34:34 ::1/articles/insert
+2023/06/28 13:34:34 ::1/assets/normalize.css
+2023/06/28 13:34:42 ::1/articles/insert
+2023/06/28 13:34:42 ::1/assets/normalize.css
+2023/06/28 13:34:52 ::1/articles/insert
+2023/06/28 13:34:52 ::1/assets/normalize.css
+2023/06/28 13:34:54 ::1/articles/insert
+2023/06/28 13:34:54 ::1/assets/normalize.css
+2023/06/28 13:35:00 ::1/articles/insert
+2023/06/28 13:35:00 ::1/assets/normalize.css
+2023/06/28 13:35:20 ::1/articles/insert
+2023/06/28 13:35:20 ::1/assets/normalize.css
+2023/06/28 13:36:03 ::1/articles/insert
+2023/06/28 13:36:03 ::1/assets/normalize.css
+2023/06/28 13:36:07 ::1/articles/insert
+2023/06/28 13:36:07 ::1/assets/normalize.css
+2023/06/28 13:36:24 ::1/articles/insert
+2023/06/28 13:36:24 ::1/assets/normalize.css
+2023/06/28 13:36:29 ::1/articles/insert
+2023/06/28 13:36:29 ::1/assets/normalize.css
+2023/06/28 13:36:47 ::1/articles/insert
+2023/06/28 13:36:47 ::1/assets/normalize.css
+2023/06/28 13:36:51 ::1/articles/insert
+2023/06/28 13:36:51 ::1/assets/normalize.css
+2023/06/28 13:37:03 ::1/articles/insert/submit
+2023/06/28 13:37:04 ::1/articles/649bb8f01304f98ebf6b8332
+2023/06/28 13:37:05 ::1/assets/articles.css
+2023/06/28 13:37:05 ::1/assets/normalize.css
+2023/06/28 13:37:08 ::1/articles
+2023/06/28 13:37:11 ErrOK:  mongo: no documents in result
+2023/06/28 13:37:11 ErrOK:  mongo: no documents in result
+2023/06/28 13:37:12 ::1/assets/articles.css
+2023/06/28 13:37:12 ::1/assets/normalize.css
+2023/06/28 13:37:24 ::1/articles/insert
+2023/06/28 13:37:24 ::1/assets/normalize.css
+2023/06/28 13:37:26 ::1/articles
+2023/06/28 13:37:29 ErrOK:  mongo: no documents in result
+2023/06/28 13:37:29 ErrOK:  mongo: no documents in result
+2023/06/28 13:37:29 ::1/assets/normalize.css
+2023/06/28 13:37:29 ::1/assets/articles.css
+2023/06/28 13:38:02 ::1/login
+2023/06/28 13:38:02 ::1/assets/main.css
+2023/06/28 13:38:02 ::1/assets/normalize.css
+2023/06/28 13:50:55 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:50:55 open /openssl/cert.pem: no such file or directory
+2023/06/28 13:51:19 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:51:19 치명적인 오류 발생:  tls: failed to find "CERTIFICATE" PEM block in certificate input after skipping PEM blocks of the following types: [CERTIFICATE REQUEST]
+2023/06/28 13:51:19 tls: failed to find "CERTIFICATE" PEM block in certificate input after skipping PEM blocks of the following types: [CERTIFICATE REQUEST]
+2023/06/28 13:55:25 http://localhost:80 에서 요청을 기다리는 중:
+2023/06/28 13:55:45 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 13:55:45 http: TLS handshake error from [::1]:52439: EOF
+2023/06/28 13:55:45 http: TLS handshake error from [::1]:52440: EOF
+2023/06/28 13:55:53 ::1/login
+2023/06/28 13:55:53 ::1/assets/main.css
+2023/06/28 13:55:53 ::1/assets/normalize.css
+2023/06/28 13:55:53 ::1/favicon.ico
+2023/06/28 13:55:55 ::1/login/auth/id
+2023/06/28 13:55:56 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 13:55:56 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 13:55:56 ::1/assets/main.css
+2023/06/28 13:55:56 ::1/assets/normalize.css
+2023/06/28 13:55:58 ::1/login/auth/password/
+2023/06/28 13:55:58 session이 겹치는 이메일 삭제 1
+2023/06/28 13:55:58 ObjectID("649bbd5edd104f1f00c7f18f")
+2023/06/28 13:55:58 ::1/session/
+2023/06/28 13:56:41 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 13:56:43 ::1/
+2023/06/28 13:57:29 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 13:57:29 ::1/session/
+2023/06/28 13:57:32 ::1/session/
+2023/06/28 13:57:32 ::1/
+2023/06/28 13:57:32 ::1/assets/main.css
+2023/06/28 13:57:32 ::1/assets/normalize.css
+2023/06/28 13:57:33 ::1/login
+2023/06/28 13:57:33 ::1/assets/main.css
+2023/06/28 13:57:33 ::1/assets/normalize.css
+2023/06/28 13:57:35 ::1/
+2023/06/28 13:57:35 ::1/assets/main.css
+2023/06/28 13:57:35 ::1/assets/normalize.css
+2023/06/28 13:57:36 ::1/
+2023/06/28 13:57:36 ::1/assets/main.css
+2023/06/28 13:57:36 ::1/assets/normalize.css
+2023/06/28 13:57:38 ::1/
+2023/06/28 13:57:38 ::1/assets/main.css
+2023/06/28 13:57:38 ::1/assets/normalize.css
+2023/06/28 14:01:38 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 14:01:38 치명적인 오류 발생:  open openssl/cert.pem: no such file or directory
+2023/06/28 14:01:38 open openssl/cert.pem: no such file or directory

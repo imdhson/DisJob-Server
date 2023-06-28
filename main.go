@@ -20,15 +20,15 @@ func main() {
 	// 로그 출력 설정
 	log.SetOutput(io.MultiWriter(os.Stdout, log_f))
 
-	const PORT int = 80
+	const PORT int = 443
 	server := http.NewServeMux()
 	server.Handle("/", http.HandlerFunc(urlHandler))
 	log.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
-	err := http.ListenAndServe(":"+strconv.Itoa(PORT), server)
-	if err != nil { // http 서버 시작 중 문제 발생시
-		log.Fatal(err)
-		panic(err)
-	}
+
+	go http.ListenAndServe(":80", server)
+
+	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "openssl/cert.pem", "openssl/key.pem", server)
+	modules.Critical(err)
 }
 
 func urlHandler(w http.ResponseWriter, r *http.Request) {
@@ -60,7 +60,8 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		if urlPath[1] == "insert" {
 			modules.CommentsInsert(w, r, &urlPath)
 		} else {
-			modules.CommentsView(w, r, &urlPath)
+			//modules.CommentsView(w, r, &urlPath)
+			modules.ErrHandler(w, r)
 		}
 	case "articles":
 		if urlPath[1] == "insert" && urlPath[2] == "" { //삽입 모드

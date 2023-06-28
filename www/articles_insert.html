@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>@import '/assets/articles_insert.css';
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <style type="text/css">
+    @import '/assets/normalize.css';
+    * {
+      font-family: 'Jua', sans-serif;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      width: 100%;
+    }
+    input[type="text"], textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0,0,0,.3);
+      width: 100%;
+      max-width: 90%;
+    }
+    input[type="submit"] {
+      background-color: white;
+      color: #8a2be2;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border-style:none;
+      box-shadow: 0px 0px 10px #8a2be2;
+      min-width: 150px;
+      cursor:pointer;
+    }
+    #content {
+      height: 150px;
+    }
+    input[type="submit"]:hover {
+      background-color: #8a2be2;
+      color:white;
+      box-shadow:none;
+    }
+    label[for="anonymous"] {
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+    #anonymous {
+      margin-bottom: 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/articles/insert/submit" method="POST">
+    <label for="title">제목:</label>
+    <input type="text" id="title" name="title" placeholder="제목을 입력하세요...">
     
-    
-    
-    </style>
+    <label for="content">내용:</label>
+    <textarea id="content" name="content" placeholder="내용을 입력하세요..."></textarea>
 
-  </head>
-  <body>
-      <form method="post" action="<go>form_action_url</go>" id="form">
-        
-        <input type="text" name="title", id="title" value="제목">
-        <input type="text" name="content", id="content" value="내용">
-        <input type="checkbox" name="anonymous" id ="checkbox">익명
-          <input type="submit" id="submit" value="보내기">
-      </form>
-  
-  </body>
-  </html>
-  <!--
-<li><span class="comment-content">첫번째 댓글</span>
-        <span class="comment-writer">1111111111111</span></li>
+    <div style="display:flex; align-items:center;">
+      <input type="checkbox" id="anonymous" name="anonymous" value="anonymous">
+      <label for="anonymous">익명</label>
+    </div>
 
-
-  -->
+    <input type="submit" value="글쓰기">
+  </form>
+  <button style="position: fixed; 
+               left: 30px; 
+               bottom: 30px; 
+               font-size: 55px; 
+               background-color: rgb(202, 240, 255); 
+               border-radius: 50%; 
+               box-shadow: 0px 10px 20px rgb(170, 170, 170); 
+               width: 70px; 
+               height: 70px;
+               border-color: transparent;" 
+        onclick="location.href='/articles'"><</button>
+</body>
+</html>
