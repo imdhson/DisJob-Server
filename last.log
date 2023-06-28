@@ -4733,3 +4733,70 @@ created by net/http.(*Server).Serve
 2023/06/28 15:36:20 ::1/login
 2023/06/28 15:36:20 ::1/login
 2023/06/28 15:39:53 ::1/login
+2023/06/28 15:42:25 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:42:28 ::1/login/auth/id
+2023/06/28 15:42:28 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 15:42:28 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:42:29 ::1/login/auth/password/
+2023/06/28 15:42:30 session이 겹치는 이메일 삭제 1
+2023/06/28 15:42:30 ObjectID("649bd6564c5a510d5278f1ae")
+2023/06/28 15:42:30 ::1/session/
+2023/06/28 15:42:34 ::1/
+2023/06/28 15:42:34 ::1/assets/main.css
+2023/06/28 15:42:34 ::1/assets/normalize.css
+2023/06/28 15:42:35 ::1/ailist
+2023/06/28 15:42:36 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:36 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:36 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:36 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:42:51 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:42:51 ::1/ailist
+2023/06/28 15:42:51 ::1/ailist
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:42:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:42:52 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:44:52 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:44:54 ::1/ailist
+2023/06/28 15:44:56 ErrOK:  mongo: no documents in result
+2023/06/28 15:44:56 ErrOK:  mongo: no documents in result
+2023/06/28 15:44:56 ErrOK:  mongo: no documents in result
+2023/06/28 15:44:56 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:45:12 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:45:13 ::1/ailist
+2023/06/28 15:45:14 ErrOK:  mongo: no documents in result
+2023/06/28 15:45:14 ErrOK:  mongo: no documents in result
+2023/06/28 15:45:14 ErrOK:  mongo: no documents in result
+2023/06/28 15:45:14 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:46:02 ::1/
+2023/06/28 15:46:02 ::1/assets/main.css
+2023/06/28 15:46:02 ::1/assets/normalize.css
+2023/06/28 15:46:02 ::1/session/
+2023/06/28 15:46:03 ::1/
+2023/06/28 15:46:03 ::1/assets/main.css
+2023/06/28 15:46:03 ::1/assets/normalize.css
+2023/06/28 15:46:03 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:46:06 ::1/login/auth/password/
+2023/06/28 15:46:06 session이 겹치는 이메일 삭제 1
+2023/06/28 15:46:06 ObjectID("649bd72ef066a3600ca22ff9")
+2023/06/28 15:46:06 ::1/session/
+2023/06/28 15:46:10 ::1/
+2023/06/28 15:46:10 ::1/assets/main.css
+2023/06/28 15:46:10 ::1/assets/normalize.css
+2023/06/28 15:46:11 ::1/
+2023/06/28 15:46:11 ::1/assets/main.css
+2023/06/28 15:46:11 ::1/assets/normalize.css
+2023/06/28 15:46:13 ::1/comments
+2023/06/28 15:46:13 ::1/assets/main.css
+2023/06/28 15:46:13 ::1/assets/normalize.css
+2023/06/28 15:46:17 ::1/login
+2023/06/28 15:46:24 ::1/articles
+2023/06/28 15:46:25 ::1/assets/articles.css
+2023/06/28 15:46:25 ::1/assets/normalize.css
+2023/06/28 15:46:30 ::1/articles/649bc5c23c4c23b41e16f77f
+2023/06/28 15:46:31 ::1/assets/articles.css
+2023/06/28 15:46:31 ::1/assets/normalize.css

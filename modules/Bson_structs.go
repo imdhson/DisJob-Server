@@ -67,6 +67,7 @@ type Dj_jobs_refined struct {
 	WageType      string             `bson:"임금형태" json:"임금형태"`
 	Wage          int                `bson:"임금" json:"임금"`
 	Address       string             `bson:"사업장 주소" json:"사업장 주소"`
+	RecuritShape  string             `bson:"고용형태" json:"고용형태"`
 }
 
 func (a Dj_jobs_detail_s) Len() int {

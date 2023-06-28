@@ -17,7 +17,7 @@ import (
 
 const (
 	BATCHSIZE  = 2000
-	OUTPUTSIZE = 50
+	OUTPUTSIZE = 5
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
@@ -226,14 +226,17 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 		if ir > Outputsize_var {
 			break
 		}
+		tmp_address := strings.Split(vr.Address, " ")
+		tmp_address1 := tmp_address[0] + " " + tmp_address[1]
 		tmp := Dj_jobs_refined{
 			AI_List_num:   vr.AI_List_num,
 			AI_List_score: vr.AI_List_score,
 			ID:            vr.ID,
+			Address:       tmp_address1,
+			RecuritShape:  vr.RecuritShape,
 			CompanyName:   vr.CompanyName,
 			WageType:      vr.WageType,
 			Wage:          vr.Wage,
-			Address:       vr.Address,
 		}
 		will_send_refined = append(will_send_refined, tmp)
 	}
