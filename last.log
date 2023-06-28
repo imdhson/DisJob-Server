@@ -5021,3 +5021,33 @@ created by net/http.(*Server).Serve
 2023/06/28 16:33:35 ::1/login
 2023/06/28 16:33:38 ::1/login/auth/id
 2023/06/28 16:33:39 ::1/login/
+2023/06/28 16:37:34 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 16:37:36 ::1/login/
+2023/06/28 16:37:36 ::1/login/
+2023/06/28 16:37:37 ::1/login/
+2023/06/28 16:37:37 ::1/login/
+2023/06/28 16:37:37 ::1/login/
+2023/06/28 16:37:38 ::1/login/
+2023/06/28 16:38:51 ::1/login/
+2023/06/28 16:38:52 ::1/login/
+2023/06/28 16:40:49 ::1/login/auth/id
+2023/06/28 16:40:49 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 16:40:49 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:41:36 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:41:43 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:41:53 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:44:41 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 16:45:15 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 16:45:19 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:45:19 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:45:20 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 16:45:20 ::1/login
+2023/06/28 16:45:25 ::1/login/auth/id
+2023/06/28 16:45:26 ErrOK:  mongo: no documents in result
+2023/06/28 16:45:27 pseudo: 회원가입으로 이동하기 hhammer00@naver.com 3620
+2023/06/28 16:45:27 db regist에 저장 완료 &{ObjectID("649be5172b29c9d252dc4671")}
+2023/06/28 16:45:27 ::1/r/hhammer00@naver.com
+2023/06/28 16:45:55 ::1/r/hhammer00@naver.com
+2023/06/28 17:59:04 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 18:01:58 :443 에서 요청을 기다리는 중:
+2023/06/28 18:02:41 :443 에서 요청을 기다리는 중:

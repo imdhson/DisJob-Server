@@ -18,8 +18,8 @@ func SmtpSender(to_mail string, register bool) string { //register: true인 경�
 	if register {
 		mail_subject = "DisJob 회원가입 인증번호"
 		verify_num = strconv.Itoa(int(rand.Intn(100000)))
-		mail_content = "인증번호는 " + verify_num + "\r\n" +
-			"http://pi.imdhson.com/r/" + to_mail + "/" + verify_num + " 를 눌러도 됩니다."
+		mail_content = "DisJob 회원가입 인증번호: " + verify_num + "\r\n" +
+			"http://pi.imdhson.com/r/" + to_mail + "/" + verify_num + ""
 		//http://.com/login/auth/email/mail@imdhson.com/123123321 이런식으로 가게됨
 	} else {
 		mail_subject = ""
