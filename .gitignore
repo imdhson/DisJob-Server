@@ -17,6 +17,6 @@
 *.origin
 # Dependency directories (remove the comment below to include it)
 # vendor/
-
+*.pem
 # Go workspace file
 go.work
