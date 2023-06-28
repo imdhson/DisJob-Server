@@ -4569,3 +4569,167 @@ created by net/http.(*Server).Serve
 2023/06/28 14:01:38 http://localhost:443 에서 요청을 기다리는 중:
 2023/06/28 14:01:38 치명적인 오류 발생:  open openssl/cert.pem: no such file or directory
 2023/06/28 14:01:38 open openssl/cert.pem: no such file or directory
+2023/06/28 14:36:11 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 14:36:15 ::1/
+2023/06/28 14:36:15 ::1/assets/main.css
+2023/06/28 14:36:15 ::1/assets/normalize.css
+2023/06/28 14:36:17 ::1/login
+2023/06/28 14:36:17 ::1/assets/main.css
+2023/06/28 14:36:17 ::1/assets/normalize.css
+2023/06/28 14:36:19 ::1/login/auth/id
+2023/06/28 14:36:20 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 14:36:20 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:36:20 ::1/assets/main.css
+2023/06/28 14:36:20 ::1/assets/normalize.css
+2023/06/28 14:36:22 ::1/login/auth/password/
+2023/06/28 14:36:22 session이 겹치는 이메일 삭제 1
+2023/06/28 14:36:22 ObjectID("649bc6d6c0bbce3e2a547bac")
+2023/06/28 14:36:22 ::1/session/
+2023/06/28 14:36:35 http: TLS handshake error from [::1]:52916: EOF
+2023/06/28 14:36:35 http: TLS handshake error from [::1]:52917: EOF
+2023/06/28 14:36:43 ::1/login
+2023/06/28 14:36:43 ::1/assets/main.css
+2023/06/28 14:36:43 ::1/assets/normalize.css
+2023/06/28 14:37:13 ::1/login
+2023/06/28 14:37:13 ::1/assets/main.css
+2023/06/28 14:37:13 ::1/assets/normalize.css
+2023/06/28 14:41:08 ::1/login
+2023/06/28 14:42:05 ::1/login
+2023/06/28 14:42:09 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 14:42:11 ::1/login/auth/id
+2023/06/28 14:42:12 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 14:42:12 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:43:25 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 14:43:25 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:43:30 ::1/login/auth/password/
+2023/06/28 14:43:31 session이 겹치는 이메일 삭제 1
+2023/06/28 14:43:31 ObjectID("649bc883ac535760dd864736")
+2023/06/28 14:43:31 ::1/session/
+2023/06/28 14:45:56 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:46:18 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:46:39 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:49:01 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:49:02 ::1/login/id
+2023/06/28 14:49:07 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:49:07 ::1/login/
+2023/06/28 14:50:16 ::1/login/
+2023/06/28 14:50:16 ::1/login/
+2023/06/28 14:50:20 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 14:50:20 ::1/login/
+2023/06/28 14:50:20 ::1/login/
+2023/06/28 14:50:20 ::1/login/
+2023/06/28 14:51:30 ::1/login/
+2023/06/28 14:53:45 ::1/login/
+2023/06/28 14:53:53 ::1/login/
+2023/06/28 14:54:17 ::1/login/
+2023/06/28 14:54:29 ::1/login/auth/id
+2023/06/28 14:54:29 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 14:54:29 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:54:48 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:54:53 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:56:56 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:56:57 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:57:07 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:58:21 ::1/login/auth/id
+2023/06/28 14:58:22 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 14:58:22 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:58:58 ::1/login/
+2023/06/28 14:59:06 ::1/login/
+2023/06/28 14:59:08 ::1/login/auth/id
+2023/06/28 14:59:08 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 14:59:09 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 14:59:34 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:00:41 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:01:06 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:01:11 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:02:12 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:02:15 ::1/login/auth/password/
+2023/06/28 15:02:15 session이 겹치는 이메일 삭제 1
+2023/06/28 15:02:15 ObjectID("649bcce777e1a4d313d65e17")
+2023/06/28 15:02:15 ::1/session/
+2023/06/28 15:02:20 ::1/ailist
+2023/06/28 15:02:21 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:21 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:21 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:21 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:02:36 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:02:37 ::1/ailist
+2023/06/28 15:02:38 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:38 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:38 ErrOK:  mongo: no documents in result
+2023/06/28 15:02:38 avt inters: [팔 다리 시각 음성 귀]
+2023/06/28 15:03:10 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:03:59 ::1/
+2023/06/28 15:04:00 ::1/
+2023/06/28 15:04:00 ::1/assets/main.css
+2023/06/28 15:04:00 ::1/assets/normalize.css
+2023/06/28 15:04:00 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:04:03 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:06:20 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:06:31 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:06:43 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:06:47 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:07:39 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:07:43 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:07:54 ::1/login/auth/password/
+2023/06/28 15:07:54 session이 겹치는 이메일 삭제 1
+2023/06/28 15:07:54 ObjectID("649bce3ac948fe91b00e9ee8")
+2023/06/28 15:07:54 ::1/session/
+2023/06/28 15:07:58 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:08:00 ::1/login
+2023/06/28 15:08:00 ::1/login
+2023/06/28 15:10:25 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:10:29 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:08 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:12 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:17 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:29 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:37 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:11:38 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:12:11 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:12:26 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:12:30 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:12:58 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:15:12 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:15:19 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:15:25 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:16:29 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:16:34 ::1/login/auth/password/
+2023/06/28 15:16:34 ID, 비밀번호 매칭 실패
+2023/06/28 15:16:35 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:16:37 ::1/login
+2023/06/28 15:16:52 ::1/login/auth/id
+2023/06/28 15:16:52 ErrOK:  mongo: no documents in result
+2023/06/28 15:16:54 pseudo: 회원가입으로 이동하기 123123@gmail.com 11861
+2023/06/28 15:16:54 db regist에 저장 완료 &{ObjectID("649bd056c948fe91b00e9eee")}
+2023/06/28 15:16:54 ::1/r/123123@gmail.com
+2023/06/28 15:16:54 ::1/assets/main.css
+2023/06/28 15:16:54 ::1/assets/normalize.css
+2023/06/28 15:20:53 ::1/r/123123@gmail.com
+2023/06/28 15:25:38 ::1/r/123123@gmail.com
+2023/06/28 15:26:02 ::1/r/123123@gmail.com
+2023/06/28 15:26:14 ::1/r/123123@gmail.com
+2023/06/28 15:33:25 http://localhost:443 에서 요청을 기다리는 중:
+2023/06/28 15:33:25 ::1/r/123123@gmail.com
+2023/06/28 15:33:25 ::1/r/123123@gmail.com
+2023/06/28 15:33:26 ::1/r/123123@gmail.com
+2023/06/28 15:33:35 ::1/login
+2023/06/28 15:33:42 ::1/login/auth/id
+2023/06/28 15:33:42 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/28 15:33:43 ::1/login/id/hhammer1234@gmail.com
+2023/06/28 15:33:45 ::1/login
+2023/06/28 15:33:49 ::1/login/auth/id
+2023/06/28 15:33:49 ErrOK:  mongo: no documents in result
+2023/06/28 15:33:50 pseudo: 회원가입으로 이동하기 hhammer00@naver.com 42549
+2023/06/28 15:33:50 db regist에 저장 완료 &{ObjectID("649bd44e470aade66362fd5c")}
+2023/06/28 15:33:50 ::1/r/hhammer00@naver.com
+2023/06/28 15:33:52 ::1/login
+2023/06/28 15:34:11 ::1/login
+2023/06/28 15:34:12 ::1/login
+2023/06/28 15:34:17 ::1/login
+2023/06/28 15:34:29 ::1/login
+2023/06/28 15:36:19 ::1/login
+2023/06/28 15:36:19 ::1/login
+2023/06/28 15:36:20 ::1/login
+2023/06/28 15:36:20 ::1/login
+2023/06/28 15:39:53 ::1/login

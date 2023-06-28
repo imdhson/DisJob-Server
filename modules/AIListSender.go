@@ -17,7 +17,7 @@ import (
 
 const (
 	BATCHSIZE  = 2000
-	OUTPUTSIZE = 100
+	OUTPUTSIZE = 50
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {

@@ -25,9 +25,9 @@ func main() {
 	server.Handle("/", http.HandlerFunc(urlHandler))
 	log.Println("http://localhost:"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
 
-	go http.ListenAndServe(":80", server)
+	go http.ListenAndServe(":80", server) //일반 http 전송 디버그용
 
-	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "openssl/cert.pem", "openssl/key.pem", server)
+	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "openssl/certificate.crt", "openssl/private.key", server)
 	modules.Critical(err)
 }
 
