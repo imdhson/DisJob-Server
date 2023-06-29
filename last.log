@@ -5943,3 +5943,141 @@ created by net/http.(*http2serverConn).processHeaders
 2023/06/29 17:05:38 치명적인 오류 발생:  tls: private key does not match public key
 2023/06/29 17:05:38 tls: private key does not match public key
 2023/06/29 17:08:08 :443 에서 요청을 기다리는 중:
+2023/06/29 18:53:53 :443 에서 요청을 기다리는 중:
+2023/06/29 18:53:53 치명적인 오류 발생:  open sslforfree/combined.pem: no such file or directory
+2023/06/29 18:53:53 open sslforfree/combined.pem: no such file or directory
+2023/06/29 18:54:43 :443 에서 요청을 기다리는 중:
+2023/06/29 19:31:28 :443 에서 요청을 기다리는 중:
+2023/06/29 19:31:37 192.168.50.33/articles
+2023/06/29 19:31:37 ErrOK:  http: named cookie not present
+2023/06/29 19:31:37 192.168.50.33/assets/main.css
+2023/06/29 19:31:37 192.168.50.33/assets/normalize.css
+2023/06/29 19:31:39 192.168.50.33/login
+2023/06/29 19:31:44 192.168.50.33/login/auth/id
+2023/06/29 19:31:45 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/06/29 19:31:45 192.168.50.33/login/id/hhammer1234@gmail.com
+2023/06/29 19:31:47 192.168.50.33/login/auth/password/
+2023/06/29 19:31:49 session이 겹치는 이메일 삭제 1
+2023/06/29 19:31:49 ObjectID("649d5d951cb166d180ef124d")
+2023/06/29 19:31:49 192.168.50.33/session/
+2023/06/29 19:31:56 192.168.50.33/articles
+2023/06/29 19:31:58 192.168.50.33/assets/articles.css
+2023/06/29 19:31:58 192.168.50.33/articles/insert
+2023/06/29 19:31:58 192.168.50.33/assets/normalize.css
+2023/06/29 19:33:14 ::1/articles/649c24d547aa69c9f263267b
+2023/06/29 19:33:14 ErrOK:  http: named cookie not present
+2023/06/29 19:33:14 ::1/assets/main.css
+2023/06/29 19:33:14 ::1/assets/normalize.css
+2023/06/29 19:33:25 ::1/articles/insert
+2023/06/29 19:33:25 ::1/assets/normalize.css
+2023/06/29 19:35:18 ::1/articles/insert
+2023/06/29 19:35:18 ::1/assets/normalize.css
+2023/06/29 19:35:28 ::1/articles/insert
+2023/06/29 19:35:28 ::1/assets/normalize.css
+2023/06/29 19:35:31 ::1/articles/insert
+2023/06/29 19:35:31 ::1/assets/normalize.css
+2023/06/29 19:39:21 ::1/articles/insert
+2023/06/29 19:39:21 ::1/assets/normalize.css
+2023/06/29 19:39:30 ::1/articles/insert
+2023/06/29 19:39:30 ::1/assets/normalize.css
+2023/06/29 19:42:19 ::1/articles/insert
+2023/06/29 19:42:59 ::1/articles/insert
+2023/06/29 19:43:22 ::1/articles/insert
+2023/06/29 19:43:22 ::1/articles/insert
+2023/06/29 19:43:28 ::1/articles/insert
+2023/06/29 19:44:00 ::1/articles/insert
+2023/06/29 19:44:18 ::1/articles/insert
+2023/06/29 19:44:40 ::1/articles/insert
+2023/06/29 19:44:45 ::1/articles/insert
+2023/06/29 19:45:04 ::1/articles/insert
+2023/06/29 19:45:11 ::1/articles/insert
+2023/06/29 19:45:20 ::1/articles/insert
+2023/06/29 19:45:26 ::1/articles/insert
+2023/06/29 19:45:29 ::1/articles/insert
+2023/06/29 19:45:36 ::1/articles/insert
+2023/06/29 19:45:40 ::1/articles/insert
+2023/06/29 19:45:44 ::1/articles/insert
+2023/06/29 19:45:52 ::1/articles/insert
+2023/06/29 19:45:58 ::1/articles/insert
+2023/06/29 19:46:06 ::1/articles/insert
+2023/06/29 19:46:08 ::1/articles/insert
+2023/06/29 19:46:19 ::1/articles/insert
+2023/06/29 19:50:48 ::1/articles/insert
+2023/06/29 19:50:49 ::1/articles/insert
+2023/06/29 19:53:27 ::1/articles/insert
+2023/06/29 19:58:54 ::1/articles/insert
+2023/06/29 19:58:55 ::1/articles/insert
+2023/06/29 20:00:26 ::1/articles/insert
+2023/06/29 20:01:13 ::1/articles/insert
+2023/06/29 20:02:47 ::1/articles/insert
+2023/06/29 20:02:48 ::1/articles/insert
+2023/06/29 20:03:01 ::1/articles/insert
+2023/06/29 20:03:07 ::1/articles/insert
+2023/06/29 20:03:39 ::1/articles/insert
+2023/06/29 20:03:54 ::1/articles/insert
+2023/06/29 20:03:56 ::1/articles
+2023/06/29 20:03:56 ErrOK:  http: named cookie not present
+2023/06/29 20:03:57 ::1/assets/main.css
+2023/06/29 20:03:57 ::1/assets/normalize.css
+2023/06/29 20:03:59 ::1/articles/insert
+2023/06/29 20:04:20 ::1/articles/insert
+2023/06/29 20:04:25 ::1/articles/insert/submit
+2023/06/29 20:04:25 ErrOK:  http: named cookie not present
+2023/06/29 20:04:25 ::1/assets/main.css
+2023/06/29 20:04:25 ::1/assets/normalize.css
+2023/06/29 20:04:27 ::1/login
+2023/06/29 20:04:51 ::1/articles/insert
+2023/06/29 20:05:03 ::1/articles/insert
+2023/06/29 20:05:05 ::1/articles/insert
+2023/06/29 20:05:07 ::1/articles/insert
+2023/06/29 20:05:45 ::1/articles/insert
+2023/06/29 20:05:58 ::1/articles/insert
+2023/06/29 20:06:00 ::1/articles/insert
+2023/06/29 20:07:03 ::1/articles/insert
+2023/06/29 20:09:32 ::1/articles/insert
+2023/06/29 20:09:37 ::1/articles/insert
+2023/06/29 20:10:07 ::1/articles/insert
+2023/06/29 20:10:40 ::1/articles/insert
+2023/06/29 20:10:54 ::1/articles/insert
+2023/06/29 20:11:07 ::1/articles/insert
+2023/06/29 20:11:13 ::1/articles/insert
+2023/06/29 20:11:45 ::1/articles/insert
+2023/06/29 20:11:57 192.168.50.33/articles/insert
+2023/06/29 20:12:00 192.168.50.33/articles/insert
+2023/06/29 20:12:19 192.168.50.33/articles/insert
+2023/06/29 20:12:38 ::1/articles/insert
+2023/06/29 20:12:40 ::1/articles/insert
+2023/06/29 20:12:41 ::1/articles/insert
+2023/06/29 20:12:45 192.168.50.33/articles/insert
+2023/06/29 20:12:46 192.168.50.33/articles/insert
+2023/06/29 20:13:32 192.168.50.33/articles/insert
+2023/06/29 20:13:32 192.168.50.33/assets/normalize.css
+2023/06/29 20:13:36 ::1/articles/insert
+2023/06/29 20:13:36 ::1/assets/normalize.css
+2023/06/29 20:13:37 ::1/articles/insert
+2023/06/29 20:13:37 ::1/assets/normalize.css
+2023/06/29 20:13:41 ::1/assets/normalize.css
+2023/06/29 20:14:01 ::1/articles/insert
+2023/06/29 20:14:02 192.168.50.33/articles/insert
+2023/06/29 20:14:03 192.168.50.33/articles/insert
+2023/06/29 20:14:06 192.168.50.33/articles/insert
+2023/06/29 20:14:14 192.168.50.33/articles/insert
+2023/06/29 20:14:17 192.168.50.33/articles/insert
+2023/06/29 20:14:29 192.168.50.33/articles/insert
+2023/06/29 20:14:30 192.168.50.33/articles/insert
+2023/06/29 20:14:34 192.168.50.33/articles/insert
+2023/06/29 20:14:41 192.168.50.33/articles/insert
+2023/06/29 20:14:46 192.168.50.33/articles/insert
+2023/06/29 20:14:48 ::1/articles/insert
+2023/06/29 20:15:32 192.168.50.33/articles/insert
+2023/06/29 20:15:37 192.168.50.33/articles/insert
+2023/06/29 20:15:43 192.168.50.33/articles/insert
+2023/06/29 20:15:44 192.168.50.33/articles/insert
+2023/06/29 20:15:46 192.168.50.33/articles/insert
+2023/06/29 20:16:05 192.168.50.33/articles/insert
+2023/06/29 20:16:11 192.168.50.33/articles/insert
+2023/06/29 20:16:18 192.168.50.33/articles/insert
+2023/06/29 20:16:27 192.168.50.33/articles/insert
+2023/06/29 20:16:34 192.168.50.33/articles/insert
+2023/06/29 20:16:38 192.168.50.33/articles/insert
+2023/06/29 20:16:43 ::1/articles/insert

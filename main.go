@@ -19,16 +19,18 @@ func main() {
 
 	// 로그 출력 설정
 	log.SetOutput(io.MultiWriter(os.Stdout, log_f))
-	server_80 := http.NewServeMux()
-	server_80.HandleFunc("/", modules.Http_TO_https)
-	go http.ListenAndServe(":80", server_80) //일반 http 전송 수신시 https로 변경하기
+
+	////http 80 연결 막음
+	//server_80 := http.NewServeMux()
+	//server_80.HandleFunc("/", modules.Http_TO_https)
+	//go http.ListenAndServe(":80", server_80) //일반 http 전송 수신시 https로 변경하기
 	// https://pi.imdhson.com/ *** 로 리다이렉션 해주게 됨 !!
 
 	const PORT int = 443
 	server := http.NewServeMux()
 	server.Handle("/", http.HandlerFunc(urlHandler))
 	log.Println(":"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
-	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "sslforfree/combined.pem", "sslforfree/private.pem", server)
+	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "sslforfree/combined.crt", "sslforfree/private.key", server)
 	modules.Critical(err)
 }
 
