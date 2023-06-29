@@ -19,7 +19,6 @@ func main() {
 
 	// 로그 출력 설정
 	log.SetOutput(io.MultiWriter(os.Stdout, log_f))
-
 	server_80 := http.NewServeMux()
 	server_80.HandleFunc("/", modules.Http_TO_https)
 	go http.ListenAndServe(":80", server_80) //일반 http 전송 수신시 https로 변경하기
@@ -29,7 +28,7 @@ func main() {
 	server := http.NewServeMux()
 	server.Handle("/", http.HandlerFunc(urlHandler))
 	log.Println(":"+strconv.Itoa(PORT), "에서 요청을 기다리는 중:")
-	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "sslforfree/cert.pem", "sslforfree/key.pem", server)
+	err := http.ListenAndServeTLS(":"+strconv.Itoa(PORT), "sslforfree/combined.pem", "sslforfree/private.pem", server)
 	modules.Critical(err)
 }
 
@@ -90,7 +89,7 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 	case "ailist":
 		modules.AIListSender(w, r)
 	case "sessiontest":
-		modules.PrintSession(w, r)
+		modules.PrintSession_TestOnly(w, r)
 	case "session":
 		modules.PrintSession(w, r)
 	default:
