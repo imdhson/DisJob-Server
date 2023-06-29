@@ -111,7 +111,18 @@ func ArticlesDetailHandler(w http.ResponseWriter, r *http.Request, urlPath *[]st
 		title_msg = ""
 		button_msg = ""
 	} else {
-		button_msg = "<button style=\"position: fixed; left: 30px; bottom: 90px; font-size: 40px; background-color: rgb(202, 240, 255); border-radius: 50%; box-shadow: 0px 10px 20px rgb(170, 170, 170); width: 70px; height: 70px;border-color: transparent;\" onclick=\"location.href='/articles'\"><</button>"
+		button_msg = " <button style=\"position: fixed; " +
+			"left: 30px; " +
+			"bottom: 100px; " +
+			"font-size: 15px; " +
+			"background-color: rgb(202, 240, 255); " +
+			"border-radius: 50%; " +
+			"box-shadow: 0px 10px 20px rgb(170, 170, 170); " +
+			"width: 70px; " +
+			"height: 70px;" +
+			"color: black;" +
+			"border-color: transparent;\" " +
+			"onclick=\"location.href='/articles'\">게시판</button>"
 
 	}
 	htmlmodify.AddVar("button_msg", button_msg)
