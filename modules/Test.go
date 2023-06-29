@@ -119,7 +119,7 @@ filter := bson.D{
 
 func Test3(w http.ResponseWriter, r *http.Request) { //object id로 joblist 를 불러오는 예제.
 	oid, _ := primitive.ObjectIDFromHex("648e92b1f2d0f84208c426f1")
-	will_send := OidTOjobDetail(oid)
+	will_send, _ := OidTOjobDetail(oid)
 	will_send_json, _ := json.MarshalIndent(will_send, " ", "	")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)

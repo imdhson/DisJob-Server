@@ -85,18 +85,14 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.ErrHandler(w, r)
 		}
+	case "jobs":
+		modules.PrintJobDetail(w, r, &urlPath)
 	case "ailist":
 		modules.AIListSender(w, r)
 	case "sessiontest":
 		modules.PrintSession(w, r)
 	case "session":
 		modules.PrintSession(w, r)
-	case "test":
-		modules.SampleAIList(w, r)
-	case "test2":
-		modules.Test2(w, r)
-	case "test3":
-		modules.Test3(w, r)
 	default:
 		modules.ErrHandler(w, r)
 	}
