@@ -76,7 +76,8 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.ArticlesDetailHandler(w, r, &urlPath)
 		}
-
+	case "exit":
+		modules.WebViewExit(w, r)
 	case "assets":
 		modules.AssetsHanlder(w, r, &url)
 

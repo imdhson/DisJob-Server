@@ -42,7 +42,7 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 	} else {
 		//로그인이 성공함
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		tmp := []byte("<meta http-equiv=\"refresh\" content=\"0;url=/session/\"></meta>")
+		tmp := []byte("<meta http-equiv=\"refresh\" content=\"0;url=/exit/\"></meta>")
 		sessionkey := rand.Int()
 
 		//http cookie에 세션키 저장
