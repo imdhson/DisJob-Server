@@ -6138,3 +6138,42 @@ created by net/http.(*http2serverConn).processHeaders
 2023/06/30 21:00:18 ::1/exit
 2023/06/30 21:00:23 :443 에서 요청을 기다리는 중:
 2023/06/30 21:00:24 ::1/exit
+2023/07/03 18:55:54 :443 에서 요청을 기다리는 중:
+2023/07/03 18:56:03 ::1/
+2023/07/03 18:56:03 ::1/assets/main.css
+2023/07/03 18:56:03 ::1/assets/normalize.css
+2023/07/03 18:56:03 http: TLS handshake error from [::1]:49324: EOF
+2023/07/03 18:56:03 http: TLS handshake error from [::1]:49325: EOF
+2023/07/03 18:56:05 ::1/login
+2023/07/03 18:56:11 ::1/login/auth/id
+2023/07/03 18:56:11 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/07/03 18:56:12 ::1/login/id/hhammer1234@gmail.com
+2023/07/03 18:56:13 ::1/login/auth/password/
+2023/07/03 18:56:13 session이 겹치는 이메일 삭제 1
+2023/07/03 18:56:13 ObjectID("64a29b3d39594e681b05b5b7")
+2023/07/03 18:56:13 ::1/exit/
+2023/07/03 18:56:19 ::1/articles/649c24d547aa69c9f263267b
+2023/07/03 18:56:20 ErrOK:  mongo: no documents in result
+2023/07/03 18:56:20 ::1/ailist
+2023/07/03 18:56:21 ErrOK:  mongo: no documents in result
+2023/07/03 18:56:21 ErrOK:  mongo: no documents in result
+2023/07/03 18:56:21 avt inters: [팔 다리 시각 음성 귀]
+2023/07/03 18:57:19 ::1/ailist
+2023/07/03 18:57:20 ErrOK:  mongo: no documents in result
+2023/07/03 18:57:20 ErrOK:  mongo: no documents in result
+2023/07/03 18:57:20 avt inters: [팔 다리 시각 음성 귀]
+2023/07/03 18:57:25 :443 에서 요청을 기다리는 중:
+2023/07/03 18:57:27 ::1/ailist
+2023/07/03 18:57:28 ErrOK:  mongo: no documents in result
+2023/07/03 18:57:28 ErrOK:  mongo: no documents in result
+2023/07/03 18:57:28 avt inters: [팔 다리 시각 음성 귀]
+2023/07/03 18:58:02 ::1/ailist
+2023/07/03 18:58:05 :443 에서 요청을 기다리는 중:
+2023/07/03 18:58:05 ::1/ailist
+2023/07/03 18:58:05 ::1/ailist
+2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
+2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
+2023/07/03 18:58:06 avt inters: [팔 다리 시각 음성 귀]
+2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
+2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
+2023/07/03 18:58:06 avt inters: [팔 다리 시각 음성 귀]

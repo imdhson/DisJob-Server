@@ -17,7 +17,7 @@ import (
 
 const (
 	BATCHSIZE  = 2000
-	OUTPUTSIZE = 5
+	OUTPUTSIZE = 50
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
@@ -237,6 +237,15 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 			WageType:     vr.WageType,
 			Wage:         vr.Wage,
 		}
+		switch tmp.WageType {
+		case "일급":
+			tmp.Wage = tmp.Wage / 8
+			tmp.WageType = "환산 시급"
+		case "월급":
+			tmp.Wage = tmp.Wage / (5 * 4 * 8)
+			tmp.WageType = "환산 시급"
+		}
+
 		will_send_refined = append(will_send_refined, tmp)
 	}
 
