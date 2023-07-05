@@ -41,8 +41,84 @@
     button:hover {
       background-color: #0056b3;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
   </style>
   <script>
+     function getSessionInfo() {
+      // GET 요청 보내기
+      fetch('https://pi.imdhson.com/session/')
+        .then(function(response) {
+          if (response.ok) {
+            return response.json(); // 변경된 부분: 응답을 JSON 형태로 파싱
+          } else {
+            throw new Error('요청 실패');
+          }
+        })
+        .then(function(data) {
+          var table = document.getElementById('session-info'); // 표 생성
+          table.innerHTML = ''; // 기존 표 초기화
+
+          var thead = document.createElement('thead'); // 표 머리글 생성
+          var tr = document.createElement('tr'); // 행 생성
+
+          // 표 머리글 셀 생성
+          var thKey = document.createElement('th');
+          thKey.textContent = 'Key';
+          tr.appendChild(thKey);
+
+          var thValue = document.createElement('th');
+          thValue.textContent = 'Value';
+          tr.appendChild(thValue);
+
+          thead.appendChild(tr);
+          table.appendChild(thead);
+
+          var tbody = document.createElement('tbody'); // 표 본문 생성
+
+          // 데이터 행 생성
+          Object.keys(data).forEach(function(key) {
+            var tr = document.createElement('tr');
+
+            var tdKey = document.createElement('td');
+            tdKey.textContent = key;
+            tr.appendChild(tdKey);
+
+            var tdValue = document.createElement('td');
+            tdValue.textContent = data[key];
+            tr.appendChild(tdValue);
+
+            tbody.appendChild(tr);
+          });
+
+          table.appendChild(tbody);
+        })
+        .catch(function(error) {
+          console.log('요청 실패:', error);
+        });
+    }
+
+    // 페이지 로드 시 getSessionInfo() 함수 호출
+    getSessionInfo();
+
+    // 60초마다 getSessionInfo() 함수 호출
+    setInterval(getSessionInfo, 60000);
+
+
     function sendPostRequest() {
       // JSON 데이터 생성
       var data = {
@@ -157,6 +233,11 @@
   </script>
 </head>
 <body>
+  <div class="section">
+  <div class="session-info">
+    <p>session에 대한 정보:</p>
+    <table id="session-info"></table> <!-- 변경된 부분 -->
+  </div></div>
   <div class="section">
     <input type="text" id="loc" name="loc" placeholder="loc">
     <input type="text" id="type1" name="type1" placeholder="type1">
