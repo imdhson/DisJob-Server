@@ -6177,3 +6177,18 @@ created by net/http.(*http2serverConn).processHeaders
 2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
 2023/07/03 18:58:06 ErrOK:  mongo: no documents in result
 2023/07/03 18:58:06 avt inters: [팔 다리 시각 음성 귀]
+2023/07/05 15:40:24 :443 에서 요청을 기다리는 중:
+2023/07/05 15:42:40 :443 에서 요청을 기다리는 중:
+2023/07/05 15:42:52 ::1/assets/test.html
+2023/07/05 15:42:52 ::1/assets/test.html
+2023/07/05 15:42:52 ::1/favicon.ico
+2023/07/05 15:44:35 ::1/assets/test.html
+2023/07/05 15:44:36 ::1/assets/test.html
+2023/07/05 15:44:46 ::1/assets/test.html
+2023/07/05 15:47:17 ::1/assets/test.html
+2023/07/05 15:47:18 ::1/assets/test.html
+2023/07/05 15:49:28 ::1/assets/test.html
+2023/07/05 15:51:11 ::1/assets/test.html
+2023/07/05 15:51:12 ::1/assets/test.html
+2023/07/05 15:51:12 ::1/assets/test.html
+2023/07/05 15:51:12 ::1/assets/test.html

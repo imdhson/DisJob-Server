@@ -76,6 +76,12 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 		} else {
 			modules.ArticlesDetailHandler(w, r, &urlPath)
 		}
+	case "scrap":
+		if urlPath[1] == "add" {
+			modules.ScrapAddHandler(w, r)
+		} else if urlPath[1] == "del" {
+			modules.ScrapDelHandler(w, r)
+		}
 	case "exit":
 		modules.WebViewExit(w, r)
 	case "assets":

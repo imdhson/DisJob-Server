@@ -10,28 +10,26 @@ import (
 
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-type Receive_settings struct {
-	Loc   string `json:"loc"`
-	Type1 string `json:"type1"`
-	Type2 string `json:"type2"`
-	Type3 string `json:"type3"`
+type receive_scrap_del struct {
+	ID string `json:"id"`
 }
 
-func SettingsChangeHandler(w http.ResponseWriter, r *http.Request) {
+func ScrapDelHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*") // 모든 도메인에 대해 허용
 	w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	if r.Method == "POST" {
-		//json을 수신하여 settings_struct에 저장
-		var settings_struct Receive_settings
+		//json을 수신하여 Recive Scrap에 저장
+		var scrap_struct receive_scrap_del
 		body, err := io.ReadAll(r.Body)
 		log.Println("json 수신 원본: ", string(body))
 		ErrOK(err)
-		err = json.Unmarshal(body, &settings_struct)
+		err = json.Unmarshal(body, &scrap_struct)
 		ErrOK(err)
 		defer r.Body.Close()
 		if !IsHeLogin(w, r) { //로그인 안했으면
@@ -57,12 +55,16 @@ func SettingsChangeHandler(w http.ResponseWriter, r *http.Request) {
 		coll := db.Database("dj_users").Collection("users")
 
 		filter := bson.D{{"_id", user_oid}}
-		//update := bson.D{{"$set", bson.D{{"settings", bson.D{{"loc", settings_struct.Loc}}, bson.D{{"type", settings_struct.Type}}}}}}
-		update := bson.D{
+		/*update := bson.D{
 			{"$set", bson.D{{"settings.loc", settings_struct.Loc},
 				{"settings.type1", settings_struct.Type1},
 				{"settings.type2", settings_struct.Type2},
 				{"settings.type3", settings_struct.Type3}}},
+		}*/
+		sid, err := primitive.ObjectIDFromHex(scrap_struct.ID)
+		ErrOK(err)
+		update := bson.D{
+			{"$pull", bson.D{{"scrapList", sid}}},
 		}
 
 		_, err = coll.UpdateOne(context.TODO(), filter, update)
