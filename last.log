@@ -6192,3 +6192,57 @@ created by net/http.(*http2serverConn).processHeaders
 2023/07/05 15:51:12 ::1/assets/test.html
 2023/07/05 15:51:12 ::1/assets/test.html
 2023/07/05 15:51:12 ::1/assets/test.html
+2023/07/05 16:28:19 :443 에서 요청을 기다리는 중:
+2023/07/05 16:28:24 ::1/session/
+2023/07/05 16:28:25 ErrOK:  mongo: no documents in result
+2023/07/05 16:28:26 ::1/articles/649c24d547aa69c9f263267b
+2023/07/05 16:28:26 ErrOK:  mongo: no documents in result
+2023/07/05 16:28:29 ::1/assets/test.html
+2023/07/05 16:29:22 ::1/assets/test.html
+2023/07/05 16:52:20 :443 에서 요청을 기다리는 중:
+2023/07/05 16:52:38 ::1/login
+2023/07/05 16:52:41 ::1/login/auth/id
+2023/07/05 16:52:42 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/07/05 16:52:42 ::1/login/id/hhammer1234@gmail.com
+2023/07/05 16:52:43 ::1/login/auth/password/
+2023/07/05 16:52:43 session이 겹치는 이메일 삭제 1
+2023/07/05 16:52:43 ObjectID("64a5214b04a9ba8139280c19")
+2023/07/05 16:52:43 ::1/exit/
+2023/07/05 16:52:51 ::1/session/
+2023/07/05 16:56:20 ::1/
+2023/07/05 16:56:33 ::1/session
+2023/07/05 16:56:33 ErrOK:  mongo: no documents in result
+2023/07/05 16:56:35 ::1/login
+2023/07/05 16:57:56 ::1/
+2023/07/05 16:57:57 ::1/
+2023/07/05 16:58:10 ::1/session
+2023/07/05 16:58:11 ErrOK:  mongo: no documents in result
+2023/07/05 16:58:14 ::1/session
+2023/07/05 16:58:14 ErrOK:  mongo: no documents in result
+2023/07/05 16:59:28 ::1/
+2023/07/05 17:00:06 ::1/
+2023/07/05 17:00:10 ::1/
+2023/07/05 17:01:05 ::1/
+2023/07/05 17:01:05 ::1/session
+2023/07/05 17:01:06 ErrOK:  mongo: no documents in result
+2023/07/05 17:01:15 ::1/login
+2023/07/05 17:02:10 :443 에서 요청을 기다리는 중:
+2023/07/05 17:02:17 ::1/login111
+2023/07/05 17:02:17 ::1/login111
+2023/07/05 17:02:17 ::1/session
+2023/07/05 17:02:18 ErrOK:  mongo: no documents in result
+2023/07/05 17:02:20 ::1/login
+2023/07/05 17:02:23 ::1/login/auth/id
+2023/07/05 17:02:23 pseudo: hhammer1234@gmail.com 을 E-Mail로 로그인하기
+2023/07/05 17:02:23 ::1/login/id/hhammer1234@gmail.com
+2023/07/05 17:02:25 ::1/login/auth/password/
+2023/07/05 17:02:25 session이 겹치는 이메일 삭제 1
+2023/07/05 17:02:25 ObjectID("64a52391ce2d0a350cd8e8c2")
+2023/07/05 17:02:25 ::1/exit/
+2023/07/05 17:02:27 ::1/login111
+2023/07/05 17:02:27 ::1/session
+2023/07/05 17:02:33 ::1/
+2023/07/05 17:02:33 ::1/session
+2023/07/05 17:02:33 ::1/session/
+2023/07/05 17:03:27 ::1/session
+2023/07/05 17:04:27 ::1/session

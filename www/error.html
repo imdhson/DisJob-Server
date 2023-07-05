@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>@import '/assets/main.css';</style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
 
-  </head>
+    h2 {
+      text-align: center;
+    }
+
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .session-info {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <script>
+    function getSessionInfo() {
+      // GET 요청 보내기
+      fetch('/session')
+        .then(function(response) {
+          if (response.ok) {
+            return response.text();
+          } else {
+            throw new Error('요청 실패');
+          }
+        })
+        .then(function(data) {
+          document.getElementById('session-info').textContent = data;
+        })
+        .catch(function(error) {
+          console.log('요청 실패:', error);
+        });
+    }
+
+    // 페이지 로드 시 getSessionInfo() 함수 호출
+    getSessionInfo();
+
+    // 60초마다 getSessionInfo() 함수 호출
+    setInterval(getSessionInfo, 60000);
+  </script>
+</head>
 <body>
 
 <h2>Error 발생</h2>
-<a href="/login">Login으로 이동하기</a>
+<a href="/login" target="_blank" class="login-btn">Login으로 이동하기</a>
+
+<div class="session-info">
+  <p>session에 대한 정보:</p>
+  <p id="session-info"></p>
+</div>
 
 </body>
 </html>
-

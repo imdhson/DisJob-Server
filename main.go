@@ -81,6 +81,8 @@ func urlHandler(w http.ResponseWriter, r *http.Request) {
 			modules.ScrapAddHandler(w, r)
 		} else if urlPath[1] == "del" {
 			modules.ScrapDelHandler(w, r)
+		} else if urlPath[1] == "" {
+			modules.PrintScrap(w, r)
 		}
 	case "exit":
 		modules.WebViewExit(w, r)
