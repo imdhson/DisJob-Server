@@ -111,7 +111,7 @@
             tr.appendChild(tdKey);
 
             var tdValue = document.createElement('td');
-            tdValue.textContent = data[key];
+            tdValue.textContent = JSON.stringify(data[key]);
             tr.appendChild(tdValue);
 
             tbody.appendChild(tr);

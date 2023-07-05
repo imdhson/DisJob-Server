@@ -8,7 +8,6 @@
       font-family: sans-serif;
       padding: 20px;
       background-color: #f5f5f5;
-      overflow: auto; /* 수정된 부분 */
     }
 
     .section {
@@ -99,7 +98,7 @@
             tr.appendChild(tdKey);
 
             var tdValue = document.createElement('td');
-            tdValue.textContent = data[key];
+            tdValue.textContent = JSON.stringify(data[key]);
             tr.appendChild(tdValue);
 
             tbody.appendChild(tr);
@@ -157,7 +156,7 @@
       };
 
       // 로그아웃
-      fetch('http://pi.imdhson.com/login/logout/', {
+      fetch('https://pi.imdhson.com/login/logout/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
