@@ -7,6 +7,7 @@ import (
 func Critical(err error) {
 	if err != nil {
 		log.Println("치명적인 오류 발생: ", err)
+		CriticalAlert(err)
 		log.Fatal(err)
 	}
 }
