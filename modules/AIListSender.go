@@ -15,6 +15,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+// 라인 64에 모든 부위 포함을 fitting 하기
 const (
 	BATCHSIZE  = 2000
 	OUTPUTSIZE = 50
@@ -89,7 +90,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	//filter에 적용할 user의 데이터를 가져옴
 	user_struct := OidTOuser_struct(SessionTO_oid(w, r))
 	splited_loc := strings.Split(user_struct.Settings.Loc, " ")
-	if len(splited_loc) <= 1 || !IsHeLogin(w, r) { //인덱스 런타임 에러 방지
+	if !IsHeLogin(w, r) { //인덱스 런타임 에러 방지
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
 		err_msg := map[string]string{"error": "Not LOGIN"}
@@ -113,14 +114,18 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 
 	//직장 쿼리 시작
 	//
-	//
+
+	//지역 분류 시작
 	coll := db.Database("dj_jobs").Collection("job_list")
 	// **도 쿼리 시작
 	var will_send Dj_jobs_detail_s
 	var filter_loc_0 string
 	var filter_loc_1 string
-	if len(splited_loc) <= 1 { //빈칸일경우 모든 지역 포함간주
+	if len(splited_loc) <= 0 { //빈칸일경우 모든 지역 포함간주
 		filter_loc_0 = ""
+		filter_loc_1 = ""
+	} else if len(splited_loc) == 1 {
+		filter_loc_0 = splited_loc[0]
 		filter_loc_1 = ""
 	} else {
 		filter_loc_0 = splited_loc[0]
