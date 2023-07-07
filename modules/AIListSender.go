@@ -92,7 +92,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	if len(splited_loc) <= 1 || !IsHeLogin(w, r) { //인덱스 런타임 에러 방지
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
-		err_msg := map[string]string{"error": "로그인이 되지 않음"}
+		err_msg := map[string]string{"error": "Not LOGIN"}
 		err_msg_json, _ := json.MarshalIndent(err_msg, " ", "	")
 		w.Write(err_msg_json)
 		return

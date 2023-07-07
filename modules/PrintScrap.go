@@ -71,7 +71,7 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 	} else {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
-		msg := map[string]string{"email": "Not LOGIN"}
+		msg := map[string]string{"error": "Not LOGIN"}
 		msg_json, _ := json.Marshal(msg)
 		w.Write(msg_json)
 	}
