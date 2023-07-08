@@ -17,13 +17,13 @@
         overflow: hidden;
         width: calc(100% - 10px);
         margin-left: 3px;
-        height: 70px;
+        height: 40px;
         left:0;
         background: #FFFFFF;
         box-shadow: 3px 3px 5px 1px #E3B3FF;
         border-radius: 20px;
         list-style: none;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
       }
 
       li.article-detail {
@@ -75,7 +75,7 @@
       .comment-content {
         position: absolute;
         top: 20%;
-        height: 20%;
+        height: 100%;
         width: 80%;
         padding-left: 20px;
         font-family: 'Jua', sans-serif;
@@ -109,9 +109,9 @@
         position: absolute;
         text-align: right;
         right: 20px;
-        bottom: 5px;
+        bottom: 10px;
         width: 50%;
-        height: 27px;
+        height: auto;
         font-family: sans-serif;
         font-weight: 400;
         font-size: 10px;
@@ -137,7 +137,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
-        height: 50px;
+        height: 30px;
         box-shadow: 3px 3px 5px 1px gray;
         background: #F2DDFF;
         border-radius: 40px;
@@ -150,7 +150,7 @@
       /* 보내기 버튼 */
       #submit {
         right:0;
-        width: 100px;
+        width: 50px;
         height: 90%;
         background-color: #FFFFFF;
         color: black;
@@ -165,7 +165,7 @@
       /* 익명 */
       #checkbox-container {
         position: relative;
-        right: 100px;
+        right: 60px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -235,7 +235,7 @@
         <label for="checkbox" id="checkbox-label"></label>
         <span id="checkbox-text">익명</span>
       </div>
-      <input type="submit" id="submit" value="보내기">
+      <input type="submit" id="submit" value="⇧">
     </form>
     <go>button_msg</go>
   </body>
