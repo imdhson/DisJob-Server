@@ -26,6 +26,7 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 		for i, v := range user_struct.ScrapList {
 			dj_temp, err := OidTOjobDetail(v)
 			ErrOK(err)
+
 			tmp_address := strings.Split(dj_temp.Address, " ") //위치 앞에만 잘라서 보냄
 			tmp_address1 := tmp_address[0] + " " + tmp_address[1]
 
@@ -38,6 +39,19 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 				Address:        tmp_address1,
 				RecuritShape:   dj_temp.RecuritShape,
 			}
+			//시급으로 환산
+			switch temp.WageType {
+			case "일급":
+				temp.Wage = temp.Wage / 8
+				temp.WageType = "환산 시급"
+			case "월급":
+				temp.Wage = temp.Wage / (5 * 4 * 8)
+				temp.WageType = "환산 시급"
+			case "연봉":
+				temp.Wage = temp.Wage / (12 * 5 * 4 * 8)
+				temp.WageType = "환산 시급"
+			}
+
 			will_send = append(will_send, temp)
 		}
 		will_send_json, err := json.MarshalIndent(will_send, " ", "	")

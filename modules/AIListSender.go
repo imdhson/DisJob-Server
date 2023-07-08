@@ -203,6 +203,8 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / SCORE_WEIGHT
 		case "월급":
 			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / SCORE_WEIGHT
+		case "연봉":
+			will_send[iw].AI_List_score += will_send[iw].Wage / (12 * 5 * 4 * 8) / SCORE_WEIGHT
 		}
 
 	}
@@ -249,6 +251,9 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 			tmp.WageType = "환산 시급"
 		case "월급":
 			tmp.Wage = tmp.Wage / (5 * 4 * 8)
+			tmp.WageType = "환산 시급"
+		case "연봉":
+			tmp.Wage = tmp.Wage / (12 * 5 * 4 * 8)
 			tmp.WageType = "환산 시급"
 		}
 
