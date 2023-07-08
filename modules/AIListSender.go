@@ -17,9 +17,13 @@ import (
 
 // 라인 64에 모든 부위 포함을 fitting 하기
 const (
-	BATCHSIZE    = 2000
-	OUTPUTSIZE   = 50
-	SCORE_WEIGHT = 200 //100~250 권장
+	BATCHSIZE        = 2000
+	OUTPUTSIZE       = 50
+	SCORE_WEIGHT_AVT = 30  //장애유형 매칭 성공시 추가할 점수
+	SCORE_WEIGHT_DO  = 200 //**도 가 일치할 경우 추가할 점수
+	SCORE_WEIGHT_SI  = 100 //**도 && **시 가 일치할 경우 추가할 점수
+
+	SCORE_WEIGHT_WAGE = 200 //100~250 권장
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
@@ -146,7 +150,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 		}
 		var dbres_loc1 Dj_jobs_detail = Dj_jobs_detail{}
 		cursor.Decode(&dbres_loc1)
-		will_send_append(&dbres_loc1, &will_send, 200)
+		will_send_append(&dbres_loc1, &will_send, SCORE_WEIGHT_DO)
 		cnt++
 	}
 
@@ -166,7 +170,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 		}
 		var dbres_loc2 Dj_jobs_detail = Dj_jobs_detail{}
 		cursor.Decode(&dbres_loc2)
-		will_send_append(&dbres_loc2, &will_send, 100)
+		will_send_append(&dbres_loc2, &will_send, SCORE_WEIGHT_SI)
 		cnt++
 	}
 	// type_inters 순회하여 쿼리 시작
@@ -189,7 +193,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 			}
 			var dbres_type Dj_jobs_detail
 			cursor.Decode(&dbres_type)
-			will_send_append(&dbres_type, &will_send, 110)
+			will_send_append(&dbres_type, &will_send, SCORE_WEIGHT_AVT)
 			cnt++
 		}
 	}
@@ -198,13 +202,13 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	for iw := range will_send {
 		switch will_send[iw].WageType {
 		case "시급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / SCORE_WEIGHT
+			will_send[iw].AI_List_score += will_send[iw].Wage / SCORE_WEIGHT_WAGE
 		case "일급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / SCORE_WEIGHT
+			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / SCORE_WEIGHT_WAGE
 		case "월급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / SCORE_WEIGHT
+			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / SCORE_WEIGHT_WAGE
 		case "연봉":
-			will_send[iw].AI_List_score += will_send[iw].Wage / (12 * 5 * 4 * 8) / SCORE_WEIGHT
+			will_send[iw].AI_List_score += will_send[iw].Wage / (12 * 5 * 4 * 8) / SCORE_WEIGHT_WAGE
 		}
 
 	}
