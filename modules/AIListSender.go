@@ -197,11 +197,11 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	for iw := range will_send {
 		switch will_send[iw].WageType {
 		case "시급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / 100
+			will_send[iw].AI_List_score += will_send[iw].Wage / 200
 		case "일급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / 100
+			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / 200
 		case "월급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / 100
+			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / 200
 		}
 
 	}
