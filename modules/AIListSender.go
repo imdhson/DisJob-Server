@@ -17,8 +17,9 @@ import (
 
 // 라인 64에 모든 부위 포함을 fitting 하기
 const (
-	BATCHSIZE  = 2000
-	OUTPUTSIZE = 50
+	BATCHSIZE    = 2000
+	OUTPUTSIZE   = 50
+	SCORE_WEIGHT = 200 //100~250 권장
 )
 
 func will_send_append(dbres *Dj_jobs_detail, input *Dj_jobs_detail_s, score int) {
@@ -197,11 +198,11 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	for iw := range will_send {
 		switch will_send[iw].WageType {
 		case "시급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / 200
+			will_send[iw].AI_List_score += will_send[iw].Wage / SCORE_WEIGHT
 		case "일급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / 200
+			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / SCORE_WEIGHT
 		case "월급":
-			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / 200
+			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / SCORE_WEIGHT
 		}
 
 	}
