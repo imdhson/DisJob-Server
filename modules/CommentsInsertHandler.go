@@ -53,10 +53,9 @@ func CommentsInsert(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 	if err != nil {
 		ErrOK(err)
 	} else {
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
-		redirect_url := "/articles/" + ARJB_oid_str
-		msg := "<meta http-equiv=\"refresh\" content=\"0;url=" + redirect_url + "\"></meta>"
-		w.Write([]byte(msg))
+		inserted_id := ARJB_oid_str
+		tmp_urlpath := []string{"", inserted_id}
+		ArticlesDetailHandler(w, r, &tmp_urlpath)
 	}
 
 }

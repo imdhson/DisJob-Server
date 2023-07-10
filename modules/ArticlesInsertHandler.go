@@ -51,11 +51,8 @@ func ArticlesInsertHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		ErrOK(err)
 	} else {
-		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		inserted_id := result.InsertedID.(primitive.ObjectID).Hex() //result.id를 hex로 변환
-		redirect_url := "/articles/" + inserted_id
-		msg := "<meta http-equiv=\"refresh\" content=\"0;url=" + redirect_url + "\"></meta>"
-		w.Write([]byte(msg))
+		tmp_urlpath := []string{"", inserted_id}
+		ArticlesDetailHandler(w, r, &tmp_urlpath)
 	}
-
 }
