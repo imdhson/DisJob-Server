@@ -19,9 +19,9 @@ import (
 const (
 	BATCHSIZE        = 2000
 	OUTPUTSIZE       = 50
-	SCORE_WEIGHT_AVT = 30  //장애유형 매칭 성공시 추가할 점수
+	SCORE_WEIGHT_AVT = 50  //장애유형 매칭 성공시 추가할 점수
 	SCORE_WEIGHT_DO  = 200 //**도 가 일치할 경우 추가할 점수
-	SCORE_WEIGHT_SI  = 100 //**도 && **시 가 일치할 경우 추가할 점수
+	SCORE_WEIGHT_SI  = 300 //**도 && **시 가 일치할 경우 추가할 점수
 
 	SCORE_WEIGHT_WAGE = 200 //100~250 권장
 )
