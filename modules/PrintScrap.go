@@ -18,6 +18,21 @@ type job_scrap struct {
 	RecuritShape   string             `bson:"고용형태" json:"고용형태"`
 }
 
+func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) {
+	var tmp bool = false
+	for i, v := range *input {
+		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
+			tmp = true
+			return
+		} else { //포함되지 않았을 때 dbres를 append함
+			tmp = false
+		}
+	}
+	if !tmp { //포함되지 않았을 때 dbres를 append함
+		//log.Println("어펜드 시도", dbres.ID)
+		*input = append(*input, *dbres)
+	}
+}
 func PrintScrap(w http.ResponseWriter, r *http.Request) {
 	if IsHeLogin(w, r) {
 		var will_send []job_scrap
@@ -52,7 +67,8 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 				temp.WageType = "환산 시급"
 			}
 
-			will_send = append(will_send, temp)
+			//will_send = append(will_send, temp)
+			will_send_append_scrap(&temp, &will_send)
 		}
 		will_send_json, err := json.MarshalIndent(will_send, " ", "	")
 		ErrOK(err)
