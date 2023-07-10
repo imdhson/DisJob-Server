@@ -10,5 +10,7 @@ func XSSFix(input string) string {
 	a = strings.ReplaceAll(a, "\"", "&quot;")
 	a = strings.ReplaceAll(a, "'", "&#x27;")
 	a = strings.ReplaceAll(a, "/", "&#x2F;")
+
+	a = strings.ReplaceAll(a, "\n", "<br>")
 	return a
 }
