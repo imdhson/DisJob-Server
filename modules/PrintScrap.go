@@ -18,7 +18,7 @@ type job_scrap struct {
 	RecuritShape   string             `bson:"고용형태" json:"고용형태"`
 }
 
-func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) bool{
+func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) bool {
 	var tmp bool = false
 	for _, v := range *input {
 		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
@@ -42,8 +42,11 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 		user_struct := OidTOuser_struct(oid)
 		scrap_list_num := 0
 		for _, v := range user_struct.ScrapList {
+
 			dj_temp, err := OidTOjobDetail(v)
-			ErrOK(err)
+			if err != nil {
+				continue
+			}
 
 			tmp_address := strings.Split(dj_temp.Address, " ") //위치 앞에만 잘라서 보냄
 			tmp_address1 := tmp_address[0] + " " + tmp_address[1]
@@ -70,7 +73,7 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 				temp.WageType = "환산 시급"
 			}
 
-			if will_send_append_scrap(&temp, &will_send){ // 중복하지않고 append 성공하면 리스트번호 1 추가
+			if will_send_append_scrap(&temp, &will_send) { // 중복하지않고 append 성공하면 리스트번호 1 추가
 				scrap_list_num++
 			}
 
