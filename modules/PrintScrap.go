@@ -18,12 +18,12 @@ type job_scrap struct {
 	RecuritShape   string             `bson:"고용형태" json:"고용형태"`
 }
 
-func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) {
+func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) bool{
 	var tmp bool = false
-	for i, v := range *input {
+	for _, v := range *input {
 		if v.ID == dbres.ID { //will_send에 이미 포함 되어있는 데이터일때
 			tmp = true
-			return
+			return false
 		} else { //포함되지 않았을 때 dbres를 append함
 			tmp = false
 		}
@@ -31,14 +31,17 @@ func will_send_append_scrap(dbres *job_scrap, input *[]job_scrap) {
 	if !tmp { //포함되지 않았을 때 dbres를 append함
 		//log.Println("어펜드 시도", dbres.ID)
 		*input = append(*input, *dbres)
+		return true
 	}
+	return false
 }
 func PrintScrap(w http.ResponseWriter, r *http.Request) {
 	if IsHeLogin(w, r) {
 		var will_send []job_scrap
 		oid := SessionTO_oid(w, r)
 		user_struct := OidTOuser_struct(oid)
-		for i, v := range user_struct.ScrapList {
+		scrap_list_num := 0
+		for _, v := range user_struct.ScrapList {
 			dj_temp, err := OidTOjobDetail(v)
 			ErrOK(err)
 
@@ -46,7 +49,7 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 			tmp_address1 := tmp_address[0] + " " + tmp_address[1]
 
 			temp := job_scrap{
-				Scrap_List_num: i,
+				Scrap_List_num: scrap_list_num,
 				ID:             dj_temp.ID,
 				CompanyName:    dj_temp.CompanyName,
 				WageType:       dj_temp.WageType,
@@ -67,8 +70,10 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 				temp.WageType = "환산 시급"
 			}
 
-			//will_send = append(will_send, temp)
-			will_send_append_scrap(&temp, &will_send)
+			if will_send_append_scrap(&temp, &will_send){ // 중복하지않고 append 성공하면 리스트번호 1 추가
+				scrap_list_num++
+			}
+
 		}
 		will_send_json, err := json.MarshalIndent(will_send, " ", "	")
 		ErrOK(err)
