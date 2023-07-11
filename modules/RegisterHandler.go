@@ -64,7 +64,5 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 	ErrOK(err)
 	log.Println("regist 사용된 키 삭제:", result_del.DeletedCount)
 
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	msg := "<meta http-equiv=\"refresh\" content=\"0;url=/login/\"></meta>"
-	w.Write([]byte(msg))
+	Immed_Login_AfterRegister(w, r, users_struct.Email, users_struct.Password)
 }
