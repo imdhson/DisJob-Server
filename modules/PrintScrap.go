@@ -45,6 +45,7 @@ func PrintScrap(w http.ResponseWriter, r *http.Request) {
 
 			dj_temp, err := OidTOjobDetail(v)
 			if err != nil {
+				ErrOK(err)
 				continue
 			}
 

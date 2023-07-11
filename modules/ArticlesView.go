@@ -4,6 +4,7 @@ import (
 	"context"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 
@@ -68,13 +69,34 @@ func ArticlesView(w http.ResponseWriter, r *http.Request) {
 		}
 		compare_time = strings.ReplaceAll(compare_time, "h", "시간")
 		compare_time = strings.ReplaceAll(compare_time, "d", "일")
+
+		//댓글 개수 계산
+		coll_for_commentCount := db.Database("dj_board").Collection("comments")
+		filter_for_commentCount := bson.D{{"dj_jobs_id", v.ID}}
+		commentCount, err := coll_for_commentCount.CountDocuments(context.TODO(), filter_for_commentCount)
+		ErrOK(err)
+
 		article_url := "/articles/" + v.ID.Hex()
-		title_msg += "<a href="
-		title_msg += article_url
-		title_msg += "><li><span class=\"comment-content\">" + v.Title + "</span><span class=\"comment-writer\">" +
-			useremail + "(이)가 " + compare_time + "전 작성</span></li></a>"
+
+		//그리드 작성 시작
+		/*
+					    <a href=%%article_url>
+			    <div class="post">
+			      <h2>%%v.Title</h2>
+			      <p class="time"><i class="far fa-clock"></i>%%compare_time</p>
+			      <p class="author"><i class="fas fa-user"></i>%%usermail</p>
+			      <p class="commentCount"><i class="far fa-comments"></i>$$commentCount</p>
+			    </div>
+			    </a>
+		*/
+		title_msg += "<a href=\"" + article_url + "\">"
+		title_msg += " <div class=\"post\"> 	 <h2>" + v.Title + "</h2>"
+		title_msg += "<p class=\"time\"><i class=\"far fa-clock\"></i>" + compare_time + "전</p>"
+		title_msg += "<p class=\"author\"><i class=\"fas fa-user\"></i>" + useremail + "</p>"
+		title_msg += "<p class=\"commentCount\"><i class=\"far fa-comments\"></i>" + strconv.Itoa(int(commentCount)) + "개</p>"
+		title_msg += "</div> 	</a>\n"
 	}
-	htmlmodify.AddVar("title_msg", title_msg)
+	htmlmodify.AddVar("articles_grid", title_msg)
 	html_modified := htmlmodify.VarsOnHTML(wwwfile)
 	w.Write(html_modified)
 }
