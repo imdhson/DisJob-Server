@@ -2,6 +2,7 @@ package modules
 
 import (
 	"context"
+	"crypto/sha512"
 	"log"
 	"math/rand"
 	"net/http"
@@ -30,7 +31,8 @@ func AuthPWHandler(w http.ResponseWriter, r *http.Request) {
 		Critical(err)
 	}()
 	coll := db.Database("dj_users").Collection("users")
-	filter := bson.D{{"email", form_email}, {"password", form_pw}}
+	encryptedPW := sha512.Sum512([]byte(form_pw)) //비밀 번호 해시 단방향 암호화
+	filter := bson.D{{"email", form_email}, {"password", encryptedPW}}
 	var dbres Dj_users_users
 	err = coll.FindOne(context.TODO(), filter).Decode(&dbres)
 	if err != nil { //로그인이 실패함

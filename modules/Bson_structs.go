@@ -9,7 +9,7 @@ import (
 type Dj_users_users struct {
 	ID        primitive.ObjectID      `bson:"_id,omitempty"`
 	Email     string                  `bson:"email"`
-	Password  string                  `bson:"password"`
+	Password  [64]byte                `bson:"password"`
 	LastLogin time.Time               `bson:"lastLogin"`
 	ScrapList []primitive.ObjectID    `bson:"scrapList"`
 	Settings  Dj_users_users_settings `bson:"settings"`

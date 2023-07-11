@@ -2,6 +2,7 @@ package modules
 
 import (
 	"context"
+	"crypto/sha512"
 	"log"
 	"net/http"
 	"os"
@@ -46,8 +47,9 @@ func RegisterHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(msg))
 		return
 	}
+	encryptedPW := sha512.Sum512([]byte(form_pw1)) //비밀 번호 해시 단방향 암호화
 	users_struct := Dj_users_users{
-		Email: dbres.Email, Password: form_pw1,
+		Email: dbres.Email, Password: encryptedPW,
 		LastLogin: time.Now(), ScrapList: []primitive.ObjectID{}, // primitive.NewObjectID 로 나중에 Push 가능
 		Settings: Dj_users_users_settings{},
 	}
