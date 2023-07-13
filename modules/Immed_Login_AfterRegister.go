@@ -36,7 +36,7 @@ func Immed_Login_AfterRegister(w http.ResponseWriter, r *http.Request, email str
 		log.Println("ID, 비밀번호 매칭 실패")
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
-		redirect_msg := "<script>alert(\"로그인 실패\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + form_email + "\"></meta>" //다시 원래 pwrequst
+		redirect_msg := "<script>alert(\"로그인 실패\")</script><meta http-equiv=\"refresh\" content=\"0;url=/login/id/" + email + "\"></meta>" //다시 원래 pwrequst
 		w.Write([]byte(redirect_msg))
 	} else {
 		//로그인이 성공함
