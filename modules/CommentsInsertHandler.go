@@ -45,6 +45,7 @@ func CommentsInsert(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 		Djuserid: user_oid,
 		CreateAt: time.Now(),
 		Content:  content,
+		GenbyAI:  false,
 	}
 	if anon {
 		comments_struct.Djuserid = primitive.NilObjectID

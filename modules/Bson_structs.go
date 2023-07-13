@@ -86,6 +86,7 @@ type Dj_board_comments struct {
 	Djuserid primitive.ObjectID `bson:"dj_user_id"`
 	CreateAt time.Time          `bson:"createAt"`
 	Content  string             `bson:"content"`
+	GenbyAI  bool               `bson:"genbyAI"`
 }
 type Dj_board_articles struct {
 	ID       primitive.ObjectID `bson:"_id,omitempty"`

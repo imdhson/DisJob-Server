@@ -15,6 +15,10 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+const (
+	genbyAI_name = "Google Bard AI"
+)
+
 func ArticlesDetailHandler(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 	if !IsHeLogin(w, r) {
 		ErrHandler(w, r)
@@ -95,7 +99,9 @@ func ArticlesDetailHandler(w http.ResponseWriter, r *http.Request, urlPath *[]st
 	}
 
 	htmlmodify.AddVar("form_action_url", "/comments/insert/"+url_oid)
+
 	var comments_msg string
+
 	for _, v := range comments_struct {
 		useremail := OidTOuser_struct(v.Djuserid).Email
 		if v.Djuserid == primitive.NilObjectID {
@@ -113,13 +119,21 @@ func ArticlesDetailHandler(w http.ResponseWriter, r *http.Request, urlPath *[]st
 		compare_time = strings.ReplaceAll(compare_time, "h", "시간")
 		compare_time = strings.ReplaceAll(compare_time, "d", "일")
 
-		comments_msg += `<div class="post">`
-		comments_msg += `<p class="commentIcon"><i class="far fa-comments"></i></p>`
-		comments_msg += `<p>` + v.Content + `</p>`
-		comments_msg += `<p class="time"><i class="far fa-clock"></i>` + compare_time + `</p>`
-		comments_msg += `<p class="author"><i class="fas fa-user"></i>` + useremail + `</p>`
-		comments_msg += `</div>`
+		if v.GenbyAI { //AI 작성 댓글의 경우 다르게 적용
+			comments_msg += `<div class="post">`
+			comments_msg += `<p class="commentIcon"><i class="far fa-comments"></i>` + genbyAI_name + `</p>`
+			comments_msg += `<p>` + v.Content + `</p>`
+			comments_msg += `<p class="time"><i class="far fa-clock"></i>` + compare_time + `</p>`
+			comments_msg += `</div>`
+		} else { //AI가 아닌 사람이 작성함
+			comments_msg += `<div class="post">`
+			comments_msg += `<p class="commentIcon"><i class="far fa-comments"></i></p>`
+			comments_msg += `<p>` + v.Content + `</p>`
+			comments_msg += `<p class="time"><i class="far fa-clock"></i>` + compare_time + `</p>`
+			comments_msg += `<p class="author"><i class="fas fa-user"></i>` + useremail + `</p>`
+			comments_msg += `</div>`
 
+		}
 	}
 	//버튼 관련
 	var button_msg string

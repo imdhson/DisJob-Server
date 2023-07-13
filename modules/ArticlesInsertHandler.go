@@ -22,6 +22,10 @@ func ArticlesInsertHandler(w http.ResponseWriter, r *http.Request) {
 	title := XSSFix(r.FormValue("title"))
 	content := XSSFix(r.FormValue("content"))
 
+	if title == "" || content == "" { //빈칸일 경우 무시
+		return
+	}
+
 	var anon bool
 	if r.FormValue("anonymous") == "on" {
 		anon = true
@@ -54,5 +58,6 @@ func ArticlesInsertHandler(w http.ResponseWriter, r *http.Request) {
 		inserted_id := result.InsertedID.(primitive.ObjectID).Hex() //result.id를 hex로 변환
 		tmp_urlpath := []string{"", inserted_id}
 		ArticlesDetailHandler(w, r, &tmp_urlpath)
+		go CallBard(result.InsertedID.(primitive.ObjectID), title, content) //바드 비공식 파이선 api를 부름 -  비동기로
 	}
 }
