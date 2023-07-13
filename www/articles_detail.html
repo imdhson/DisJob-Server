@@ -1,123 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      @import url('/assets/normalize.css');
-      @import url('/assets/articles.css');
-      @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
-      :focus {
-  outline: none;
-}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <style>
+    @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
 
-      /* Rectangle 32 */
-      li {
-        position: relative;
-        box-sizing:border-box;
-        overflow: hidden;
-        width: calc(100% - 10px);
-        margin-left: 3px;
-        height: 40px;
-        left:0;
-        background: #FFFFFF;
-        box-shadow: 3px 3px 5px 1px #E3B3FF;
-        border-radius: 20px;
-        list-style: none;
-        margin-bottom: 10px;
-      }
+    * {
+      font-family: 'Jua', sans-serif;
+      text-decoration: none;
+    }
 
-      li.article-detail {
-        width: calc(100% - 10px);
-        top: 10px;
-        left:0;
-        box-sizing:border-box;
-        overflow: hidden;
-        margin-left: 3px;
-        position: relative;
-        min-height: 200px;
-        background: #FFFFFF;
-        box-shadow: 3px 3px 5px 1px #E3B3FF;
-        border-radius: 20px;
-        list-style: none;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    .post {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      padding: 10px;
+      background-color: #FFF;
+      color: #000;
+      border-radius: 20px;
+      text-align: left;
+      box-shadow: 3px 3px 5px 1px #E3B3FF;
+      font-family: 'Jua', sans-serif;
+      width: calc(100% - 30px);
+      margin-right: 2px;
+      position: relative; /* 수정된 부분 */
+    }
+    #post-articlede{
+        width: calc(100% - 30px);
         margin-bottom: 30px;
-        margin-right: 0;
-      }
+    }
 
-      a:not(.button) {
-        color: black;
-      }
-
-      ul {
-        position: relative;
-        margin-bottom: 100px;
-        width: 100%;
-      }
-
-      #article-list {
-        padding:0;
-        padding-left: 10px;
-       margin: 0;
-        position: relative;
-        width:100%;
-        left: 0;
-      }
-
-      #comment-list {
-        padding:0;
-        padding-left: 10px;
-        position: relative;
-        width:100%;
-        left: 0;
-        margin-bottom: 200px;
-      }
-
-      /* 여기 일해봤었는데 일이 편해요! */
-      .comment-content {
-        position: absolute;
-        top: 20%;
-        height: 100%;
-        width: 80%;
-        padding-left: 20px;
-        font-family: 'Jua', sans-serif;
-        text-align: left;
-        font-size: 15px;
-      }
-
-      .comment-content-detail {
-        position: relative;
-        top: 20px;
-        width: 80%;
-        padding-left: 0px;
-        font-family: 'Jua', sans-serif;
-        text-align: left;
-        font-size: 40px;
-        font-weight: bold;
-      }
-
-      .article-content {
-        position: absolute;
-        top: 80px;
-        padding-left: 5px;
-        border: 5px;
-        display: block;
-        border-color: black;
-        font-family: 'Jua', sans-serif;
-      }
-
-      /* rfzz***** */
-      .comment-writer {
-        position: absolute;
-        text-align: right;
-        right: 20px;
-        bottom: 10px;
-        width: 50%;
-        height: auto;
+    .post h2 {
+      margin-bottom: 5px;
+      font-weight: normal;
+      font-size: 40px;
+    }
+    .post p {
+        font-size: 18px;
         font-family: sans-serif;
-        font-weight: 400;
-        font-size: 8px;
-      }
+        font-weight: normal;
+    }
 
-      #content {
+    .post .author {
+      margin-top: 20px; /* 수정된 부분 */
+      position: absolute; /* 수정된 부분 */
+      bottom: 0px; /* 수정된 부분 */
+      font-family: 'Spoqa Han Sans Neo', sans-serif;
+      font-size: 10px;
+    }
+
+    .post .commentCount i {
+      margin-right: 5px;
+    }
+
+    .post .commentCount,
+    .post .time {
+      position: relative;
+      bottom: 0;
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+
+    .post .time i {
+      margin-right: 5px;
+    }
+
+    .post .author {
+      right: 10px; /* 수정된 부분 */
+    }
+
+    .post .author i,
+    .post .time i {
+      margin-right: 5px;
+    }
+    .commentIcon{
+        top:0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #content {
         position: relative;
         width: 100%;
         height: 80%;
@@ -214,31 +185,25 @@
         font-size: 15px;
         color: black;
       }
+  </style>
+</head>
+<body>
+<go>article_msg</go>
+  <div class="container">
+     <go>comments_msg</go>
+  </div>
 
-      * {
-        font-family: 'Jua', sans-serif;
-      }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <go>title_msg</go>
 
-    <ul id="comment-list">
-      <go>comments_msg</go>
-    </ul>
+  <form method="post" action="<go>form_action_url</go>" id="form">
+    <input type="text" name="content" id="content" placeholder="댓글을 입력하세요.">
+    <div id="checkbox-container">
+      <input type="checkbox" name="anonymous" id="checkbox">
+      <label for="checkbox" id="checkbox-label"></label>
+      <span id="checkbox-text">익명</span>
+    </div>
+    <input type="submit" id="submit" value="➤">
+  </form>
 
-    <form method="post" action="<go>form_action_url</go>" id="form">
-      <input type="text" name="content" id="content" placeholder="댓글을 입력하세요.">
-      <div id="checkbox-container">
-        <input type="checkbox" name="anonymous" id="checkbox">
-        <label for="checkbox" id="checkbox-label"></label>
-        <span id="checkbox-text">익명</span>
-      </div>
-      <input type="submit" id="submit" value="➤">
-    </form>
-    <go>button_msg</go>
-  </body>
+  <go>button_msg</go>
+</body>
 </html>
