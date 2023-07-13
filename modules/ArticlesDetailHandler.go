@@ -118,6 +118,7 @@ func ArticlesDetailHandler(w http.ResponseWriter, r *http.Request, urlPath *[]st
 		comments_msg += `<p>` + v.Content + `</p>`
 		comments_msg += `<p class="time"><i class="far fa-clock"></i>` + compare_time + `</p>`
 		comments_msg += `<p class="author"><i class="fas fa-user"></i>` + useremail + `</p>`
+		comments_msg += `</div>`
 
 	}
 	//버튼 관련
