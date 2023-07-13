@@ -3,6 +3,7 @@ package modules
 import (
 	"bufio"
 	"context"
+	"log"
 	"os"
 	"os/exec"
 	"time"
@@ -13,7 +14,12 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+const (
+	ai_wait_seconds = 30
+)
+
 func CallBard(oid primitive.ObjectID, title string, content string) {
+	log.Println(title, "을 AI에게 전달중 ..")
 	//만들었던 파일 삭제
 	err := os.Remove("CallBard/input.txt")
 	ErrOK(err)
@@ -32,10 +38,9 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	ErrOK(err)
 
 	//파이썬 CallBard.py 호출
-	cmd := exec.Command("python", "CallBard/CallBard.py")
-	cmd.Run()
+	exec.Command("python", "CallBard/CallBard.py")
 
-	time.Sleep(5 * time.Second) //5초간 대기
+	time.Sleep(ai_wait_seconds * time.Second) //30초간 대기
 
 	//output.txt 읽어들이기
 	output_file, err := os.Open("CallBard/output.txt")
@@ -72,4 +77,5 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	}
 	_, err = coll.InsertOne(context.TODO(), comments_struct)
 	ErrOK(err)
+	log.Println(ai_content, "AI가 답변 완료함")
 }
