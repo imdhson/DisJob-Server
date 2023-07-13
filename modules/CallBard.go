@@ -14,10 +14,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const (
-	ai_wait_seconds = 30
-)
-
 func CallBard(oid primitive.ObjectID, title string, content string) {
 	log.Println(title, "을 AI에게 전달중 ..")
 	//만들었던 파일 삭제
@@ -38,9 +34,9 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	ErrOK(err)
 
 	//파이썬 CallBard.py 호출
-	exec.Command("python", "CallBard/CallBard.py")
-
-	time.Sleep(ai_wait_seconds * time.Second) //30초간 대기
+	cmd := exec.Command("python", "CallBard/CallBard.py")
+	err = cmd.Run()
+	ErrOK(err)
 
 	//output.txt 읽어들이기
 	output_file, err := os.Open("CallBard/output.txt")
