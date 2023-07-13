@@ -37,16 +37,20 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	cmd := exec.Command("python", "CallBard/CallBard.py")
 	err = cmd.Run()
 	ErrOK(err)
-
-	//output.txt 읽어들이기
-	output_file, err := os.Open("CallBard/output.txt")
-	ErrOK(err)
-	defer output_file.Close()
-
 	var ai_content string
-	output_file_scanner := bufio.NewScanner(output_file)
-	for output_file_scanner.Scan() {
-		ai_content += output_file_scanner.Text()
+
+	if err != nil {
+		ai_content = "AI 호출 중 오류 발생"
+	} else {
+		//output.txt 읽어들이기
+		output_file, err := os.Open("CallBard/output.txt")
+		ErrOK(err)
+		defer output_file.Close()
+
+		output_file_scanner := bufio.NewScanner(output_file)
+		for output_file_scanner.Scan() {
+			ai_content += output_file_scanner.Text()
+		}
 	}
 
 	//호출 완료
