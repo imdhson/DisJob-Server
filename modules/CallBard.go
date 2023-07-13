@@ -14,6 +14,12 @@ import (
 )
 
 func CallBard(oid primitive.ObjectID, title string, content string) {
+	//만들었던 파일 삭제
+	err := os.Remove("CallBard/input.txt")
+	ErrOK(err)
+	err = os.Remove("CallBard/output.txt")
+	ErrOK(err)
+
 	//AI에게 페르소나 부여
 	input_refined := `제목 : ` + title + `내용 : ` + content
 
@@ -29,6 +35,9 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	cmd := exec.Command("python", "CallBard/CallBard.py")
 	cmd.Run()
 
+	time.Sleep(5 * time.Second) //5초간 대기
+
+	//output.txt 읽어들이기
 	output_file, err := os.Open("CallBard/output.txt")
 	ErrOK(err)
 	defer output_file.Close()
@@ -38,6 +47,7 @@ func CallBard(oid primitive.ObjectID, title string, content string) {
 	for output_file_scanner.Scan() {
 		ai_content += output_file_scanner.Text()
 	}
+
 	//호출 완료
 	godotenv.Load()
 	URI := os.Getenv("MONGODB_URI")
