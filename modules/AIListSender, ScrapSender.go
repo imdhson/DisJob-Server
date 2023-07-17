@@ -150,7 +150,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 		}
 		var dbres_loc1 Dj_jobs_detail = Dj_jobs_detail{}
 		cursor.Decode(&dbres_loc1)
-		will_send_append(&dbres_loc1, &will_send, SCORE_WEIGHT_DO)
+		will_send_append(&dbres_loc1, &will_send, SCORE_WEIGHT_DO+dbres_loc1.ScrapCount) //도 가중치 + 스크랩 개수
 		cnt++
 	}
 
@@ -170,7 +170,7 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 		}
 		var dbres_loc2 Dj_jobs_detail = Dj_jobs_detail{}
 		cursor.Decode(&dbres_loc2)
-		will_send_append(&dbres_loc2, &will_send, SCORE_WEIGHT_SI)
+		will_send_append(&dbres_loc2, &will_send, SCORE_WEIGHT_SI+dbres_loc2.ScrapCount)
 		cnt++
 	}
 	// type_inters 순회하여 쿼리 시작
@@ -199,6 +199,163 @@ func AIListSender(w http.ResponseWriter, r *http.Request) { //메인화면 직�
 	}
 
 	//will_send를 순회하여 급여에 대한 가산점 처리
+	for iw := range will_send {
+		switch will_send[iw].WageType {
+		case "시급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / SCORE_WEIGHT_WAGE
+		case "일급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / 8 / SCORE_WEIGHT_WAGE
+		case "월급":
+			will_send[iw].AI_List_score += will_send[iw].Wage / (5 * 4 * 8) / SCORE_WEIGHT_WAGE
+		case "연봉":
+			will_send[iw].AI_List_score += will_send[iw].Wage / (12 * 5 * 4 * 8) / SCORE_WEIGHT_WAGE
+		}
+
+	}
+
+	//
+	//
+	//
+
+	//score을 기반으로 sort 시작
+	sort.Sort(sort.Reverse(Dj_jobs_detail_s(will_send)))
+	ai_list_num := 0
+	for numi, _ := range will_send {
+		will_send[numi].AI_List_num = ai_list_num
+		ai_list_num++
+	}
+
+	var Outputsize_var int           //결과 슬라이싱시 인덱스 바깥으로 튀는것 방지하기 위함
+	if len(will_send) < OUTPUTSIZE { //결과 슬라이싱시 인덱스 바깥으로 튀는것 방지하기 위함
+		Outputsize_var = len(will_send)
+	} else {
+		Outputsize_var = OUTPUTSIZE
+	}
+
+	//필요한 만큼 outputsize로 자르고 메인에서 필요한 데이터만 남김
+	var will_send_refined []Dj_jobs_refined
+	for ir, vr := range will_send {
+		if ir > Outputsize_var {
+			break
+		}
+		tmp_address := strings.Split(vr.Address, " ")
+		tmp_address1 := tmp_address[0] + " " + tmp_address[1]
+		tmp := Dj_jobs_refined{
+			AI_List_num:  vr.AI_List_num,
+			ID:           vr.ID,
+			Address:      tmp_address1,
+			RecuritShape: vr.RecuritShape,
+			CompanyName:  vr.CompanyName,
+			WageType:     vr.WageType,
+			Wage:         vr.Wage,
+		}
+		switch tmp.WageType {
+		case "일급":
+			tmp.Wage = tmp.Wage / 8
+			tmp.WageType = "환산 시급"
+		case "월급":
+			tmp.Wage = tmp.Wage / (5 * 4 * 8)
+			tmp.WageType = "환산 시급"
+		case "연봉":
+			tmp.Wage = tmp.Wage / (12 * 5 * 4 * 8)
+			tmp.WageType = "환산 시급"
+		}
+
+		will_send_refined = append(will_send_refined, tmp)
+	}
+
+	will_send_json, _ := json.MarshalIndent(will_send_refined, " ", "	")
+	w.Header().Set("Content-Type", "application/json; charset=utf-8")
+	w.WriteHeader(http.StatusOK)
+	w.Write(will_send_json)
+}
+
+func ScrapSender(w http.ResponseWriter, r *http.Request) { //스크랩 sort
+	err := godotenv.Load()
+	Critical(err)
+	URI := os.Getenv("MONGODB_URI")
+	if URI == "" {
+		Critical(err)
+	}
+	db, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(URI))
+	Critical(err)
+	defer func() {
+		err := db.Disconnect(context.TODO())
+		Critical(err)
+	}()
+
+	//filter에 적용할 user의 데이터를 가져옴
+	user_struct := OidTOuser_struct(SessionTO_oid(w, r))
+	splited_loc := strings.Split(user_struct.Settings.Loc, " ")
+	if !IsHeLogin(w, r) { //인덱스 런타임 에러 방지
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusOK)
+		err_msg := map[string]string{"error": "Not LOGIN"}
+		err_msg_json, _ := json.MarshalIndent(err_msg, " ", "	")
+		w.Write(err_msg_json)
+		return
+	}
+
+	coll_avty := db.Database("dj_jobs").Collection("type_availability")
+	var typeavt [3]Dj_jobs_typeavt
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type1}}).Decode(&typeavt[0])
+	ErrOK(err)
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type2}}).Decode(&typeavt[1])
+	ErrOK(err)
+	err = coll_avty.FindOne(context.TODO(), bson.D{{"종류", user_struct.Settings.Type3}}).Decode(&typeavt[2])
+	ErrOK(err)
+
+	avt_inters := type_inters(typeavt[0].Availability, typeavt[1].Availability, typeavt[2].Availability) //교집합 구하기
+	log.Println("avt inters:", avt_inters)
+	// avt 관련 쿼리 종료
+
+	//scrap 리스트 쿼리 시작
+	var will_send Dj_jobs_detail_s
+	var filter_loc_0 string
+	var filter_loc_1 string
+	if len(splited_loc) <= 0 { //빈칸일경우 모든 지역 포함간주
+		filter_loc_0 = ""
+		filter_loc_1 = ""
+	} else if len(splited_loc) == 1 {
+		filter_loc_0 = splited_loc[0]
+		filter_loc_1 = ""
+	} else {
+		filter_loc_0 = splited_loc[0]
+		filter_loc_1 = splited_loc[1]
+	}
+
+	for _, v := range user_struct.ScrapList {
+		job_detail_in_Range, err := OidTOjobDetail(v)
+		ErrOK(err)
+
+		var inRangeScore int
+		// **도가 같을 경우
+		if strings.Contains(job_detail_in_Range.Address, filter_loc_0) {
+			inRangeScore = SCORE_WEIGHT_DO
+		} else {
+			inRangeScore = 0
+		}
+		will_send_append(&job_detail_in_Range, &will_send, inRangeScore)
+		// **시가 같을 경우
+		if strings.Contains(job_detail_in_Range.Address, filter_loc_1) {
+			inRangeScore = SCORE_WEIGHT_SI
+		} else {
+			inRangeScore = 0
+		}
+		will_send_append(&job_detail_in_Range, &will_send, inRangeScore)
+
+		//장애유형이 겹칠 때 가산점 처리
+		for _, v := range avt_inters {
+			if strings.Contains(job_detail_in_Range.BodySpec, v) {
+				inRangeScore = SCORE_WEIGHT_AVT
+			} else {
+				inRangeScore = 0
+			}
+			will_send_append(&job_detail_in_Range, &will_send, inRangeScore)
+		}
+	}
+
+	// will_send를 순회하여 급여에 대한 가산점 처리
 	for iw := range will_send {
 		switch will_send[iw].WageType {
 		case "시급":

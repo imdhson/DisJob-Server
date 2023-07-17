@@ -57,6 +57,7 @@ type Dj_jobs_detail struct {
 	CreateAt       string             `bson:"등록일" json:"등록일"`
 	Contact        string             `bson:"연락처" json:"연락처"`
 	BodySpec       string             `bson:"필수부위" json:"필수부위"`
+	ScrapCount     int                `bson:"scrapCount" json:"scrapCount"`
 }
 type Dj_jobs_detail_s []Dj_jobs_detail
 type Dj_jobs_refined struct {

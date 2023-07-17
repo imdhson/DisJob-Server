@@ -23,7 +23,9 @@ func CommentsInsert(w http.ResponseWriter, r *http.Request, urlPath *[]string) {
 	user_oid := SessionTO_oid(w, r)
 
 	content := XSSFix(r.FormValue("content"))
-
+	if content == "" { //빈칸 이면 무시
+		ArticlesDetailHandler(w, r, urlPath)
+	}
 	var anon bool
 	if r.FormValue("anonymous") == "on" {
 		anon = true
