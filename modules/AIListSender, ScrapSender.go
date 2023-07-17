@@ -335,14 +335,14 @@ func ScrapSender(w http.ResponseWriter, r *http.Request) { //스크랩 sort
 		} else {
 			inRangeScore = 0
 		}
-		will_send_append(&job_detail_in_Range, &will_send, inRangeScore)
+		will_send_append(&job_detail_in_Range, &will_send, inRangeScore+job_detail_in_Range.ScrapCount) //스크랩 카운트만큼 더하기
 		// **시가 같을 경우
 		if strings.Contains(job_detail_in_Range.Address, filter_loc_1) {
 			inRangeScore = SCORE_WEIGHT_SI
 		} else {
 			inRangeScore = 0
 		}
-		will_send_append(&job_detail_in_Range, &will_send, inRangeScore)
+		will_send_append(&job_detail_in_Range, &will_send, inRangeScore+job_detail_in_Range.ScrapCount) //스크랩 카운트만큼 더하기
 
 		//장애유형이 겹칠 때 가산점 처리
 		for _, v := range avt_inters {
